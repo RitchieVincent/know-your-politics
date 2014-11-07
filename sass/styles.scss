@@ -1,6 +1,7 @@
 @import "bootstrap-compass";
 @import "bootstrap-variables";
 @import "bootstrap";
+@import "compass";
 
 /* FONTS */
 
@@ -122,28 +123,17 @@ Wrap Sections
 ========================================================================== */
 
 #headerwrap {
-    background: rgb(46, 204, 113);
-    /* IE6-9 fallback on horizontal gradient */
+    background-color: #27ae60;
     margin-top: -10px;
     padding-top: 20px;
     text-align: center;
-    background-attachment: relative;
-    background-position: center center;
     min-height: 500px;
     width: 100%;
-    -webkit-background-size: 100%;
-    -moz-background-size: 100%;
-    -o-background-size: 100%;
-    background-size: 100%;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
 }
 #headerwrap h1 {
     margin-top: 100px;
     color: white;
-    font-size: 70px;
+    font-size: 90px;
     font-weight: 300;
     letter-spacing: 3px;
 }
@@ -357,10 +347,13 @@ Pricing Tables
 .pricing-option .pricing-signup:hover {
     background: #ff7878;
 }
-$labourColor:#e74c3c;
+//Variables------------------------------------------
+ $labourColor:#e74c3c;
  $conservativeColor:#3498db;
  $libdemColor:#F7E041;
  $ukipColor:#9b59b6;
+ $novoteColor:#7f8c8d;
+//---------------------------------------------------
  .partyIcon {
     width: 100%;
     padding: 35px;
@@ -438,6 +431,9 @@ $labourColor:#e74c3c;
 .wellUkip .btn {
     background-color: $ukipColor;
 }
+.novoteBtn {
+    background-color: $novoteColor;
+}
 .wellLabour .btn:hover {
     background-color: darken($labourColor, 5);
 }
@@ -449,4 +445,13 @@ $labourColor:#e74c3c;
 }
 .wellUkip .btn:hover {
     background-color: darken($ukipColor, 5);
+}
+.novoteBtn:hover {
+    background-color: darken($novoteColor, 5);
+}
+.headerDownArrow {
+    transition: all 0.3s;
+}
+.headerDownArrow:hover {
+    color: #2ecc71;
 }

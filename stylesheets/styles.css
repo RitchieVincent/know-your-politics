@@ -8206,12 +8206,12 @@ button.close {
 }
 /* FONTS */
 /* OVERALL ASPECT */
-/* line 13, ../sass/styles.scss */
+/* line 14, ../sass/styles.scss */
 html {
   margin-top: -60px;
 }
 
-/* line 16, ../sass/styles.scss */
+/* line 17, ../sass/styles.scss */
 body {
   background-color: #f2f2f2;
   font-family: 'Lato', sans-serif;
@@ -8224,7 +8224,7 @@ body {
 }
 
 /* Titles */
-/* line 28, ../sass/styles.scss */
+/* line 29, ../sass/styles.scss */
 h1,
 h2,
 h3,
@@ -8237,19 +8237,19 @@ h6 {
 }
 
 /* Paragraph & Typographic */
-/* line 40, ../sass/styles.scss */
+/* line 41, ../sass/styles.scss */
 p {
   line-height: 28px;
   margin-bottom: 25px;
 }
 
-/* line 44, ../sass/styles.scss */
+/* line 45, ../sass/styles.scss */
 .centered {
   text-align: center;
 }
 
 /* Links */
-/* line 49, ../sass/styles.scss */
+/* line 50, ../sass/styles.scss */
 a {
   color: #f85c37;
   word-wrap: break-word;
@@ -8260,7 +8260,7 @@ a {
   transition: color 0.1s ease-in, background 0.1s ease-in;
 }
 
-/* line 58, ../sass/styles.scss */
+/* line 59, ../sass/styles.scss */
 a:hover,
 a:focus {
   color: #7b7b7b;
@@ -8268,7 +8268,7 @@ a:focus {
   outline: 0;
 }
 
-/* line 64, ../sass/styles.scss */
+/* line 65, ../sass/styles.scss */
 a:before,
 a:after {
   -webkit-transition: color 0.1s ease-in, background 0.1s ease-in;
@@ -8278,7 +8278,7 @@ a:after {
   transition: color 0.1s ease-in, background 0.1s ease-in;
 }
 
-/* line 72, ../sass/styles.scss */
+/* line 73, ../sass/styles.scss */
 hr {
   display: block;
   height: 1px;
@@ -8288,7 +8288,7 @@ hr {
   padding: 0;
 }
 
-/* line 80, ../sass/styles.scss */
+/* line 81, ../sass/styles.scss */
 .navbar {
   font-weight: 800;
   font-size: 14px;
@@ -8296,18 +8296,18 @@ hr {
   padding-bottom: 15px;
 }
 
-/* line 86, ../sass/styles.scss */
+/* line 87, ../sass/styles.scss */
 .navbar-inverse {
   background: #2d2d2d;
   border-color: #2d2d2d;
 }
 
-/* line 90, ../sass/styles.scss */
+/* line 91, ../sass/styles.scss */
 .navbar-inverse .navbar-nav > .active > a {
   background: #ff7878;
 }
 
-/* line 93, ../sass/styles.scss */
+/* line 94, ../sass/styles.scss */
 .navbar-inverse .navbar-brand {
   color: #999999;
   font-weight: bolder;
@@ -8315,7 +8315,7 @@ hr {
   letter-spacing: 1px;
 }
 
-/* line 99, ../sass/styles.scss */
+/* line 100, ../sass/styles.scss */
 .navbar-inverse .navbar-brand i {
   color: #ff7878;
   font-size: 22px;
@@ -8323,7 +8323,7 @@ hr {
 }
 
 /*TILT*/
-/* line 106, ../sass/styles.scss */
+/* line 107, ../sass/styles.scss */
 .tilt {
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
@@ -8332,7 +8332,7 @@ hr {
   transition: all 0.5s ease;
 }
 
-/* line 113, ../sass/styles.scss */
+/* line 114, ../sass/styles.scss */
 .tilt:hover {
   -webkit-transform: rotate(-10deg);
   -moz-transform: rotate(-10deg);
@@ -8344,37 +8344,26 @@ hr {
 /* ==========================================================================
 Wrap Sections
 ========================================================================== */
-/* line 124, ../sass/styles.scss */
+/* line 125, ../sass/styles.scss */
 #headerwrap {
-  background: #2ecc71;
-  /* IE6-9 fallback on horizontal gradient */
+  background-color: #27ae60;
   margin-top: -10px;
   padding-top: 20px;
   text-align: center;
-  background-attachment: relative;
-  background-position: center center;
   min-height: 500px;
   width: 100%;
-  -webkit-background-size: 100%;
-  -moz-background-size: 100%;
-  -o-background-size: 100%;
-  background-size: 100%;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
 }
 
-/* line 143, ../sass/styles.scss */
+/* line 133, ../sass/styles.scss */
 #headerwrap h1 {
   margin-top: 100px;
   color: white;
-  font-size: 70px;
+  font-size: 90px;
   font-weight: 300;
   letter-spacing: 3px;
 }
 
-/* line 150, ../sass/styles.scss */
+/* line 140, ../sass/styles.scss */
 #headerwrap h2 {
   color: white;
   font-size: 40px;
@@ -8383,13 +8372,13 @@ Wrap Sections
   text-transform: uppercase;
 }
 
-/* line 157, ../sass/styles.scss */
+/* line 147, ../sass/styles.scss */
 #headerwrap h3 {
   font-weight: 400;
 }
 
 /* Dark Grey Wrap */
-/* line 162, ../sass/styles.scss */
+/* line 152, ../sass/styles.scss */
 #dg {
   background: #e0e0e0;
   padding-top: 70px;
@@ -8397,13 +8386,13 @@ Wrap Sections
   text-align: center;
 }
 
-/* line 168, ../sass/styles.scss */
+/* line 158, ../sass/styles.scss */
 #dg h4 {
   font-weight: 700;
 }
 
 /* Light Grey */
-/* line 173, ../sass/styles.scss */
+/* line 163, ../sass/styles.scss */
 #lg {
   background: #ebebeb;
   padding-top: 70px;
@@ -8411,102 +8400,102 @@ Wrap Sections
   text-align: center;
 }
 
-/* line 179, ../sass/styles.scss */
+/* line 169, ../sass/styles.scss */
 #lg h4 {
   font-weight: 700;
 }
 
 /* Red Wrap */
-/* line 184, ../sass/styles.scss */
+/* line 174, ../sass/styles.scss */
 #r {
   background: #ff7878;
   padding-top: 35px;
   padding-bottom: 35px;
 }
 
-/* line 189, ../sass/styles.scss */
+/* line 179, ../sass/styles.scss */
 #r h4 {
   color: white;
   font-weight: 700;
 }
 
-/* line 193, ../sass/styles.scss */
+/* line 183, ../sass/styles.scss */
 #r p {
   color: white;
 }
 
 /* Blue Wrap */
-/* line 198, ../sass/styles.scss */
+/* line 188, ../sass/styles.scss */
 #blue {
   background: #3498db;
   padding-top: 35px;
   padding-bottom: 35px;
 }
 
-/* line 203, ../sass/styles.scss */
+/* line 193, ../sass/styles.scss */
 #blue h4 {
   color: white;
   font-weight: 700;
 }
 
-/* line 207, ../sass/styles.scss */
+/* line 197, ../sass/styles.scss */
 #blue p {
   color: white;
 }
 
 /* Footer Wrap */
-/* line 212, ../sass/styles.scss */
+/* line 202, ../sass/styles.scss */
 #f {
   background: #2d2d2d;
   padding-top: 30px;
   padding-bottom: 30px;
 }
 
-/* line 217, ../sass/styles.scss */
+/* line 207, ../sass/styles.scss */
 #f i {
   color: #bdbdbd;
   font-size: 30px;
   padding: 20px;
 }
 
-/* line 222, ../sass/styles.scss */
+/* line 212, ../sass/styles.scss */
 #f i:hover {
   color: #ff7878;
 }
 
 /****** SECTIONS *****/
-/* line 227, ../sass/styles.scss */
+/* line 217, ../sass/styles.scss */
 .w {
   padding-top: 35px;
 }
 
-/* line 230, ../sass/styles.scss */
+/* line 220, ../sass/styles.scss */
 .w h4 {
   font-weight: 700;
 }
 
-/* line 237, ../sass/styles.scss */
+/* line 227, ../sass/styles.scss */
 .wb {
   padding-top: 35px;
   margin-bottom: 0px;
 }
 
-/* line 241, ../sass/styles.scss */
+/* line 231, ../sass/styles.scss */
 .wb h4 {
   font-weight: 700;
 }
 
-/* line 244, ../sass/styles.scss */
+/* line 234, ../sass/styles.scss */
 .desc {
   padding-top: 35px;
 }
 
-/* line 247, ../sass/styles.scss */
+/* line 237, ../sass/styles.scss */
 .desc h4 {
   font-weight: 700;
 }
 
-/* line 250, ../sass/styles.scss */
+/* line 240, ../sass/styles.scss */
 .desc i {
   color: #ff7878;
   font-size: 12px;
@@ -8514,23 +8503,23 @@ Wrap Sections
 }
 
 /***** MODAL CONTACT *****/
-/* line 257, ../sass/styles.scss */
+/* line 247, ../sass/styles.scss */
 .modal-content {
   border-radius: 0px;
 }
 
-/* line 260, ../sass/styles.scss */
+/* line 250, ../sass/styles.scss */
 .modal-header {
   background: #bdbdbd;
   color: white;
 }
 
-/* line 264, ../sass/styles.scss */
+/* line 254, ../sass/styles.scss */
 .modal-header h4 {
   font-weight: 700;
 }
 
-/* line 267, ../sass/styles.scss */
+/* line 257, ../sass/styles.scss */
 .modal-body {
   background: #f2f2f2;
   font-family: "Lato";
@@ -8539,7 +8528,7 @@ Wrap Sections
   color: #555;
 }
 
-/* line 274, ../sass/styles.scss */
+/* line 264, ../sass/styles.scss */
 .modal-footer {
   background: #f2f2f2;
   margin-top: 0px;
@@ -8548,12 +8537,12 @@ Wrap Sections
 /* ==========================================================================
 Pricing Tables
 ========================================================================== */
-/* line 282, ../sass/styles.scss */
+/* line 272, ../sass/styles.scss */
 .pricing-option {
   padding-bottom: 40px;
 }
 
-/* line 285, ../sass/styles.scss */
+/* line 275, ../sass/styles.scss */
 .pricing-option .pricing-top {
   position: relative;
   background: #222;
@@ -8566,7 +8555,7 @@ Pricing Tables
   box-sizing: border-box;
 }
 
-/* line 296, ../sass/styles.scss */
+/* line 286, ../sass/styles.scss */
 .pricing-option .pricing-top .special-label {
   display: block;
   width: 100%;
@@ -8580,12 +8569,12 @@ Pricing Tables
   padding: 3px 0;
 }
 
-/* line 308, ../sass/styles.scss */
+/* line 298, ../sass/styles.scss */
 .special .pricing-top {
   background: black;
 }
 
-/* line 311, ../sass/styles.scss */
+/* line 301, ../sass/styles.scss */
 .pricing-option .pricing-edition {
   text-transform: uppercase;
   display: block;
@@ -8593,13 +8582,13 @@ Pricing Tables
   letter-spacing: 8px;
 }
 
-/* line 317, ../sass/styles.scss */
+/* line 307, ../sass/styles.scss */
 .pricing-option .price {
   display: inline-block;
   position: relative;
 }
 
-/* line 321, ../sass/styles.scss */
+/* line 311, ../sass/styles.scss */
 .pricing-option .price sup {
   position: absolute;
   top: 50px;
@@ -8607,20 +8596,20 @@ Pricing Tables
   font-size: 24px;
 }
 
-/* line 327, ../sass/styles.scss */
+/* line 317, ../sass/styles.scss */
 .pricing-option .price .price-amount {
   font-size: 108px;
   letter-spacing: -4px;
 }
 
-/* line 331, ../sass/styles.scss */
+/* line 321, ../sass/styles.scss */
 .pricing-option .price small {
   position: relative;
   left: -10px;
   font-size: 18px;
 }
 
-/* line 336, ../sass/styles.scss */
+/* line 326, ../sass/styles.scss */
 .pricing-option ul {
   list-style: none;
   margin: 0;
@@ -8629,14 +8618,14 @@ Pricing Tables
   padding-left: 0px;
 }
 
-/* line 343, ../sass/styles.scss */
+/* line 333, ../sass/styles.scss */
 .pricing-option ul li {
   border-bottom: solid 1px #e1e1e1;
   padding-top: 20px;
   padding-bottom: 20px;
 }
 
-/* line 348, ../sass/styles.scss */
+/* line 338, ../sass/styles.scss */
 .pricing-option .pricing-signup {
   display: block;
   text-align: center;
@@ -8647,54 +8636,54 @@ Pricing Tables
   background: #1abc9c;
 }
 
-/* line 357, ../sass/styles.scss */
+/* line 347, ../sass/styles.scss */
 .pricing-option .pricing-signup:hover {
   background: #ff7878;
 }
 
-/* line 364, ../sass/styles.scss */
+/* line 357, ../sass/styles.scss */
 .partyIcon {
   width: 100%;
   padding: 35px;
 }
 
-/* line 368, ../sass/styles.scss */
+/* line 361, ../sass/styles.scss */
 .partyIconCircle {
   width: 150px;
   height: 150px;
   margin: 0 auto;
 }
 
-/* line 373, ../sass/styles.scss */
+/* line 366, ../sass/styles.scss */
 .labourText,
 .wellLabour i {
   color: #e74c3c;
 }
 
-/* line 377, ../sass/styles.scss */
+/* line 370, ../sass/styles.scss */
 .conservativeText,
 .wellConservative i {
   color: #3498db;
 }
 
-/* line 381, ../sass/styles.scss */
+/* line 374, ../sass/styles.scss */
 .libdemText,
 .wellLibdem i {
   color: #F7E041;
 }
 
-/* line 385, ../sass/styles.scss */
+/* line 378, ../sass/styles.scss */
 .ukipText,
 .wellUkip i {
   color: #9b59b6;
 }
 
-/* line 392, ../sass/styles.scss */
+/* line 385, ../sass/styles.scss */
 .labourTextAlign {
   height: 0.01em;
 }
 
-/* line 395, ../sass/styles.scss */
+/* line 388, ../sass/styles.scss */
 .wellLabour,
 .wellConservative,
 .wellLibdem,
@@ -8704,27 +8693,27 @@ Pricing Tables
   transition: 0.5s;
 }
 
-/* line 403, ../sass/styles.scss */
+/* line 396, ../sass/styles.scss */
 .wellLabour:hover {
   border: 1px solid #f5b4ae;
 }
 
-/* line 406, ../sass/styles.scss */
+/* line 399, ../sass/styles.scss */
 .wellConservative:hover {
   border: 1px solid #a0cfee;
 }
 
-/* line 409, ../sass/styles.scss */
+/* line 402, ../sass/styles.scss */
 .wellLibdem:hover {
   border: 1px solid #f9e872;
 }
 
-/* line 412, ../sass/styles.scss */
+/* line 405, ../sass/styles.scss */
 .wellUkip:hover {
   border: 1px solid #d0b2dd;
 }
 
-/* line 415, ../sass/styles.scss */
+/* line 408, ../sass/styles.scss */
 .btn {
   color: #fff;
   text-decoration: none;
@@ -8740,42 +8729,62 @@ Pricing Tables
   transition: .25s;
 }
 
-/* line 429, ../sass/styles.scss */
+/* line 422, ../sass/styles.scss */
 .wellLabour .btn {
   background-color: #e74c3c;
 }
 
-/* line 432, ../sass/styles.scss */
+/* line 425, ../sass/styles.scss */
 .wellConservative .btn {
   background-color: #3498db;
 }
 
-/* line 435, ../sass/styles.scss */
+/* line 428, ../sass/styles.scss */
 .wellLibdem .btn {
   background-color: #F7E041;
 }
 
-/* line 438, ../sass/styles.scss */
+/* line 431, ../sass/styles.scss */
 .wellUkip .btn {
   background-color: #9b59b6;
 }
 
-/* line 441, ../sass/styles.scss */
+/* line 434, ../sass/styles.scss */
+.novoteBtn {
+  background-color: #7f8c8d;
+}
+
+/* line 437, ../sass/styles.scss */
 .wellLabour .btn:hover {
   background-color: #e43725;
 }
 
-/* line 444, ../sass/styles.scss */
+/* line 440, ../sass/styles.scss */
 .wellConservative .btn:hover {
   background-color: #258cd1;
 }
 
-/* line 447, ../sass/styles.scss */
+/* line 443, ../sass/styles.scss */
 .wellLibdem .btn:hover {
   background-color: #f6dc29;
 }
 
-/* line 450, ../sass/styles.scss */
+/* line 446, ../sass/styles.scss */
 .wellUkip .btn:hover {
   background-color: #8f4bab;
+}
+
+/* line 449, ../sass/styles.scss */
+.novoteBtn:hover {
+  background-color: #727f80;
+}
+
+/* line 452, ../sass/styles.scss */
+.headerDownArrow {
+  transition: all 0.3s;
+}
+
+/* line 455, ../sass/styles.scss */
+.headerDownArrow:hover {
+  color: #2ecc71;
 }

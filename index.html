@@ -56,7 +56,7 @@ Fixed navbar
                     <h2>Take our test and find out!</h2>
                     <h3>Choose your party below and let's see if you really know where your money is going.</h3>
                     <br/>
-                    <h1><i class="fa fa-angle-down"></i></h1>
+                    <h1><i class="fa fa-angle-down headerDownArrow"></i></h1>
                 </div>
             </div>
             <!-- row -->
@@ -85,7 +85,7 @@ Fixed navbar
                         <a class="list-group-item" href="https://www.facebook.com/labourparty" target="_blank"><i class="fa fa-facebook fa-2x"></i></a>
                         <a class="list-group-item" href="https://twitter.com/UKLabour" target="_blank"><i class="fa fa-twitter fa-2x"></i></a>
                     </div>
-                    <button type="button" class="btn btn-primary btn-lg btn-block">Vote!</button>
+                    <button type="button" class="btn btn-primary btn-lg btn-block partyBtn" id="labourVote">Vote!</button>
                 </div>
             </div>
             <!-- col-lg-3 -->
@@ -103,7 +103,7 @@ Fixed navbar
                         <a class="list-group-item" href="https://www.facebook.com/conservatives" target="_blank"><i class="fa fa-facebook fa-2x"></i></a>
                         <a class="list-group-item" href="https://twitter.com/Conservatives" target="_blank"><i class="fa fa-twitter fa-2x"></i></a>
                     </div>
-                    <button type="button" class="btn btn-primary btn-lg btn-block">Vote!</button>
+                    <button type="button" class="btn btn-primary btn-lg btn-block partyBtn" id="conservativeVote">Vote!</button>
                 </div>
             </div>
             <!-- col-lg-3 -->
@@ -121,7 +121,7 @@ Fixed navbar
                         <a class="list-group-item" href="https://www.facebook.com/libdems" target="_blank"><i class="fa fa-facebook fa-2x"></i></a>
                         <a class="list-group-item" href="https://twitter.com/LibDems" target="_blank"><i class="fa fa-twitter fa-2x"></i></a>
                     </div>
-                    <button type="button" class="btn btn-primary btn-lg btn-block">Vote!</button>
+                    <button type="button" class="btn btn-primary btn-lg btn-block partyBtn" id="libdemVote">Vote!</button>
                 </div>
             </div>
             <!-- col-lg-3 -->
@@ -139,13 +139,24 @@ Fixed navbar
                         <a class="list-group-item" href="https://www.facebook.com/TheUKIP" target="_blank"><i class="fa fa-facebook fa-2x"></i></a>
                         <a class="list-group-item" href="https://twitter.com/UKIP" target="_blank"><i class="fa fa-twitter fa-2x"></i></a>
                     </div>
-                    <button type="button" class="btn btn-primary btn-lg btn-block">Vote!</button>
+                    <button type="button" class="btn btn-primary btn-lg btn-block partyBtn" id="ukipVote">Vote!</button>
                 </div>
             </div>
             <!-- col-lg-3 -->
 
         </div>
         <!-- row -->
+        <div class="container">
+            <div class="row centered">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <h4>NO PREFERENCE</h4>
+                    <p>Alternativeley, if you have no preference for the above parties, you can vote 'No preference' to still take part in this test.</p>
+                    <div class="col-lg-4 col-lg-offset-4">
+                        <button type="button" class="btn btn-primary btn-lg btn-block novoteBtn partyBtn" id="noVote">No preference</button>
+                    </div>
+                </div>
+            </div>
+        </div>
         <br>
         <br>
     </div>
