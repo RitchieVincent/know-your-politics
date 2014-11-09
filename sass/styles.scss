@@ -1,17 +1,45 @@
+//Imports-------------------------------------------
 @import "bootstrap-compass";
 @import "bootstrap-variables";
 @import "bootstrap";
 @import "compass";
-
-/* FONTS */
-
+//---------------------------------------------------
+//Fonts----------------------------------------------
 @import url(http://fonts.googleapis.com/css?family=Lato:300,400,700,900);
 @import url(http://fonts.googleapis.com/css?family=Raleway:400,300,700,900);
 @import url(http://fonts.googleapis.com/css?family=Josefin+Sans:300,400,700);
-
-/* OVERALL ASPECT */
-
-html {
+//---------------------------------------------------
+//Variables------------------------------------------
+$labourColor:#e74c3c;
+ $conservativeColor:#3498db;
+ $libdemColor:#F7E041;
+ $ukipColor:#9b59b6;
+ $novoteColor:#7f8c8d;
+ $primaryColor:#27ae60;
+ $footerBg:#2d2d2d;
+//---------------------------------------------------
+//Mixins---------------------------------------------
+@mixin choiceStyle($choice) {
+    background-color: $choice;
+    height: 30px;
+    line-height: 30px;
+    margin-top: 0;
+}
+@mixin transition($time) {
+    -webkit-transition: $time;
+    -moz-transition: $time;
+    transition: $time;
+}
+@mixin boxShadow($shadow) {
+    -webkit-box-shadow: $shadow;
+    -moz-box-shadow: $shadow;
+    box-shadow: $shadow;
+}
+@mixin partyBtnHover($party) {
+    background-color: darken($party, 5)
+}
+//---------------------------------------------------
+ html {
     margin-top: -60px;
 }
 body {
@@ -123,7 +151,7 @@ Wrap Sections
 ========================================================================== */
 
 #headerwrap {
-    background-color: #27ae60;
+    background-color: $primaryColor;
     margin-top: -10px;
     padding-top: 20px;
     text-align: center;
@@ -149,13 +177,13 @@ Wrap Sections
 }
 /* Dark Grey Wrap */
 
-#dg {
+#selectedSection {
     background: #e0e0e0;
     padding-top: 70px;
     padding-bottom: 70px;
     text-align: center;
 }
-#dg h4 {
+#selectedSection h4 {
     font-weight: 700;
 }
 /* Light Grey */
@@ -199,18 +227,24 @@ Wrap Sections
 }
 /* Footer Wrap */
 
-#f {
-    background: #2d2d2d;
+#footer {
+    background: $footerBg;
     padding-top: 30px;
     padding-bottom: 30px;
 }
-#f i {
+#footer i {
     color: #bdbdbd;
     font-size: 30px;
     padding: 20px;
 }
-#f i:hover {
-    color: #ff7878;
+#footer i:hover {
+    color: $primaryColor;
+}
+#footer h2 {
+    color: $primaryColor;
+}
+#footer h3 {
+    color: lighten($footerBg, 25);
 }
 /****** SECTIONS *****/
 
@@ -218,17 +252,6 @@ Wrap Sections
     padding-top: 35px;
 }
 .w h4 {
-    font-weight: 700;
-}
-// .w i {
-// 	color: #ff7878;
-// 	font-size: 30px;
-// }
- .wb {
-    padding-top: 35px;
-    margin-bottom: 0px;
-}
-.wb h4 {
     font-weight: 700;
 }
 .desc {
@@ -347,14 +370,7 @@ Pricing Tables
 .pricing-option .pricing-signup:hover {
     background: #ff7878;
 }
-//Variables------------------------------------------
- $labourColor:#e74c3c;
- $conservativeColor:#3498db;
- $libdemColor:#F7E041;
- $ukipColor:#9b59b6;
- $novoteColor:#7f8c8d;
-//---------------------------------------------------
- .partyIcon {
+.partyIcon {
     width: 100%;
     padding: 35px;
 }
@@ -379,9 +395,6 @@ Pricing Tables
 .wellUkip i {
     color: $ukipColor;
 }
-// .wellLabour i, .wellConservative i, .wellLibdem i, .wellUkip i{
-// 	font-size: 30px;
-// }
 .labourTextAlign {
     height: 0.01em;
 }
@@ -389,9 +402,7 @@ Pricing Tables
 .wellConservative,
 .wellLibdem,
 .wellUkip {
-    -webkit-transition: 0.5s;
-    -moz-transition: 0.5s;
-    transition: 0.5s;
+    @include transition(0.5s);
 }
 .wellLabour:hover {
     border: 1px solid lighten($labourColor, 25);
@@ -412,12 +423,8 @@ Pricing Tables
     background-image: none;
     border: 0;
     border-radius: 0;
-    -webkit-box-shadow: none;
-    -moz-box-shadow: none;
-    box-shadow: none;
-    -webkit-transition: .25s;
-    -moz-transition: .25s;
-    transition: .25s;
+    @include boxShadow(none);
+    @include transition(0.25s);
 }
 .wellLabour .btn {
     background-color: $labourColor;
@@ -435,23 +442,52 @@ Pricing Tables
     background-color: $novoteColor;
 }
 .wellLabour .btn:hover {
-    background-color: darken($labourColor, 5);
+    @include partyBtnHover($labourColor);
 }
 .wellConservative .btn:hover {
-    background-color: darken($conservativeColor, 5);
+    @include partyBtnHover($conservativeColor);
 }
 .wellLibdem .btn:hover {
-    background-color: darken($libdemColor, 5);
+    @include partyBtnHover($libdemColor);
 }
 .wellUkip .btn:hover {
-    background-color: darken($ukipColor, 5);
+    @include partyBtnHover($ukipColor);
 }
 .novoteBtn:hover {
-    background-color: darken($novoteColor, 5);
+    @include partyBtnHover($novoteColor);
 }
 .headerDownArrow {
     transition: all 0.3s;
 }
 .headerDownArrow:hover {
     color: #2ecc71;
+    cursor: pointer;
+}
+.partyBtn:focus {
+    //Stops the blue outline around the buttons when clicked
+    outline: 0;
+}
+.labourChoice {
+    @include choiceStyle($labourColor);
+}
+.conservativeChoice {
+    @include choiceStyle($conservativeColor);
+}
+.libdemChoice {
+    @include choiceStyle($libdemColor);
+}
+.ukipChoice {
+    @include choiceStyle($ukipColor);
+}
+.noChoice {
+    @include choiceStyle($novoteColor);
+}
+.hiddenSteps {
+    display: none;
+}
+::selection {
+    background: lighten($primaryColor, 20);
+}
+::-moz-selection {
+    background: lighten($primaryColor, 20);
 }
