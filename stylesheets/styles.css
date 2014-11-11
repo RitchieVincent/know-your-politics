@@ -8320,29 +8320,7 @@ hr {
   letter-spacing: 1px;
 }
 
-/*TILT*/
-/* line 135, ../sass/styles.scss */
-.tilt {
-  -webkit-transition: all 0.5s ease;
-  -moz-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
-  -ms-transition: all 0.5s ease;
-  transition: all 0.5s ease;
-}
-
-/* line 142, ../sass/styles.scss */
-.tilt:hover {
-  -webkit-transform: rotate(-10deg);
-  -moz-transform: rotate(-10deg);
-  -o-transform: rotate(-10deg);
-  -ms-transform: rotate(-10deg);
-  transform: rotate(-10deg);
-}
-
-/* ==========================================================================
-Wrap Sections
-========================================================================== */
-/* line 153, ../sass/styles.scss */
+/* line 133, ../sass/styles.scss */
 #headerwrap {
   background-color: #27ae60;
   margin-top: -10px;
@@ -8352,7 +8330,7 @@ Wrap Sections
   width: 100%;
 }
 
-/* line 161, ../sass/styles.scss */
+/* line 141, ../sass/styles.scss */
 #headerwrap h1 {
   margin-top: 100px;
   color: white;
@@ -8361,7 +8339,7 @@ Wrap Sections
   letter-spacing: 3px;
 }
 
-/* line 168, ../sass/styles.scss */
+/* line 148, ../sass/styles.scss */
 #headerwrap h2 {
   color: white;
   font-size: 40px;
@@ -8370,13 +8348,13 @@ Wrap Sections
   text-transform: uppercase;
 }
 
-/* line 175, ../sass/styles.scss */
+/* line 155, ../sass/styles.scss */
 #headerwrap h3 {
   font-weight: 400;
 }
 
 /* Dark Grey Wrap */
-/* line 180, ../sass/styles.scss */
+/* line 160, ../sass/styles.scss */
 #selectedSection {
   background: #e0e0e0;
   padding-top: 70px;
@@ -8384,13 +8362,14 @@ Wrap Sections
   text-align: center;
 }
 
-/* line 186, ../sass/styles.scss */
+/* line 166, ../sass/styles.scss */
 #selectedSection h4 {
   font-weight: 700;
+  text-transform: uppercase;
 }
 
 /* Light Grey */
-/* line 191, ../sass/styles.scss */
+/* line 172, ../sass/styles.scss */
 #lg {
   background: #ebebeb;
   padding-top: 70px;
@@ -8398,101 +8377,137 @@ Wrap Sections
   text-align: center;
 }
 
-/* line 197, ../sass/styles.scss */
+/* line 178, ../sass/styles.scss */
 #lg h4 {
   font-weight: 700;
 }
 
-/* Red Wrap */
-/* line 202, ../sass/styles.scss */
-#r {
-  background: #ff7878;
+/* line 181, ../sass/styles.scss */
+#questionSection {
+  background-color: #f2f2f2;
+  height: 200px;
   padding-top: 35px;
   padding-bottom: 35px;
 }
 
-/* line 207, ../sass/styles.scss */
-#r h4 {
+/* line 187, ../sass/styles.scss */
+#labourQuestionSection {
+  background: #eb6d60;
+}
+
+/* line 190, ../sass/styles.scss */
+#conservativeQuestionSection {
+  background: #57aae1;
+}
+
+/* line 193, ../sass/styles.scss */
+#libdemQuestionSection {
+  background: #f9e668;
+}
+
+/* line 196, ../sass/styles.scss */
+#ukipQuestionSection {
+  background: #ac75c2;
+}
+
+/* line 199, ../sass/styles.scss */
+#labourQuestionSection,
+#conservativeQuestionSection,
+#libdemQuestionSection,
+#ukipQuestionSection {
+  padding-top: 35px;
+  padding-bottom: 35px;
+}
+
+/* line 206, ../sass/styles.scss */
+#labourQuestionSection h4,
+#conservativeQuestionSection h4,
+#libdemQuestionSection h4,
+#ukipQuestionSection h4 {
   color: white;
   font-weight: 700;
 }
 
-/* line 211, ../sass/styles.scss */
-#r p {
+/* line 213, ../sass/styles.scss */
+#labourQuestionSection p,
+#conservativeQuestionSection p,
+#libdemQuestionSection p,
+#ukipQuestionSection p {
   color: white;
 }
 
 /* Blue Wrap */
-/* line 216, ../sass/styles.scss */
+/* line 221, ../sass/styles.scss */
 #blue {
   background: #3498db;
   padding-top: 35px;
   padding-bottom: 35px;
 }
 
-/* line 221, ../sass/styles.scss */
+/* line 226, ../sass/styles.scss */
 #blue h4 {
   color: white;
   font-weight: 700;
 }
 
-/* line 225, ../sass/styles.scss */
+/* line 230, ../sass/styles.scss */
 #blue p {
   color: white;
 }
 
 /* Footer Wrap */
-/* line 230, ../sass/styles.scss */
+/* line 235, ../sass/styles.scss */
 #footer {
   background: #2d2d2d;
   padding-top: 30px;
   padding-bottom: 30px;
 }
 
-/* line 235, ../sass/styles.scss */
+/* line 240, ../sass/styles.scss */
 #footer i {
   color: #bdbdbd;
   font-size: 30px;
   padding: 20px;
 }
 
-/* line 240, ../sass/styles.scss */
+/* line 245, ../sass/styles.scss */
 #footer i:hover {
   color: #27ae60;
 }
 
-/* line 243, ../sass/styles.scss */
+/* line 248, ../sass/styles.scss */
 #footer h3 {
   color: #27ae60;
+  font-weight: 700;
 }
 
-/* line 246, ../sass/styles.scss */
+/* line 252, ../sass/styles.scss */
 #footer h4 {
   color: #6d6d6d;
 }
 
 /****** SECTIONS *****/
-/* line 251, ../sass/styles.scss */
+/* line 257, ../sass/styles.scss */
 .w {
   padding-top: 35px;
 }
 
-/* line 254, ../sass/styles.scss */
+/* line 260, ../sass/styles.scss */
 .w h4 {
   font-weight: 700;
 }
 
-/* line 257, ../sass/styles.scss */
+/* line 263, ../sass/styles.scss */
 .desc {
   padding-top: 35px;
 }
 
-/* line 260, ../sass/styles.scss */
+/* line 266, ../sass/styles.scss */
 .desc h4 {
   font-weight: 700;
 }
 
-/* line 263, ../sass/styles.scss */
+/* line 269, ../sass/styles.scss */
 .desc i {
   color: #ff7878;
   font-size: 12px;
@@ -8500,23 +8515,23 @@ Wrap Sections
 }
 
 /***** MODAL CONTACT *****/
-/* line 270, ../sass/styles.scss */
+/* line 276, ../sass/styles.scss */
 .modal-content {
   border-radius: 0px;
 }
 
-/* line 273, ../sass/styles.scss */
+/* line 279, ../sass/styles.scss */
 .modal-header {
   background: #bdbdbd;
   color: white;
 }
 
-/* line 277, ../sass/styles.scss */
+/* line 283, ../sass/styles.scss */
 .modal-header h4 {
   font-weight: 700;
 }
 
-/* line 280, ../sass/styles.scss */
+/* line 286, ../sass/styles.scss */
 .modal-body {
   background: #f2f2f2;
   font-family: "Lato";
@@ -8525,162 +8540,55 @@ Wrap Sections
   color: #555;
 }
 
-/* line 287, ../sass/styles.scss */
+/* line 293, ../sass/styles.scss */
 .modal-footer {
   background: #f2f2f2;
   margin-top: 0px;
 }
 
-/* ==========================================================================
-Pricing Tables
-========================================================================== */
-/* line 295, ../sass/styles.scss */
-.pricing-option {
-  padding-bottom: 40px;
-}
-
-/* line 298, ../sass/styles.scss */
-.pricing-option .pricing-top {
-  position: relative;
-  background: #222;
-  color: white;
-  text-align: center;
-  font-weight: bold;
-  padding: 40px 20px 30px 20px;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-/* line 309, ../sass/styles.scss */
-.pricing-option .pricing-top .special-label {
-  display: block;
-  width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background: #1abc9c;
-  text-transform: uppercase;
-  font-size: 15px;
-  font-weight: bold;
-  padding: 3px 0;
-}
-
-/* line 321, ../sass/styles.scss */
-.special .pricing-top {
-  background: black;
-}
-
-/* line 324, ../sass/styles.scss */
-.pricing-option .pricing-edition {
-  text-transform: uppercase;
-  display: block;
-  font-size: 25px;
-  letter-spacing: 8px;
-}
-
-/* line 330, ../sass/styles.scss */
-.pricing-option .price {
-  display: inline-block;
-  position: relative;
-}
-
-/* line 334, ../sass/styles.scss */
-.pricing-option .price sup {
-  position: absolute;
-  top: 50px;
-  left: -10px;
-  font-size: 24px;
-}
-
-/* line 340, ../sass/styles.scss */
-.pricing-option .price .price-amount {
-  font-size: 108px;
-  letter-spacing: -4px;
-}
-
-/* line 344, ../sass/styles.scss */
-.pricing-option .price small {
-  position: relative;
-  left: -10px;
-  font-size: 18px;
-}
-
-/* line 349, ../sass/styles.scss */
-.pricing-option ul {
-  list-style: none;
-  margin: 0;
-  background: #eee;
-  text-align: center;
-  padding-left: 0px;
-}
-
-/* line 356, ../sass/styles.scss */
-.pricing-option ul li {
-  border-bottom: solid 1px #e1e1e1;
-  padding-top: 20px;
-  padding-bottom: 20px;
-}
-
-/* line 361, ../sass/styles.scss */
-.pricing-option .pricing-signup {
-  display: block;
-  text-align: center;
-  font-size: 18px;
-  font-weight: bold;
-  padding: 15px 10px;
-  color: white;
-  background: #1abc9c;
-}
-
-/* line 370, ../sass/styles.scss */
-.pricing-option .pricing-signup:hover {
-  background: #ff7878;
-}
-
-/* line 373, ../sass/styles.scss */
+/* line 297, ../sass/styles.scss */
 .partyIcon {
   width: 100%;
   padding: 35px;
 }
 
-/* line 377, ../sass/styles.scss */
+/* line 301, ../sass/styles.scss */
 .partyIconCircle {
   width: 150px;
   height: 150px;
   margin: 0 auto;
 }
 
-/* line 382, ../sass/styles.scss */
+/* line 306, ../sass/styles.scss */
 .labourText,
 .wellLabour i {
   color: #e74c3c;
 }
 
-/* line 386, ../sass/styles.scss */
+/* line 310, ../sass/styles.scss */
 .conservativeText,
 .wellConservative i {
   color: #3498db;
 }
 
-/* line 390, ../sass/styles.scss */
+/* line 314, ../sass/styles.scss */
 .libdemText,
 .wellLibdem i {
   color: #F7E041;
 }
 
-/* line 394, ../sass/styles.scss */
+/* line 318, ../sass/styles.scss */
 .ukipText,
 .wellUkip i {
   color: #9b59b6;
 }
 
-/* line 398, ../sass/styles.scss */
+/* line 322, ../sass/styles.scss */
 .labourTextAlign {
   height: 0.01em;
 }
 
-/* line 401, ../sass/styles.scss */
+/* line 325, ../sass/styles.scss */
 .wellLabour,
 .wellConservative,
 .wellLibdem,
@@ -8690,27 +8598,27 @@ Pricing Tables
   transition: 0.5s;
 }
 
-/* line 407, ../sass/styles.scss */
+/* line 331, ../sass/styles.scss */
 .wellLabour:hover {
   border: 1px solid #f5b4ae;
 }
 
-/* line 410, ../sass/styles.scss */
+/* line 334, ../sass/styles.scss */
 .wellConservative:hover {
   border: 1px solid #a0cfee;
 }
 
-/* line 413, ../sass/styles.scss */
+/* line 337, ../sass/styles.scss */
 .wellLibdem:hover {
   border: 1px solid #f9e872;
 }
 
-/* line 416, ../sass/styles.scss */
+/* line 340, ../sass/styles.scss */
 .wellUkip:hover {
   border: 1px solid #d0b2dd;
 }
 
-/* line 419, ../sass/styles.scss */
+/* line 343, ../sass/styles.scss */
 .btn {
   color: #fff;
   text-decoration: none;
@@ -8726,73 +8634,97 @@ Pricing Tables
   transition: 0.25s;
 }
 
-/* line 429, ../sass/styles.scss */
+/* line 353, ../sass/styles.scss */
 .wellLabour .btn {
   background-color: #e74c3c;
 }
 
-/* line 432, ../sass/styles.scss */
+/* line 356, ../sass/styles.scss */
 .wellConservative .btn {
   background-color: #3498db;
 }
 
-/* line 435, ../sass/styles.scss */
+/* line 359, ../sass/styles.scss */
 .wellLibdem .btn {
   background-color: #F7E041;
 }
 
-/* line 438, ../sass/styles.scss */
+/* line 362, ../sass/styles.scss */
 .wellUkip .btn {
   background-color: #9b59b6;
 }
 
-/* line 441, ../sass/styles.scss */
+/* line 365, ../sass/styles.scss */
 .novoteBtn {
   background-color: #7f8c8d;
 }
 
-/* line 444, ../sass/styles.scss */
+/* line 368, ../sass/styles.scss */
 .wellLabour .btn:hover {
   background-color: #e43725;
 }
 
-/* line 447, ../sass/styles.scss */
+/* line 371, ../sass/styles.scss */
 .wellConservative .btn:hover {
   background-color: #258cd1;
 }
 
-/* line 450, ../sass/styles.scss */
+/* line 374, ../sass/styles.scss */
 .wellLibdem .btn:hover {
   background-color: #f6dc29;
 }
 
-/* line 453, ../sass/styles.scss */
+/* line 377, ../sass/styles.scss */
 .wellUkip .btn:hover {
   background-color: #8f4bab;
 }
 
-/* line 456, ../sass/styles.scss */
+/* line 380, ../sass/styles.scss */
 .novoteBtn:hover {
   background-color: #727f80;
 }
 
-/* line 459, ../sass/styles.scss */
+/* line 383, ../sass/styles.scss */
 .headerDownArrow {
   transition: all 0.3s;
 }
 
-/* line 462, ../sass/styles.scss */
+/* line 386, ../sass/styles.scss */
 .headerDownArrow:hover {
   color: #2ecc71;
   cursor: pointer;
 }
 
-/* line 466, ../sass/styles.scss */
+/* line 390, ../sass/styles.scss */
 .partyBtn:focus {
   outline: 0;
 }
 
-/* line 470, ../sass/styles.scss */
+/* line 394, ../sass/styles.scss */
+.agreeBtn {
+  background-color: #27ae60;
+}
+
+/* line 397, ../sass/styles.scss */
+.disagreeBtn {
+  background-color: #000;
+}
+
+/* line 400, ../sass/styles.scss */
+.agreeBtn:hover,
+.agreeBtn:focus,
+.agreeBtn:active {
+  background-color: #36d278;
+}
+
+/* line 405, ../sass/styles.scss */
+.disagreeBtn:hover,
+.disagreeBtn:focus,
+.disagreeBtn:active {
+  background-color: #1a1a1a;
+}
+
+/* line 410, ../sass/styles.scss */
 .labourChoice {
   background-color: #e74c3c;
   height: 30px;
@@ -8800,7 +8732,7 @@ Pricing Tables
   margin-top: 0;
 }
 
-/* line 473, ../sass/styles.scss */
+/* line 413, ../sass/styles.scss */
 .conservativeChoice {
   background-color: #3498db;
   height: 30px;
@@ -8808,7 +8740,7 @@ Pricing Tables
   margin-top: 0;
 }
 
-/* line 476, ../sass/styles.scss */
+/* line 416, ../sass/styles.scss */
 .libdemChoice {
   background-color: #F7E041;
   height: 30px;
@@ -8816,7 +8748,7 @@ Pricing Tables
   margin-top: 0;
 }
 
-/* line 479, ../sass/styles.scss */
+/* line 419, ../sass/styles.scss */
 .ukipChoice {
   background-color: #9b59b6;
   height: 30px;
@@ -8824,7 +8756,7 @@ Pricing Tables
   margin-top: 0;
 }
 
-/* line 482, ../sass/styles.scss */
+/* line 422, ../sass/styles.scss */
 .noChoice {
   background-color: #7f8c8d;
   height: 30px;
@@ -8832,17 +8764,17 @@ Pricing Tables
   margin-top: 0;
 }
 
-/* line 485, ../sass/styles.scss */
+/* line 425, ../sass/styles.scss */
 .hiddenSteps {
   display: none;
 }
 
-/* line 488, ../sass/styles.scss */
+/* line 428, ../sass/styles.scss */
 ::selection {
   background: #60db94;
 }
 
-/* line 491, ../sass/styles.scss */
+/* line 431, ../sass/styles.scss */
 ::-moz-selection {
   background: #60db94;
 }

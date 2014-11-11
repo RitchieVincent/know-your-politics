@@ -130,26 +130,6 @@ hr {
     font-size: 22px;
     letter-spacing: 1px;
 }
-/*TILT*/
-
-.tilt {
-    -webkit-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
-    -ms-transition: all 0.5s ease;
-    transition: all 0.5s ease;
-}
-.tilt:hover {
-    -webkit-transform: rotate(-10deg);
-    -moz-transform: rotate(-10deg);
-    -o-transform: rotate(-10deg);
-    -ms-transform: rotate(-10deg);
-    transform: rotate(-10deg);
-}
-/* ==========================================================================
-Wrap Sections
-========================================================================== */
-
 #headerwrap {
     background-color: $primaryColor;
     margin-top: -10px;
@@ -185,6 +165,7 @@ Wrap Sections
 }
 #selectedSection h4 {
     font-weight: 700;
+    text-transform: uppercase;
 }
 /* Light Grey */
 
@@ -197,18 +178,42 @@ Wrap Sections
 #lg h4 {
     font-weight: 700;
 }
-/* Red Wrap */
-
-#r {
-    background: #ff7878;
+#questionSection {
+    background-color: #f2f2f2;
+    height: 200px;
     padding-top: 35px;
     padding-bottom: 35px;
 }
-#r h4 {
+#labourQuestionSection {
+    background: lighten($labourColor, 8);
+}
+#conservativeQuestionSection {
+    background: lighten($conservativeColor, 8);
+}
+#libdemQuestionSection {
+    background: lighten($libdemColor, 8);
+}
+#ukipQuestionSection {
+    background: lighten($ukipColor, 8);
+}
+#labourQuestionSection,
+#conservativeQuestionSection,
+#libdemQuestionSection,
+#ukipQuestionSection {
+    padding-top: 35px;
+    padding-bottom: 35px;
+}
+#labourQuestionSection h4,
+#conservativeQuestionSection h4,
+#libdemQuestionSection h4,
+#ukipQuestionSection h4 {
     color: white;
     font-weight: 700;
 }
-#r p {
+#labourQuestionSection p,
+#conservativeQuestionSection p,
+#libdemQuestionSection p,
+#ukipQuestionSection p {
     color: white;
 }
 /* Blue Wrap */
@@ -242,6 +247,7 @@ Wrap Sections
 }
 #footer h3 {
     color: $primaryColor;
+    font-weight: 700;
 }
 #footer h4 {
     color: lighten($footerBg, 25);
@@ -287,88 +293,6 @@ Wrap Sections
 .modal-footer {
     background: #f2f2f2;
     margin-top: 0px;
-}
-/* ==========================================================================
-Pricing Tables
-========================================================================== */
-
-.pricing-option {
-    padding-bottom: 40px;
-}
-.pricing-option .pricing-top {
-    position: relative;
-    background: #222;
-    color: white;
-    text-align: center;
-    font-weight: bold;
-    padding: 40px 20px 30px 20px;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-}
-.pricing-option .pricing-top .special-label {
-    display: block;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background: #1abc9c;
-    text-transform: uppercase;
-    font-size: 15px;
-    font-weight: bold;
-    padding: 3px 0;
-}
-.special .pricing-top {
-    background: black;
-}
-.pricing-option .pricing-edition {
-    text-transform: uppercase;
-    display: block;
-    font-size: 25px;
-    letter-spacing: 8px;
-}
-.pricing-option .price {
-    display: inline-block;
-    position: relative;
-}
-.pricing-option .price sup {
-    position: absolute;
-    top: 50px;
-    left: -10px;
-    font-size: 24px;
-}
-.pricing-option .price .price-amount {
-    font-size: 108px;
-    letter-spacing: -4px;
-}
-.pricing-option .price small {
-    position: relative;
-    left: -10px;
-    font-size: 18px;
-}
-.pricing-option ul {
-    list-style: none;
-    margin: 0;
-    background: #eee;
-    text-align: center;
-    padding-left: 0px;
-}
-.pricing-option ul li {
-    border-bottom: solid 1px #e1e1e1;
-    padding-top: 20px;
-    padding-bottom: 20px;
-}
-.pricing-option .pricing-signup {
-    display: block;
-    text-align: center;
-    font-size: 18px;
-    font-weight: bold;
-    padding: 15px 10px;
-    color: white;
-    background: #1abc9c;
-}
-.pricing-option .pricing-signup:hover {
-    background: #ff7878;
 }
 .partyIcon {
     width: 100%;
@@ -466,6 +390,22 @@ Pricing Tables
 .partyBtn:focus {
     //Stops the blue outline around the buttons when clicked
     outline: 0;
+}
+.agreeBtn {
+    background-color: $primaryColor;
+}
+.disagreeBtn {
+    background-color: #000;
+}
+.agreeBtn:hover,
+.agreeBtn:focus,
+.agreeBtn:active {
+    background-color: lighten($primaryColor, 10);
+}
+.disagreeBtn:hover,
+.disagreeBtn:focus,
+.disagreeBtn:active {
+    background-color: lighten(#000, 10);
 }
 .labourChoice {
     @include choiceStyle($labourColor);
