@@ -60,27 +60,50 @@ $(".partyBtn").click(function (e) {
 
 
 
-    var text = '{ "data" : [' +
-        '{ "question":"Labour Government will reset the energy market and freeze your energy bills until January 2017. Do you think this is a good idea?" , "party":"labourChoice" },' +
-        '{ "question":"5,000 more GPs to be trained. Do you think this is a good idea?" , "party":"conservativeChoice" },' +
-        '{ "question":"A real terms increase in NHS funding of £1 billion in 2016/17 and 2017/18" , "party":"libdemChoice" },' +
-        '{ "question":"UKIP will increase personal allowance to the level of full-time minimum wage earnings (approximately £13,500 by next election). Is this a good idea?" , "party":"ukipChoice" } ]}';
+    // var text = '{ "data" : [' +
+    //     '{ "question":"Labour Government will reset the energy market and freeze your energy bills until January 2017. Do you think this is a good idea?" , "party":"labourChoice" },' +
+    //     '{ "question":"5,000 more GPs to be trained. Do you think this is a good idea?" , "party":"conservativeChoice" },' +
+    //     '{ "question":"A real terms increase in NHS funding of £1 billion in 2016/17 and 2017/18" , "party":"libdemChoice" },' +
+    //     '{ "question":"UKIP will increase personal allowance to the level of full-time minimum wage earnings (approximately £13,500 by next election). Is this a good idea?" , "party":"ukipChoice" } ]}';
 
-    var questions = JSON.parse(text);
+    var text = {
+        "questions": [
+            {
+                "question": "Labour Government will reset the energy market and freeze your energy bills until January 2017. Do you think this is a good idea?",
+                "party": "labourChoice"
+            },
+            {
+                "question": "5,000 more GPs to be trained. Do you think this is a good idea?",
+                "party": "conservativeChoice"
+            },
+            {
+                "question": "A real terms increase in NHS funding of £1 billion in 2016/17 and 2017/18",
+                "party": "libdemChoice"
+            },
+            {
+                "question": "UKIP will increase personal allowance to the level of full-time minimum wage earnings (approximately £13,500 by next election). Is this a good idea?",
+                "party": "ukipChoice"
+            }
+        ]
+    };
 
-    var x = Math.floor((Math.random() * 3) + 0);
-    //Question party   questions.data[x].party
-    //Choice party    choiceClass
-    document.getElementById("test").innerHTML = questions.data[x].question + " " + questions.data[x].party + " " + choiceClass;
+    var questionsLength = Object.keys(text.questions).length;
+
+    var x = Math.floor((Math.random() * questionsLength) + 0); //Randomise questions
+    document.getElementById("test").innerHTML = text.questions[x].question + " " + text.questions[x].party + " " + choiceClass;
 
     $(".agreeBtn").click(function (e) {
-        if (questions.data[x].party == choiceClass) {
+        if (text.questions[x].party == choiceClass) {
             alert("success");
+        } else{
+            alert("fail");
         }
     });
     $(".disagreeBtn").click(function (e) {
-        if (questions.data[x].party != choiceClass) {
+        if (text.questions[x].party != choiceClass) {
             alert("success");
+        } else{
+            alert("fail");
         }
     });
 
