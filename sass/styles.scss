@@ -41,6 +41,14 @@ $labourColor:#e74c3c;
     -moz-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 1px 2px 0 rgba(0, 0, 0, 0.24);
     box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 1px 2px 0 rgba(0, 0, 0, 0.24);
 }
+@mixin questionSection($party) {
+    background: $party;
+    padding-top: 35px;
+    padding-bottom: 35px;
+    h3 {
+        color: $party;
+    }
+}
 //---------------------------------------------------
  html {
     margin-top: -60px;
@@ -171,35 +179,21 @@ hr {
 #lg h4 {
     font-weight: 700;
 }
-//#questionSection {
-//    background-color: #f2f2f2;
-//    height: 200px;
-//    padding-top: 35px;
-//    padding-bottom: 35px;
-//}
 .labourQuestionSection {
-    background: $labourColor;
+    @include questionSection($labourColor);
 }
 .conservativeQuestionSection {
-    background: $conservativeColor;
+    @include questionSection($conservativeColor);
 }
 .libdemQuestionSection {
-    background: $libdemColor;
+    @include questionSection($libdemColor);
 }
 .ukipQuestionSection {
-    background: $ukipColor;
+    @include questionSection($ukipColor);
 }
 .novoteQuestionSection {
-    background: $novoteColor;
+    @include questionSection($novoteColor);
 }
-.labourQuestionSection,
-.conservativeQuestionSection,
-.libdemQuestionSection,
-.ukipQuestionSection, .novoteQuestionSection {
-    padding-top: 35px;
-    padding-bottom: 35px;
-}
-
 /* Footer Wrap */
 
 #footer {
@@ -363,22 +357,6 @@ hr {
     //Stops the blue outline around the buttons when clicked
     outline: 0;
 }
-.agreeBtn {
-    background-color: $primaryColor;
-}
-.disagreeBtn {
-    background-color: #000;
-}
-.agreeBtn:hover,
-.agreeBtn:focus,
-.agreeBtn:active {
-    background-color: lighten($primaryColor, 10);
-}
-.disagreeBtn:hover,
-.disagreeBtn:focus,
-.disagreeBtn:active {
-    background-color: lighten(#000, 10);
-}
 .labourChoice {
     @include choiceStyle($labourColor);
 }
@@ -403,7 +381,9 @@ hr {
 ::-moz-selection {
     background: lighten($primaryColor, 5);
 }
-.headerDownBtn {
+.headerDownBtn,
+.agreeBtn,
+.disagreeBtn {
     padding: 1em;
     border-radius: 50%;
     width: 56px;
@@ -419,13 +399,35 @@ hr {
     @include transition(0.5s);
     line-height: 1.7em;
 }
-.headerDownBtn i {
+.headerDownBtn i,
+.agreeBtn i,
+.disagreeBtn i {
     font-size: 1.7em;
 }
 .headerDownBtn:hover {
     background-color: darken($primaryColor, 10);
     color: #fff;
     cursor: pointer;
+}
+.agreeBtn {
+    background-color: $bgColour;
+    color: $footerBg;
+}
+.disagreeBtn {
+    background-color: $footerBg;
+    color: #fff;
+}
+.agreeBtn:hover,
+.agreeBtn:focus,
+.agreeBtn:active {
+    background-color: darken($bgColour, 10);
+    color: $primaryColor;
+}
+.disagreeBtn:hover,
+.disagreeBtn:focus,
+.disagreeBtn:active {
+    background-color: lighten(#000, 10);
+    color: $primaryColor;
 }
 .underHeader {
     height: 200px;
@@ -451,4 +453,12 @@ hr {
 #theQuestions h3 {
     font-family: 'Lato', sans-serif;
     font-weight: 400;
+}
+.agreeText {
+    color: $primaryColor;
+    font-size: 1.5em;
+}
+.disagreeText {
+    color: darken($primaryColor, 10);
+    font-size: 1.5em;
 }
