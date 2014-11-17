@@ -6,7 +6,6 @@
 //---------------------------------------------------
 //Fonts----------------------------------------------
 @import url(http://fonts.googleapis.com/css?family=Lato:300,400,700,900);
-@import url(http://fonts.googleapis.com/css?family=Raleway:400,300,700,900);
 @import url(http://fonts.googleapis.com/css?family=Josefin+Sans:300,400,700);
 //---------------------------------------------------
 //Variables------------------------------------------
@@ -15,15 +14,14 @@ $labourColor:#e74c3c;
  $libdemColor:#F7E041;
  $ukipColor:#9b59b6;
  $novoteColor:#7f8c8d;
- $primaryColor:#27ae60;
+ $primaryColor:#009688;
  $footerBg:#2d2d2d;
+ $bgColour:#efefef;
 //---------------------------------------------------
 //Mixins---------------------------------------------
 @mixin choiceStyle($choice) {
     background-color: $choice;
-    height: 30px;
-    line-height: 30px;
-    margin-top: 0;
+    height: 200px;
 }
 @mixin transition($time) {
     -webkit-transition: $time;
@@ -36,20 +34,26 @@ $labourColor:#e74c3c;
     box-shadow: $shadow;
 }
 @mixin partyBtnHover($party) {
-    background-color: darken($party, 5)
+    background-color: darken($party, 15)
+}
+@mixin buttonShadow() {
+    -webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 1px 2px 0 rgba(0, 0, 0, 0.24);
+    -moz-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 1px 2px 0 rgba(0, 0, 0, 0.24);
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 1px 2px 0 rgba(0, 0, 0, 0.24);
 }
 //---------------------------------------------------
  html {
     margin-top: -60px;
 }
 body {
-    background-color: #f2f2f2;
+    background-color: $bgColour;
     font-family: 'Lato', sans-serif;
     font-weight: 300;
     font-size: 16px;
     color: #555;
     -webkit-font-smoothing: antialiased;
     -webkit-overflow-scrolling: touch;
+    overflow-x: hidden;
     margin-top: 70px;
 }
 /* Titles */
@@ -151,21 +155,10 @@ hr {
     font-weight: 700;
     letter-spacing: 2px;
     text-transform: uppercase;
+    text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.4);
 }
 #headerwrap h3 {
     font-weight: 400;
-}
-/* Dark Grey Wrap */
-
-#selectedSection {
-    background: #e0e0e0;
-    padding-top: 70px;
-    padding-bottom: 70px;
-    text-align: center;
-}
-#selectedSection h4 {
-    font-weight: 700;
-    text-transform: uppercase;
 }
 /* Light Grey */
 
@@ -178,58 +171,35 @@ hr {
 #lg h4 {
     font-weight: 700;
 }
-#questionSection {
-    background-color: #f2f2f2;
-    height: 200px;
+//#questionSection {
+//    background-color: #f2f2f2;
+//    height: 200px;
+//    padding-top: 35px;
+//    padding-bottom: 35px;
+//}
+.labourQuestionSection {
+    background: $labourColor;
+}
+.conservativeQuestionSection {
+    background: $conservativeColor;
+}
+.libdemQuestionSection {
+    background: $libdemColor;
+}
+.ukipQuestionSection {
+    background: $ukipColor;
+}
+.novoteQuestionSection {
+    background: $novoteColor;
+}
+.labourQuestionSection,
+.conservativeQuestionSection,
+.libdemQuestionSection,
+.ukipQuestionSection, .novoteQuestionSection {
     padding-top: 35px;
     padding-bottom: 35px;
 }
-#labourQuestionSection {
-    background: lighten($labourColor, 8);
-}
-#conservativeQuestionSection {
-    background: lighten($conservativeColor, 8);
-}
-#libdemQuestionSection {
-    background: lighten($libdemColor, 8);
-}
-#ukipQuestionSection {
-    background: lighten($ukipColor, 8);
-}
-#labourQuestionSection,
-#conservativeQuestionSection,
-#libdemQuestionSection,
-#ukipQuestionSection {
-    padding-top: 35px;
-    padding-bottom: 35px;
-}
-#labourQuestionSection h4,
-#conservativeQuestionSection h4,
-#libdemQuestionSection h4,
-#ukipQuestionSection h4 {
-    color: white;
-    font-weight: 700;
-}
-#labourQuestionSection p,
-#conservativeQuestionSection p,
-#libdemQuestionSection p,
-#ukipQuestionSection p {
-    color: white;
-}
-/* Blue Wrap */
 
-#blue {
-    background: #3498db;
-    padding-top: 35px;
-    padding-bottom: 35px;
-}
-#blue h4 {
-    color: white;
-    font-weight: 700;
-}
-#blue p {
-    color: white;
-}
 /* Footer Wrap */
 
 #footer {
@@ -325,20 +295,24 @@ hr {
 .wellLabour,
 .wellConservative,
 .wellLibdem,
-.wellUkip {
+.wellUkip,
+.wellNoPreference {
     @include transition(0.5s);
 }
 .wellLabour:hover {
-    border: 1px solid lighten($labourColor, 25);
+    border: 1px solid lighten($labourColor, 15);
 }
 .wellConservative:hover {
-    border: 1px solid lighten($conservativeColor, 25);
+    border: 1px solid lighten($conservativeColor, 15);
 }
 .wellLibdem:hover {
-    border: 1px solid lighten($libdemColor, 10);
+    border: 1px solid lighten($libdemColor, 1);
 }
 .wellUkip:hover {
-    border: 1px solid lighten($ukipColor, 25);
+    border: 1px solid lighten($ukipColor, 15);
+}
+.wellNoPreference:hover {
+    border: 1px solid lighten($novoteColor, 15);
 }
 .btn {
     color: #fff;
@@ -352,18 +326,23 @@ hr {
 }
 .wellLabour .btn {
     background-color: $labourColor;
+    @include buttonShadow();
 }
 .wellConservative .btn {
     background-color: $conservativeColor;
+    @include buttonShadow();
 }
 .wellLibdem .btn {
     background-color: $libdemColor;
+    @include buttonShadow();
 }
 .wellUkip .btn {
     background-color: $ukipColor;
+    @include buttonShadow();
 }
 .novoteBtn {
     background-color: $novoteColor;
+    @include buttonShadow();
 }
 .wellLabour .btn:hover {
     @include partyBtnHover($labourColor);
@@ -379,13 +358,6 @@ hr {
 }
 .novoteBtn:hover {
     @include partyBtnHover($novoteColor);
-}
-.headerDownArrow {
-    transition: all 0.3s;
-}
-.headerDownArrow:hover {
-    color: #2ecc71;
-    cursor: pointer;
 }
 .partyBtn:focus {
     //Stops the blue outline around the buttons when clicked
@@ -426,8 +398,57 @@ hr {
     display: none;
 }
 ::selection {
-    background: lighten($primaryColor, 20);
+    background: lighten($primaryColor, 5);
 }
 ::-moz-selection {
-    background: lighten($primaryColor, 20);
+    background: lighten($primaryColor, 5);
+}
+.headerDownBtn {
+    padding: 1em;
+    border-radius: 50%;
+    width: 56px;
+    height: 56px;
+    min-width: 56px;
+    -webkit-box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.12), 0 1px 10px 0 rgba(0, 0, 0, 0.24);
+    -moz-box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.12), 0 1px 10px 0 rgba(0, 0, 0, 0.24);
+    box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.12), 0 1px 10px 0 rgba(0, 0, 0, 0.24);
+    background-color: #ffffff;
+    outline: 0;
+    outline-offset: 0;
+    border: 0;
+    @include transition(0.5s);
+    line-height: 1.7em;
+}
+.headerDownBtn i {
+    font-size: 1.7em;
+}
+.headerDownBtn:hover {
+    background-color: darken($primaryColor, 10);
+    color: #fff;
+    cursor: pointer;
+}
+.underHeader {
+    height: 200px;
+    background-color: $primaryColor;
+    margin-bottom: -180px;
+}
+.partySelectedImage {
+    width: 200px;
+    background-color: #fff;
+}
+#novoteSelectedImage i {
+    font-size: 9em;
+    height: 200px;
+    padding-left: 50px;
+}
+.selectedPartyTitle h1 {
+    color: $bgColour;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-top: 70px;
+    text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.2);
+}
+#theQuestions h3 {
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
 }

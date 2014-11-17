@@ -58,7 +58,10 @@
                     <h2>Take our test and find out!</h2>
                     <h3>Choose your party below and let's see if you really know where your money is going.</h3>
                     <br/>
-                    <h1><i class="fa fa-angle-down headerDownArrow"></i></h1>
+                    <button type="button" class="headerDownBtn"><i class="fa fa-angle-down"></i>
+                    </button>
+
+
                 </div>
             </div>
             <!-- row -->
@@ -66,6 +69,10 @@
         <!-- container -->
     </div>
     <!-- headerwrap -->
+
+    <div class="underHeader">
+        <!--        Wrap for underheader section-->
+    </div>
 
 
     <div class="container w">
@@ -148,13 +155,15 @@
 
         </div>
         <!-- row -->
-        <div class="container">
-            <div class="row centered">
-                <div class="col-lg-8 col-lg-offset-2">
-                    <h4>NO PREFERENCE</h4>
-                    <p>Alternativeley, if you have no preference for the above parties, you can vote 'No preference' to still take part in this test.</p>
-                    <div class="col-lg-4 col-lg-offset-4">
-                        <button type="button" class="btn btn-primary btn-lg btn-block novoteBtn partyBtn" id="noVote">No preference</button>
+        <div class="well wellNoPreference">
+            <div class="container">
+                <div class="row centered">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <h4>NO PREFERENCE</h4>
+                        <p>Alternativeley, if you have no preference for the above parties, you can vote 'No preference' to still take part in this test.</p>
+                        <div class="col-lg-4 col-lg-offset-4">
+                            <button type="button" class="btn btn-primary btn-lg btn-block novoteBtn partyBtn" id="noVote">No preference</button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -165,25 +174,40 @@
     <!-- container -->
 
     <div id="selectedSection" class="hiddenSteps">
-        <div class="container">
-            <div class="row centered">
-                <div class="col-lg-2 col-lg-offset-2">
-                    <h4>YOU VOTED: </h4>
+        <div class="row">
+            <div class="container">
+                <div class="col-lg-3">
+                    <div id="labourSelectedImage" class="partySelectedImage labourSelectedSectionImage hiddenSteps">
+                        <img src="img/labourIcon.png" class="partyIcon" />
+                    </div>
+                    <div id="conservativeSelectedImage" class="partySelectedImage conservativeSelectedSectionImage hiddenSteps">
+                        <img src="img/conservativeIcon.png" class="partyIcon" />
+                    </div>
+                    <div id="libdemSelectedImage" class="partySelectedImage libdemSelectedSectionImage hiddenSteps">
+                        <img src="img/libdemIcon.png" class="partyIcon" />
+                    </div>
+                    <div id="ukipSelectedImage" class="partySelectedImage ukipSelectedSectionImage hiddenSteps">
+                        <img src="img/ukipIcon.png" class="partyIcon" />
+                    </div>
+                    <div id="novoteSelectedImage" class="partySelectedImage novoteSelectedSectionImage hiddenSteps">
+                        <i class="fa fa-question partyIcon"></i>
+                    </div>
                 </div>
-                <div class="col-lg-5 voteChoice">
+                <div class="col-lg-6 selectedPartyTitle centered">
+
                 </div>
-                <br>
             </div>
-            <!-- row -->
         </div>
-        <!-- container -->
     </div>
-    <!-- DG -->
+    <!-- selectedSection -->
 
     <div id="questionSection" class="hiddenSteps">
         <div class="container">
             <div class="row centered">
-                <div class="col-lg-8 col-lg-offset-2" id="test">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <div class="well" id="theQuestions">
+
+                    </div>
 
                 </div>
             </div>
