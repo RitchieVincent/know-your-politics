@@ -1,14 +1,14 @@
-$.fx.speeds.slow = 800;
+$.fx.speeds.slow = 800; //Sets speeds of transitions
 $.fx.speeds.xslow = 1200;
 
-$(".headerDownBtn").click(function () {
+$(".headerDownBtn").click(function () { //Scrolls the page down when clicking the down arrow in the header
     $('html,body').animate({
             scrollTop: $(".wellLabour").offset().top - 50
         },
         'slow');
 });
 
-var showChoiceFctn = function (idClicked, choiceClass, imageShow, choiceClassQuestionSection) {
+var showChoiceFctn = function (idClicked, choiceClass, imageShow, choiceClassQuestionSection) { //Shows the correct question section based on which button the user clicks
     $("#selectedSection").addClass("" + choiceClass + "");
     $(".selectedPartyTitle").append("<h1>" + idClicked + "</h1>");
     $("#" + imageShow + "").fadeIn("slow");
