@@ -69,11 +69,55 @@ $(".partyBtn").click(function (e) {
     var text = {
         "questions": [
             {
-                "question": "Labour Government will reset the energy market and freeze your energy bills until January 2017. Do you think this is a good idea?",
+                "question": "The Government will reset the energy market and freeze your energy bills until January 2017. Do you think this is a good idea?",
                 "party": "labourChoice"
             },
             {
-                "question": "5,000 more GPs to be trained. Do you think this is a good idea?",
+                "question": "The party leader promises a £2.5bn fund to transform the NHS. Do you think this is a good idea?",
+                "party": "labourChoice"
+            },
+            {
+                "question": "Do you support public sector job cuts?",
+                "party": "labourChoice"
+            },
+            {
+                "question": "There will be a guarenteed place in education or training for all 16 and 17 year olds. Do you agree with this?",
+                "party": "labourChoice"
+            },
+            {
+                "question": "This party will ensure all people who suspect they have cancer to get tested, getting results within one week. Do you agree with this?",
+                "party": "labourChoice"
+            },
+            {
+                "question": "This party wants to ensure every teacher has a teaching qualification. Do you agree with this?",
+                "party": "labourChoice"
+            },
+            {
+                "question": "This party wants to cut pension tax relief for higher earners. Do you agree with this?",
+                "party": "labourChoice"
+            },
+            {
+                "question": "There will be 5,000 more GPs trained. Do you think this is a good idea?",
+                "party": "conservativeChoice"
+            },
+            {
+                "question": "All patients will have access to a GP from 8am to 8pm, seven days a week by 2020. Do you think this is a good idea?",
+                "party": "conservativeChoice"
+            },
+            {
+                "question": "This party is cutting income tax and freezing fuel duty. Do you think this is a good idea?",
+                "party": "conservativeChoice"
+            },
+            {
+                "question": "This party is cutting jobs tax. Do you think this is a good idea?",
+                "party": "conservativeChoice"
+            },
+            {
+                "question": "This party is cutting corporation tax. Do you think this is a good idea?",
+                "party": "conservativeChoice"
+            },
+            {
+                "question": "This party will enforce public sector job cuts. Do you think this is a good idea?",
                 "party": "conservativeChoice"
             },
             {
@@ -92,20 +136,43 @@ $(".partyBtn").click(function (e) {
     var x = Math.floor((Math.random() * questionsLength) + 0); //Randomise questions
     document.getElementById("theQuestions").innerHTML = "<h3>" + text.questions[x].question + " " + text.questions[x].party + " " + choiceClass + "</h3>";
 
-    $(".agreeBtn").click(function (e) {
-        if (text.questions[x].party == choiceClass) {
-            alert("success");
-        } else {
-            alert("fail");
-        }
+    var questionParty = text.questions[x].party;
+
+    function randomQuestion(x) {
+        x = Math.floor((Math.random() * questionsLength) + 0);
+        document.getElementById("theQuestions").innerHTML = "<h3>" + text.questions[x].question + " " + text.questions[x].party + " " + choiceClass + "</h3>";
+        questionParty = text.questions[x].party;
+    }
+
+
+    $(".choiceBtn").click(function (e) {
+        var id = this.id;
+        var counter = $('#percentBox').val();
+        checkQuestion(id, questionParty, choiceClass, counter);
+        randomQuestion(x);
     });
-    $(".disagreeBtn").click(function (e) {
-        if (text.questions[x].party != choiceClass) {
-            alert("success");
-        } else {
-            alert("fail");
+
+    function checkQuestion(id, questionParty, choiceClass, counter) {
+        if (id == "agreeChoice") {
+            if (questionParty == choiceClass) {
+                counter++;
+                $('#percentBox').val(counter);
+            } else {
+                counter--;
+                $('#percentBox').val(counter);
+            }
         }
-    });
+        if (id == "disagreeChoice") {
+            if (questionParty == choiceClass) {
+                counter--;
+                $('#percentBox').val(counter);
+            } else {
+                $('#percentBox').val(counter);
+            }
+        }
+    }
+
+
 
 
 
