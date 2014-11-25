@@ -89,24 +89,15 @@ $(".partyBtn").click(function (e) {
                 "party": "labourChoice"
             },
             {
-<<<<<<< HEAD
-=======
-                "question": "This party wants to ensure every teacher has a teaching qualification. Do you agree with this?",
-                "party": "labourChoice"
-            },
-            {
                 "question": "This party wants to cut pension tax relief for higher earners. Do you agree with this?",
                 "party": "labourChoice"
             },
             {
->>>>>>> origin/master
                 "question": "There will be 5,000 more GPs trained. Do you think this is a good idea?",
                 "party": "conservativeChoice"
             },
             {
                 "question": "All patients will have access to a GP from 8am to 8pm, seven days a week by 2020. Do you think this is a good idea?",
-<<<<<<< HEAD
-=======
                 "party": "conservativeChoice"
             },
             {
@@ -123,7 +114,6 @@ $(".partyBtn").click(function (e) {
             },
             {
                 "question": "This party will enforce public sector job cuts. Do you think this is a good idea?",
->>>>>>> origin/master
                 "party": "conservativeChoice"
             },
             {
@@ -226,15 +216,10 @@ $(".partyBtn").click(function (e) {
         questionParty = text.questions[x].party;
     }
 
-<<<<<<< HEAD
     var userScore = 0;
-=======
->>>>>>> origin/master
 
     $(".choiceBtn").click(function (e) {
         var id = this.id;
-        var counter = $('#percentBox').val();
-<<<<<<< HEAD
         checkQuestion(id, questionParty, choiceClass);
         randomQuestion(x);
     });
@@ -247,35 +232,14 @@ $(".partyBtn").click(function (e) {
             } else {
                 userScore--;
                 alert(userScore);
-=======
-        checkQuestion(id, questionParty, choiceClass, counter);
-        randomQuestion(x);
-    });
-
-    function checkQuestion(id, questionParty, choiceClass, counter) {
-        if (id == "agreeChoice") {
-            if (questionParty == choiceClass) {
-                counter++;
-                $('#percentBox').val(counter);
-            } else {
-                counter--;
-                $('#percentBox').val(counter);
->>>>>>> origin/master
             }
         }
         if (id == "disagreeChoice") {
             if (questionParty == choiceClass) {
-<<<<<<< HEAD
                 userScore--;
                 alert(userScore);
             } else {
                 alert(userScore);
-=======
-                counter--;
-                $('#percentBox').val(counter);
-            } else {
-                $('#percentBox').val(counter);
->>>>>>> origin/master
             }
         }
     }
