@@ -8667,3 +8667,14 @@ hr {
   color: #00635a;
   font-size: 1.5em;
 }
+
+/* line 474, ../sass/styles.scss */
+.logo {
+  width: 6%;
+}
+
+/* line 477, ../sass/styles.scss */
+.logoFooter {
+  width: 8%;
+  margin-top: -7px;
+}
