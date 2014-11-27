@@ -21,7 +21,6 @@ $labourColor:#e74c3c;
 //Mixins---------------------------------------------
 @mixin choiceStyle($choice) {
     background-color: $choice;
-    height: 200px;
 }
 @mixin transition($time) {
     -webkit-transition: $time;

@@ -13,6 +13,7 @@ var showChoiceFctn = function (idClicked, choiceClass, imageShow, choiceClassQue
     $(".selectedPartyTitle").append("<h1>" + idClicked + "</h1>");
     $("#" + imageShow + "").fadeIn("slow");
     clicked = "2";
+    $('.partyBtn').prop('disabled', true); //Disables the party selection buttons so no user can re-click another party
     $("#questionSection").slideDown("slow");
     $("#questionSection").addClass("" + choiceClassQuestionSection + "");
 };
@@ -61,182 +62,85 @@ $(".partyBtn").click(function (e) {
         },
         'xslow');
 
-
-
-
-
-
-//    var text = {
-        //        "questions": [
-        //            {
-        //                "question": "The Government will reset the energy market and freeze your energy bills until January 2017. Do you think this is a good idea?",
-        //                "party": "labourChoice"
-        //            },
-        //            {
-        //                "question": "The party leader promises a £2.5bn fund to transform the NHS. Do you think this is a good idea?",
-        //                "party": "labourChoice"
-        //            },
-        //            {
-        //                "question": "Do you support public sector job cuts?",
-        //                "party": "labourChoice"
-        //            },
-        //            {
-        //                "question": "There will be a guarenteed place in education or training for all 16 and 17 year olds. Do you agree with this?",
-        //                "party": "labourChoice"
-        //            },
-        //            {
-        //                "question": "This party will ensure all people who suspect they have cancer to get tested, getting results within one week. Do you agree with this?",
-        //                "party": "labourChoice"
-        //            },
-        //            {
-        //                "question": "This party wants to cut pension tax relief for higher earners. Do you agree with this?",
-        //                "party": "labourChoice"
-        //            },
-        //            {
-        //                "question": "There will be 5,000 more GPs trained. Do you think this is a good idea?",
-        //                "party": "conservativeChoice"
-        //            },
-        //            {
-        //                "question": "All patients will have access to a GP from 8am to 8pm, seven days a week by 2020. Do you think this is a good idea?",
-        //                "party": "conservativeChoice"
-        //            },
-        //            {
-        //                "question": "This party is cutting income tax and freezing fuel duty. Do you think this is a good idea?",
-        //                "party": "conservativeChoice"
-        //            },
-        //            {
-        //                "question": "This party is cutting jobs tax. Do you think this is a good idea?",
-        //                "party": "conservativeChoice"
-        //            },
-        //            {
-        //                "question": "This party is cutting corporation tax. Do you think this is a good idea?",
-        //                "party": "conservativeChoice"
-        //            },
-        //            {
-        //                "question": "This party will enforce public sector job cuts. Do you think this is a good idea?",
-        //                "party": "conservativeChoice"
-        //            },
-        //            {
-        //                "question": "This party is cutting income tax and freezing fuel duty. Do you think this is a good idea?",
-        //                "party": "conservativeChoice"
-        //            },
-        //            {
-        //                "question": "This party is cutting jobs tax. Do you think this is a good idea?",
-        //                "party": "conservativeChoice"
-        //            },
-        //            {
-        //                "question": "This party is cutting corporation tax. Do you think this is a good idea?",
-        //                "party": "conservativeChoice"
-        //            },
-        //            {
-        //                "question": "This party will introduce a scheme that means it will always pay more to be in work than on benefits. Do you think this is a good idea?",
-        //                "party": "conservativeChoice"
-        //            },
-        //            {
-        //                "question": "This party has a plan to help small business and enterprises succeed, thus creating more jobs. Do you think this is a good idea?",
-        //                "party": "conservativeChoice"
-        //            },
-        //            {
-        //                "question": "This party wants to clamp down on \"benefits tourism\" and \"health tourism\" - so that we only those who want to work hard and contribute to our society are welcomed. Do you think this is a good idea?",
-        //                "party": "conservativeChoice"
-        //            },
-        //            {
-        //                "question": "This party wants to introduce a new citizenship test with British values at its heart. Do you think this is a good idea?",
-        //                "party": "conservativeChoice"
-        //            },
-        //            {
-        //                "question": "This party will increase NHS funding by £1bn in 2016/17 and 2017/18. Do you agree with this?",
-        //                "party": "libdemChoice"
-        //            },
-        //            {
-        //                "question": "This party will allocate an additional £500 million for mental health services. Do you think this is a good idea?",
-        //                "party": "libdemChoice"
-        //            },
-        //            {
-        //                "question": "All patients will be issued with a \"Care footprint\", detailing the costs of their care. Do you think this is a good idea?",
-        //                "party": "libdemChoice"
-        //            },
-        //            {
-        //                "question": "This party wants to raise the threshold at which people start paying income tax from £6,475 to £10,000. Do you think this is a good idea?",
-        //                "party": "libdemChoice"
-        //            },
-        //            {
-        //                "question": "This party will increase personal allowance to the level of full-time minimum wage earnings. Do you think this is a good idea?",
-        //                "party": "ukipChoice"
-        //            },
-        //            {
-        //                "question": "This party wants to ensure that the NHS stays free for all UK residents. Do you think this is a good idea?",
-        //                "party": "ukipChoice"
-        //            },
-        //            {
-        //                "question": "This party oposes current plans to charge patients for visitin their GP. Do you think this is a good idea?",
-        //                "party": "ukipChoice"
-        //            },
-        //            {
-        //                "question": "This party wants to maintain the system of providing pensioner bus passes. Do you think this is a good idea?",
-        //                "party": "ukipChoice"
-        //            },
-        //            {
-        //                "question": "This party wants to encourage local councils to provide more free parking for the high street. Do you think this is a good idea?",
-        //                "party": "ukipChoice"
-        //            },
-        //            {
-        //                "question": "This party wants to scrap the current target of 50% of school leavers going to university. Do you think this is a good idea?",
-        //                "party": "ukipChoice"
-        //            },
-        //            {
-        //                "question": "This party wants to ensure that students from the EU will pay the same student fee rates as International students. Do you think this is a good idea?",
-        //                "party": "ukipChoice"
-        //            },
-        //            {
-        //                "question": "This party will guarantee those who have served in the Armed Forces for a minimum of 12 years a job in the police force, prison service or border force. Do you think this is a good idea?",
-        //                "party": "ukipChoice"
-        //            },
-        //            {
-        //                "question": "This party supports a diverse energy market including coal, nuclear, shale gas, geo-thermal, tidal, solar, conventional gas and oil. Do you think this is a good idea?",
-        //                "party": "ukipChoice"
-        //            },
-        //            {
-        //                "question": "This party wants to abolish inheritance tax. Is this a good idea?",
-        //                "party": "ukipChoice"
-        //            }
-        //        ]
-        //    };
+    var questionCount = 0;//This variable stores how many questions the system has asked
 
     var questionsLength = Object.keys(text.questions).length;
 
-    var x = Math.floor((Math.random() * questionsLength) + 0); //Randomise questions
-    document.getElementById("theQuestions").innerHTML = "<h3>" + text.questions[x].question + " " + text.questions[x].party + " " + choiceClass + "</h3>";
+    var randomChoice = Math.floor((Math.random() * questionsLength) + 0); //Randomise questions
+    document.getElementById("theQuestions").innerHTML = "<h3>" + text.questions[randomChoice].question + " " + text.questions[randomChoice].party + " " + choiceClass + "</h3>";
+    questionCount++;//Raises the question count since it has displayed the first question
 
-    var questionParty = text.questions[x].party;
+    var questionParty = text.questions[randomChoice].party;
 
-    function randomQuestion(x) {
-        x = Math.floor((Math.random() * questionsLength) + 0);
-        document.getElementById("theQuestions").innerHTML = "<h3>" + text.questions[x].question + " " + text.questions[x].party + " " + choiceClass + "</h3>";
-        questionParty = text.questions[x].party;
+    function randomQuestion(randomChoice) { //Runs a function that randomises the JSON objects to display a random question
+        randomChoice = Math.floor((Math.random() * questionsLength) + 0); //Randomises a number based on the length of the JSON array and stores it in variable randomChoice
+        document.getElementById("theQuestions").innerHTML = "<h3>" + text.questions[randomChoice].question + " " + text.questions[randomChoice].party + " " + choiceClass + "</h3>";
+        questionParty = text.questions[randomChoice].party; //Sets the party name of the selected question to this variable
+        questionCount++; //Raises the question count by 1
     }
 
-    var userScore = 0;
+    var userScore = 0;//Sets the users score to 0, since it's the start of the quiz!
 
-    $(".choiceBtn").click(function (e) {
-        var id = this.id;
-        checkQuestion(id, questionParty, choiceClass);
-        randomQuestion(x);
+    var timeoutQuestion;
+    function delayedAlert() {
+      timeoutQuestion = window.setTimeout(showAlert, 2000);
+    }
+
+    function showAlert() {
+      alert("Time's up!");
+      randomQuestion(randomChoice);//Runs the random choice function, passing the randomised number to it, to create a new random number
+    }
+
+
+
+    $(".choiceBtn").click(function (e) {//Runs this function when the agreeChoice or disagreeChoice button is clicked
+        var id = this.id;//Sets a variable called id to the id of the clicked button (agreeChoice or disagreeChoice)
+        checkQuestion(id, questionParty, choiceClass);//Calls the checkQuestion function and passes the variables as parameters
+        if(questionCount<10){ //Only displays a new question if the question count is below 10
+            delayedAlert();
+
+            
+        }else{
+            alert("finished");
+        }
+        
     });
 
+    function wrongChoiceColour(questionParty, choiceClass){ //This function checks which party you have chosen and will remove any previous classes relating to other parties. It then replaces it with the new party class, which styles the background of the section, alerting the user to the party that question actually relates to
+        var removedClasses = "labourChoice conservativeChoice libdemChoice ukipChoice"; //Sets the classes to remove (All other parties)
+        if(questionParty=="labourChoice"){
+            $("#questionSection").removeClass(removedClasses);//Removes old classes using the "removedClasses" variable defined above
+            $("#questionSection").addClass("labourChoice");//Adds the party class which relates to the question they have just answered
+        }
+        if(questionParty=="conservativeChoice"){
+            $("#questionSection").removeClass(removedClasses);
+            $("#questionSection").addClass("conservativeChoice");
+        }
+        if(questionParty=="libdemChoice"){
+            $("#questionSection").removeClass(removedClasses);
+            $("#questionSection").addClass("libdemChoice");
+        }
+        if(questionParty=="ukipChoice"){
+            $("#questionSection").removeClass(removedClasses);
+            $("#questionSection").addClass("ukipChoice");
+        }
+    }
+
     function checkQuestion(id, questionParty, choiceClass) {
-        if (id == "agreeChoice") {
-            if (questionParty == choiceClass) {
-                userScore++;
+        if (id == "agreeChoice") { //If the user has clicked the "Agree" button
+            if (questionParty == choiceClass) {//If the question's party matches the user's chosen party
+                userScore++; //Raises the user's score since they got the question correct
                 alert(userScore);
             } else {
-                userScore--;
+                wrongChoiceColour(questionParty, choiceClass);//Calls the function above that checks the party against the question and changes the background style accordingly
+                userScore--;//Lowers the user's score since they got the question incorrect
                 alert(userScore);
             }
         }
-        if (id == "disagreeChoice") {
-            if (questionParty == choiceClass) {
+        if (id == "disagreeChoice") { //If the user has clicked the "Disagree" button
+            if (questionParty == choiceClass) {//If the question's party does not the user's chosen party
                 userScore--;
+                wrongChoiceColour(questionParty, choiceClass);
                 alert(userScore);
             } else {
                 alert(userScore);

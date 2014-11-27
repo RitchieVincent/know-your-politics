@@ -8516,31 +8516,38 @@ hr {
 /* line 368, ../sass/styles.scss */
 .labourChoice {
   background-color: #e74c3c;
-  height: 200px;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  transition: 0.5s;
 }
 
 /* line 371, ../sass/styles.scss */
 .conservativeChoice {
   background-color: #3498db;
-  height: 200px;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  transition: 0.5s;
 }
 
 /* line 374, ../sass/styles.scss */
 .libdemChoice {
   background-color: #F7E041;
-  height: 200px;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  transition: 0.5s;
 }
 
 /* line 377, ../sass/styles.scss */
 .ukipChoice {
   background-color: #9b59b6;
-  height: 200px;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  transition: 0.5s;
 }
 
 /* line 380, ../sass/styles.scss */
 .noChoice {
   background-color: #7f8c8d;
-  height: 200px;
 }
 
 /* line 383, ../sass/styles.scss */
