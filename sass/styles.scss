@@ -45,9 +45,10 @@ $labourColor:#e74c3c;
     padding-bottom: 20px;
     padding-top: 50px;
     @include transition(1s);
-//    h3 {
-//        color: $party;
-//    }
+    //    h3 {
+    //        color: $party;
+    //    }
+
 }
 //---------------------------------------------------
  html {
@@ -145,6 +146,9 @@ hr {
     font-size: 22px;
     letter-spacing: 1px;
 }
+.headerLink {
+    margin-top: 70px;
+}
 #headerwrap {
     background-color: $primaryColor;
     margin-top: -10px;
@@ -152,6 +156,12 @@ hr {
     text-align: center;
     min-height: 500px;
     width: 100%;
+}
+#headerwrap a {
+    color: #000;
+}
+#headerwrap a:hover {
+    color: lighten($primaryColor, 25);
 }
 #headerwrap h1 {
     color: white;
@@ -452,7 +462,7 @@ hr {
 .logo {
     display: block;
     margin: 0 auto;
-    width: 15%;
+    max-width: 100%;
 }
 .logoFooter {
     width: 8%;
