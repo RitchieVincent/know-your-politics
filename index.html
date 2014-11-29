@@ -53,7 +53,7 @@
     <div id="headerwrap">
         <div class="container">
             <div class="row centered">
-            <img src="img/logo.svg" class="logo" />
+                <img src="img/logo.svg" class="logo" />
                 <div class="col-lg-10 col-lg-offset-1">
                     <h1><b>Know your politics?</b></h1>
                     <h2>Take our test and find out!</h2>
@@ -175,30 +175,35 @@
     <div id="selectedSection" class="hiddenSteps">
         <div class="row">
             <div class="container">
-                <div class="col-lg-3">
-                    <div id="labourSelectedImage" class="partySelectedImage labourSelectedSectionImage hiddenSteps">
-                        <img src="img/labourIconWhite.png" class="partyIcon" />
+                <div class="col-lg-2 col-lg-offset-5">
+                    <div id="labourSelectedImage" class="labourSelectedSectionImage hiddenSteps">
+                        <img src="img/labourIconWhite.png" class="partySelectedImage" />
                     </div>
-                    <div id="conservativeSelectedImage" class="partySelectedImage conservativeSelectedSectionImage hiddenSteps">
-                        <img src="img/conservativeIconWhite.png" class="partyIcon" />
+                    <div id="conservativeSelectedImage" class="conservativeSelectedSectionImage hiddenSteps">
+                        <img src="img/conservativeIconWhite.png" class="partySelectedImage" />
                     </div>
-                    <div id="libdemSelectedImage" class="partySelectedImage libdemSelectedSectionImage hiddenSteps">
-                        <img src="img/libdemIconWhite.png" class="partyIcon" />
+                    <div id="libdemSelectedImage" class="libdemSelectedSectionImage hiddenSteps">
+                        <img src="img/libdemIconWhite.png" class="partySelectedImage" />
                     </div>
-                    <div id="ukipSelectedImage" class="partySelectedImage ukipSelectedSectionImage hiddenSteps">
-                        <img src="img/ukipIconWhite.png" class="partyIcon" />
+                    <div id="ukipSelectedImage" class="ukipSelectedSectionImage hiddenSteps">
+                        <img src="img/ukipIconWhite.png" class="partySelectedImage" />
                     </div>
-                    <div id="novoteSelectedImage" class="partySelectedImage novoteSelectedSectionImage hiddenSteps">
-                        <i class="fa fa-question partyIcon"></i>
+                    <div id="novoteSelectedImage" class="novoteSelectedSectionImage hiddenSteps">
+                        <i class="fa fa-question partySelectedImage"></i>
                     </div>
                 </div>
-                <div class="col-lg-6 selectedPartyTitle centered">
+            </div>
+        </div>
+        <div class="row centered">
+            <div class="container">
+                <div class="col-lg-10 col-lg-offset-1 selectedPartyTitle">
 
                 </div>
             </div>
         </div>
     </div>
     <!-- selectedSection -->
+    <div class="loadingBar"></div>
 
     <div id="questionSection" class="hiddenSteps">
         <div class="container">
@@ -207,7 +212,13 @@
                     <div class="well" id="theQuestions">
 
                     </div>
+                </div>
+            </div>
+            <div class="row centered">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <div class="well correctParty">
 
+                    </div>
                 </div>
             </div>
             <div class="row centered">
@@ -222,8 +233,6 @@
             </div>
         </div>
     </div>
-
-
 
 
     <!-- FOOTER -->
@@ -253,8 +262,9 @@
     <!-- Bootstrap core JavaScript
 ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="javascripts/script.js"></script>
+    <!--Loads the questions external file-->
     <script src="javascripts/questions.json"></script>
     <script src="javascripts/bootstrap.js"></script>
 </body>
