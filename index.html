@@ -182,6 +182,8 @@
     </div>
     <!-- container -->
 
+
+    <!---------------------------Begin selectedSection------------------------------->
     <div id="selectedSection" class="hiddenSteps">
         <div class="row">
             <div class="container">
@@ -212,10 +214,7 @@
             </div>
         </div>
     </div>
-    <!-- selectedSection -->
-<!--  <div class="loadingBar"></div>-->
-
-
+    <!---------------------------End selectedSection------------------------------->
     <!---------------------------Begin question section---------------------------->
     <div id="questionSection" class="hiddenSteps testClass">
         <div class="container">
@@ -237,15 +236,26 @@
                 <div class="col-lg-2 col-md-offset-4">
                     <button type="button" class="agreeBtn choiceBtn" id="agreeChoice"><i class="fa fa-check"></i>
                     </button>
+                    <!--correctAudio attribution: https://www.freesound.org/people/Bertrof/sounds/131660/-->
+                    <audio id="correctAudio" src="audio/correct.mp3"></audio>
                 </div>
                 <div class="col-lg-2">
                     <button type="button" class="disagreeBtn choiceBtn" id="disagreeChoice"><i class="fa fa-times"></i>
                     </button>
+                    <audio id="incorrectAudio" src="audio/incorrect.mp3"></audio>
                 </div>
             </div>
         </div>
     </div>
     <!--------------------------------End question section---------------------------------->
+    <div class="loadingBarHolder">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="loadingBar"></div>
+            </div>
+        </div>
+        <audio id="timeUpAudio" src="audio/timeUp.mp3"></audio>
+    </div>
     <!--------------------------------Begin result section--------------------------------->
     <div id="resultSection" class="hiddenSteps">
         <div class="container">
@@ -260,6 +270,7 @@
                 </div>
             </div>
         </div>
+        <audio id="resultAudio" src="audio/result.mp3"></audio>
     </div>
     <!----------------------------------End result section------------------------------>
     <!----------------------------------Begin footer------------------------------------>

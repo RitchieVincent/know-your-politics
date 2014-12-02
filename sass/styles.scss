@@ -460,19 +460,21 @@ hr {
     visibility: hidden;
     width: 100%;
     height: 10px;
-    background: white;
+    background: $primaryColor;
     -webkit-transform: translate3d(-100%, 0, 0);
     transform: translate3d(-100%, 0, 0);
 }
 .loadingBarAnimate {
     visibility: visible;
     z-index: 100;
-    opacity: 0;
-    -webkit-transition: -webkit-transform 4s ease-in, opacity 1s 3.5s;
-    transition: transform 4s ease-in, opacity 1s 3.5s;
+    -webkit-transition: -webkit-transform 10s ease-in;
+    transition: transform 10s ease-in;
     -webkit-transform: translate3d(0%, 0, 0);
     transform: translate3d(0%, 0, 0);
-    margin-bottom: -10px;
+}
+.loadingBarHolder {
+    height: 10px;
+    background-color: $footerBg;
 }
 .correctParty {
     margin-top: -20px;
