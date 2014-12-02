@@ -8026,12 +8026,12 @@ button.close {
     display: none !important;
   }
 }
-/* line 54, ../sass/styles.scss */
+/* line 50, ../sass/styles.scss */
 html {
   margin-top: -60px;
 }
 
-/* line 57, ../sass/styles.scss */
+/* line 53, ../sass/styles.scss */
 body {
   background-color: #eaeaea;
   font-family: 'Lato', sans-serif;
@@ -8045,7 +8045,7 @@ body {
 }
 
 /* Titles */
-/* line 70, ../sass/styles.scss */
+/* line 66, ../sass/styles.scss */
 h1,
 h2,
 h3,
@@ -8058,19 +8058,19 @@ h6 {
 }
 
 /* Paragraph & Typographic */
-/* line 82, ../sass/styles.scss */
+/* line 78, ../sass/styles.scss */
 p {
   line-height: 28px;
   margin-bottom: 25px;
 }
 
-/* line 86, ../sass/styles.scss */
+/* line 82, ../sass/styles.scss */
 .centered {
   text-align: center;
 }
 
 /* Links */
-/* line 91, ../sass/styles.scss */
+/* line 87, ../sass/styles.scss */
 a {
   color: #f85c37;
   word-wrap: break-word;
@@ -8081,7 +8081,7 @@ a {
   transition: color 0.1s ease-in, background 0.1s ease-in;
 }
 
-/* line 100, ../sass/styles.scss */
+/* line 96, ../sass/styles.scss */
 a:hover,
 a:focus {
   color: #7b7b7b;
@@ -8089,7 +8089,7 @@ a:focus {
   outline: 0;
 }
 
-/* line 106, ../sass/styles.scss */
+/* line 102, ../sass/styles.scss */
 a:before,
 a:after {
   -webkit-transition: color 0.1s ease-in, background 0.1s ease-in;
@@ -8099,7 +8099,7 @@ a:after {
   transition: color 0.1s ease-in, background 0.1s ease-in;
 }
 
-/* line 114, ../sass/styles.scss */
+/* line 110, ../sass/styles.scss */
 hr {
   display: block;
   height: 1px;
@@ -8109,12 +8109,12 @@ hr {
   padding: 0;
 }
 
-/* line 122, ../sass/styles.scss */
+/* line 118, ../sass/styles.scss */
 .hrQuestions {
   border-top: 1px solid #2d2d2d;
 }
 
-/* line 125, ../sass/styles.scss */
+/* line 121, ../sass/styles.scss */
 .navbar {
   font-weight: 800;
   font-size: 14px;
@@ -8122,18 +8122,18 @@ hr {
   padding-bottom: 15px;
 }
 
-/* line 131, ../sass/styles.scss */
+/* line 127, ../sass/styles.scss */
 .navbar-inverse {
   background: #2d2d2d;
   border-color: #2d2d2d;
 }
 
-/* line 135, ../sass/styles.scss */
+/* line 131, ../sass/styles.scss */
 .navbar-inverse .navbar-nav > .active > a {
   background: #ff7878;
 }
 
-/* line 138, ../sass/styles.scss */
+/* line 134, ../sass/styles.scss */
 .navbar-inverse .navbar-brand {
   color: #999999;
   font-weight: bolder;
@@ -8141,19 +8141,19 @@ hr {
   letter-spacing: 1px;
 }
 
-/* line 144, ../sass/styles.scss */
+/* line 140, ../sass/styles.scss */
 .navbar-inverse .navbar-brand i {
   color: #ff7878;
   font-size: 22px;
   letter-spacing: 1px;
 }
 
-/* line 149, ../sass/styles.scss */
+/* line 145, ../sass/styles.scss */
 .headerLink {
   margin-top: 70px;
 }
 
-/* line 152, ../sass/styles.scss */
+/* line 148, ../sass/styles.scss */
 #headerwrap {
   background-color: #009688;
   margin-top: -10px;
@@ -8163,25 +8163,25 @@ hr {
   width: 100%;
 }
 
-/* line 160, ../sass/styles.scss */
+/* line 156, ../sass/styles.scss */
 #headerwrap a {
   color: #000;
 }
 
-/* line 163, ../sass/styles.scss */
+/* line 159, ../sass/styles.scss */
 #headerwrap a:hover {
   color: #17ffe9;
 }
 
-/* line 166, ../sass/styles.scss */
+/* line 162, ../sass/styles.scss */
 #headerwrap h1 {
   color: white;
-  font-size: 90px;
+  font-size: 8em;
   font-weight: 300;
   letter-spacing: 3px;
 }
 
-/* line 172, ../sass/styles.scss */
+/* line 168, ../sass/styles.scss */
 #headerwrap h2 {
   color: white;
   font-size: 40px;
@@ -8191,13 +8191,13 @@ hr {
   text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.4);
 }
 
-/* line 180, ../sass/styles.scss */
+/* line 176, ../sass/styles.scss */
 #headerwrap h3 {
   font-weight: 400;
 }
 
 /* Light Grey */
-/* line 185, ../sass/styles.scss */
+/* line 181, ../sass/styles.scss */
 #lg {
   background: #ebebeb;
   padding-top: 70px;
@@ -8205,12 +8205,12 @@ hr {
   text-align: center;
 }
 
-/* line 191, ../sass/styles.scss */
+/* line 187, ../sass/styles.scss */
 #lg h4 {
   font-weight: 700;
 }
 
-/* line 194, ../sass/styles.scss */
+/* line 190, ../sass/styles.scss */
 .labourQuestionSection {
   background: #e74c3c;
   padding-bottom: 20px;
@@ -8220,7 +8220,7 @@ hr {
   transition: 1s;
 }
 
-/* line 197, ../sass/styles.scss */
+/* line 193, ../sass/styles.scss */
 .conservativeQuestionSection {
   background: #3498db;
   padding-bottom: 20px;
@@ -8230,7 +8230,7 @@ hr {
   transition: 1s;
 }
 
-/* line 200, ../sass/styles.scss */
+/* line 196, ../sass/styles.scss */
 .libdemQuestionSection {
   background: #F7E041;
   padding-bottom: 20px;
@@ -8240,7 +8240,7 @@ hr {
   transition: 1s;
 }
 
-/* line 203, ../sass/styles.scss */
+/* line 199, ../sass/styles.scss */
 .ukipQuestionSection {
   background: #9b59b6;
   padding-bottom: 20px;
@@ -8250,7 +8250,7 @@ hr {
   transition: 1s;
 }
 
-/* line 206, ../sass/styles.scss */
+/* line 202, ../sass/styles.scss */
 .novoteQuestionSection {
   background: #7f8c8d;
   padding-bottom: 20px;
@@ -8261,71 +8261,71 @@ hr {
 }
 
 /* Footer Wrap */
-/* line 211, ../sass/styles.scss */
+/* line 207, ../sass/styles.scss */
 #footer {
   background: #2d2d2d;
   padding-top: 30px;
   padding-bottom: 30px;
 }
 
-/* line 216, ../sass/styles.scss */
+/* line 212, ../sass/styles.scss */
 #footer i {
   color: #bdbdbd;
   font-size: 30px;
   padding: 20px;
 }
 
-/* line 221, ../sass/styles.scss */
+/* line 217, ../sass/styles.scss */
 #footer i:hover {
   color: #009688;
 }
 
-/* line 224, ../sass/styles.scss */
+/* line 220, ../sass/styles.scss */
 #footer h3 {
   color: #009688;
   font-weight: 700;
 }
 
-/* line 228, ../sass/styles.scss */
+/* line 224, ../sass/styles.scss */
 #footer h4 {
   color: #6d6d6d;
 }
 
 /****** SECTIONS *****/
-/* line 233, ../sass/styles.scss */
+/* line 229, ../sass/styles.scss */
 .w {
   padding-top: 35px;
 }
 
-/* line 236, ../sass/styles.scss */
+/* line 232, ../sass/styles.scss */
 .w h4 {
   font-weight: 700;
 }
 
-/* line 239, ../sass/styles.scss */
+/* line 235, ../sass/styles.scss */
 .desc {
   padding-top: 35px;
 }
 
-/* line 242, ../sass/styles.scss */
+/* line 238, ../sass/styles.scss */
 .desc h4 {
   font-weight: 700;
 }
 
-/* line 245, ../sass/styles.scss */
+/* line 241, ../sass/styles.scss */
 .desc i {
   color: #ff7878;
   font-size: 12px;
   padding: 5px;
 }
 
-/* line 250, ../sass/styles.scss */
+/* line 246, ../sass/styles.scss */
 .partyIcon {
   width: 100%;
   padding: 20px;
 }
 
-/* line 254, ../sass/styles.scss */
+/* line 250, ../sass/styles.scss */
 .partySelectedImage {
   width: 75%;
   display: block;
@@ -8333,43 +8333,43 @@ hr {
   margin-top: 50px;
 }
 
-/* line 260, ../sass/styles.scss */
+/* line 256, ../sass/styles.scss */
 .partyIconCircle {
   width: 150px;
   height: 150px;
   margin: 0 auto;
 }
 
-/* line 265, ../sass/styles.scss */
+/* line 261, ../sass/styles.scss */
 .labourText,
 .wellLabour i {
   color: #e74c3c;
 }
 
-/* line 269, ../sass/styles.scss */
+/* line 265, ../sass/styles.scss */
 .conservativeText,
 .wellConservative i {
   color: #3498db;
 }
 
-/* line 273, ../sass/styles.scss */
+/* line 269, ../sass/styles.scss */
 .libdemText,
 .wellLibdem i {
   color: #F7E041;
 }
 
-/* line 277, ../sass/styles.scss */
+/* line 273, ../sass/styles.scss */
 .ukipText,
 .wellUkip i {
   color: #9b59b6;
 }
 
-/* line 281, ../sass/styles.scss */
+/* line 277, ../sass/styles.scss */
 .labourTextAlign {
   height: 0.01em;
 }
 
-/* line 284, ../sass/styles.scss */
+/* line 280, ../sass/styles.scss */
 .wellLabour,
 .wellConservative,
 .wellLibdem,
@@ -8378,35 +8378,35 @@ hr {
   -webkit-transition: 0.5s;
   -moz-transition: 0.5s;
   transition: 0.5s;
-  box-shadow: 0px 2px 2px 0 rgba(0, 0, 0, 0.12);
+  border: 1px solid #d8d8d8;
 }
 
-/* line 292, ../sass/styles.scss */
+/* line 288, ../sass/styles.scss */
 .wellLabour:hover {
   border: 1px solid #ef8b80;
 }
 
-/* line 295, ../sass/styles.scss */
+/* line 291, ../sass/styles.scss */
 .wellConservative:hover {
   border: 1px solid #75b9e7;
 }
 
-/* line 298, ../sass/styles.scss */
+/* line 294, ../sass/styles.scss */
 .wellLibdem:hover {
   border: 1px solid #f7e146;
 }
 
-/* line 301, ../sass/styles.scss */
+/* line 297, ../sass/styles.scss */
 .wellUkip:hover {
   border: 1px solid #bb8ecd;
 }
 
-/* line 304, ../sass/styles.scss */
+/* line 300, ../sass/styles.scss */
 .wellNoPreference:hover {
   border: 1px solid #a7b0b1;
 }
 
-/* line 307, ../sass/styles.scss */
+/* line 303, ../sass/styles.scss */
 .btn {
   color: #fff;
   text-decoration: none;
@@ -8422,123 +8422,113 @@ hr {
   transition: 0.25s;
 }
 
-/* line 317, ../sass/styles.scss */
+/* line 313, ../sass/styles.scss */
 .wellLabour .btn {
   background-color: #e74c3c;
-  -webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 1px 2px 0 rgba(0, 0, 0, 0.24);
-  -moz-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 1px 2px 0 rgba(0, 0, 0, 0.24);
-  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 1px 2px 0 rgba(0, 0, 0, 0.24);
 }
 
-/* line 321, ../sass/styles.scss */
+/* line 316, ../sass/styles.scss */
 .wellConservative .btn {
   background-color: #3498db;
-  -webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 1px 2px 0 rgba(0, 0, 0, 0.24);
-  -moz-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 1px 2px 0 rgba(0, 0, 0, 0.24);
-  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 1px 2px 0 rgba(0, 0, 0, 0.24);
+}
+
+/* line 319, ../sass/styles.scss */
+.wellLibdem .btn {
+  background-color: #F7E041;
+}
+
+/* line 322, ../sass/styles.scss */
+.wellUkip .btn {
+  background-color: #9b59b6;
 }
 
 /* line 325, ../sass/styles.scss */
-.wellLibdem .btn {
-  background-color: #F7E041;
-  -webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 1px 2px 0 rgba(0, 0, 0, 0.24);
-  -moz-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 1px 2px 0 rgba(0, 0, 0, 0.24);
-  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 1px 2px 0 rgba(0, 0, 0, 0.24);
-}
-
-/* line 329, ../sass/styles.scss */
-.wellUkip .btn {
-  background-color: #9b59b6;
-  -webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 1px 2px 0 rgba(0, 0, 0, 0.24);
-  -moz-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 1px 2px 0 rgba(0, 0, 0, 0.24);
-  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 1px 2px 0 rgba(0, 0, 0, 0.24);
-}
-
-/* line 333, ../sass/styles.scss */
 .novoteBtn {
   background-color: #7f8c8d;
-  -webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 1px 2px 0 rgba(0, 0, 0, 0.24);
-  -moz-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 1px 2px 0 rgba(0, 0, 0, 0.24);
-  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 1px 2px 0 rgba(0, 0, 0, 0.24);
 }
 
-/* line 337, ../sass/styles.scss */
+/* line 328, ../sass/styles.scss */
 .wellLabour .btn:hover {
   background-color: #bf2718;
 }
 
-/* line 340, ../sass/styles.scss */
+/* line 331, ../sass/styles.scss */
 .wellConservative .btn:hover {
   background-color: #1d6fa5;
 }
 
-/* line 343, ../sass/styles.scss */
+/* line 334, ../sass/styles.scss */
 .wellLibdem .btn:hover {
   background-color: #e2c70a;
 }
 
-/* line 346, ../sass/styles.scss */
+/* line 337, ../sass/styles.scss */
 .wellUkip .btn:hover {
   background-color: #713b87;
 }
 
-/* line 349, ../sass/styles.scss */
+/* line 340, ../sass/styles.scss */
 .novoteBtn:hover {
   background-color: #5a6465;
 }
 
-/* line 352, ../sass/styles.scss */
+/* line 343, ../sass/styles.scss */
 .partyBtn {
   text-transform: uppercase;
   font-size: 0.9em;
 }
 
-/* line 356, ../sass/styles.scss */
+/* line 347, ../sass/styles.scss */
 .partyBtn:focus {
   outline: 0;
 }
 
-/* line 360, ../sass/styles.scss */
+/* line 351, ../sass/styles.scss */
 .labourChoice {
   background-color: #e74c3c;
+  padding-bottom: 30px;
+}
+
+/* line 354, ../sass/styles.scss */
+.conservativeChoice {
+  background-color: #3498db;
+  padding-bottom: 30px;
+}
+
+/* line 357, ../sass/styles.scss */
+.libdemChoice {
+  background-color: #F7E041;
+  padding-bottom: 30px;
+}
+
+/* line 360, ../sass/styles.scss */
+.ukipChoice {
+  background-color: #9b59b6;
+  padding-bottom: 30px;
 }
 
 /* line 363, ../sass/styles.scss */
-.conservativeChoice {
-  background-color: #3498db;
+.noChoice {
+  background-color: #7f8c8d;
+  padding-bottom: 30px;
 }
 
 /* line 366, ../sass/styles.scss */
-.libdemChoice {
-  background-color: #F7E041;
-}
-
-/* line 369, ../sass/styles.scss */
-.ukipChoice {
-  background-color: #9b59b6;
-}
-
-/* line 372, ../sass/styles.scss */
-.noChoice {
-  background-color: #7f8c8d;
-}
-
-/* line 375, ../sass/styles.scss */
 .hiddenSteps {
   display: none;
 }
 
-/* line 378, ../sass/styles.scss */
+/* line 369, ../sass/styles.scss */
 ::selection {
   background: #00b09f;
 }
 
-/* line 381, ../sass/styles.scss */
+/* line 372, ../sass/styles.scss */
 ::-moz-selection {
   background: #00b09f;
 }
 
-/* line 384, ../sass/styles.scss */
+/* line 375, ../sass/styles.scss */
 .headerDownBtn,
 .agreeBtn,
 .disagreeBtn {
@@ -8547,9 +8537,6 @@ hr {
   width: 56px;
   height: 56px;
   min-width: 56px;
-  -webkit-box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.12), 0 1px 10px 0 rgba(0, 0, 0, 0.24);
-  -moz-box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.12), 0 1px 10px 0 rgba(0, 0, 0, 0.24);
-  box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.12), 0 1px 10px 0 rgba(0, 0, 0, 0.24);
   background-color: #ffffff;
   outline: 0;
   outline-offset: 0;
@@ -8560,33 +8547,33 @@ hr {
   line-height: 1.7em;
 }
 
-/* line 402, ../sass/styles.scss */
+/* line 390, ../sass/styles.scss */
 .headerDownBtn i,
 .agreeBtn i,
 .disagreeBtn i {
   font-size: 1.7em;
 }
 
-/* line 407, ../sass/styles.scss */
+/* line 395, ../sass/styles.scss */
 .headerDownBtn:hover {
   background-color: #00635a;
   color: #fff;
   cursor: pointer;
 }
 
-/* line 412, ../sass/styles.scss */
+/* line 400, ../sass/styles.scss */
 .agreeBtn {
   background-color: #eaeaea;
   color: #2d2d2d;
 }
 
-/* line 416, ../sass/styles.scss */
+/* line 404, ../sass/styles.scss */
 .disagreeBtn {
   background-color: #2d2d2d;
   color: #fff;
 }
 
-/* line 420, ../sass/styles.scss */
+/* line 408, ../sass/styles.scss */
 .agreeBtn:hover,
 .agreeBtn:focus,
 .agreeBtn:active {
@@ -8594,7 +8581,7 @@ hr {
   color: #009688;
 }
 
-/* line 426, ../sass/styles.scss */
+/* line 414, ../sass/styles.scss */
 .disagreeBtn:hover,
 .disagreeBtn:focus,
 .disagreeBtn:active {
@@ -8602,62 +8589,61 @@ hr {
   color: #009688;
 }
 
-/* line 432, ../sass/styles.scss */
+/* line 420, ../sass/styles.scss */
 .underHeader {
   height: 200px;
   background-color: #009688;
   margin-bottom: -180px;
 }
 
-/* line 437, ../sass/styles.scss */
+/* line 425, ../sass/styles.scss */
 #novoteSelectedImage i {
   font-size: 9em;
   height: 200px;
   padding-left: 50px;
 }
 
-/* line 442, ../sass/styles.scss */
+/* line 430, ../sass/styles.scss */
 .selectedPartyTitle h1 {
-  color: #eaeaea;
+  color: #2d2d2d;
   font-weight: 700;
   text-transform: uppercase;
   margin-top: 40px;
-  text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.2);
 }
 
-/* line 449, ../sass/styles.scss */
+/* line 436, ../sass/styles.scss */
 #theQuestions h3 {
   font-family: 'Lato', sans-serif;
   font-weight: 400;
   color: #000;
 }
 
-/* line 454, ../sass/styles.scss */
+/* line 441, ../sass/styles.scss */
 .agreeText {
   color: #009688;
   font-size: 1.5em;
 }
 
-/* line 458, ../sass/styles.scss */
+/* line 445, ../sass/styles.scss */
 .disagreeText {
   color: #00635a;
   font-size: 1.5em;
 }
 
-/* line 462, ../sass/styles.scss */
+/* line 449, ../sass/styles.scss */
 .logo {
   display: block;
   margin: 0 auto;
   max-width: 100%;
 }
 
-/* line 467, ../sass/styles.scss */
+/* line 454, ../sass/styles.scss */
 .logoFooter {
   width: 8%;
   margin-top: -7px;
 }
 
-/* line 471, ../sass/styles.scss */
+/* line 458, ../sass/styles.scss */
 .loadingBar {
   z-index: -1;
   visibility: hidden;
@@ -8668,7 +8654,7 @@ hr {
   transform: translate3d(-100%, 0, 0);
 }
 
-/* line 480, ../sass/styles.scss */
+/* line 467, ../sass/styles.scss */
 .loadingBarAnimate {
   visibility: visible;
   z-index: 100;
@@ -8680,7 +8666,7 @@ hr {
   margin-bottom: -10px;
 }
 
-/* line 490, ../sass/styles.scss */
+/* line 477, ../sass/styles.scss */
 .correctParty {
   margin-top: -20px;
   border-radius: 0;
@@ -8692,9 +8678,34 @@ hr {
   box-shadow: none;
 }
 
-/* line 500, ../sass/styles.scss */
+/* line 487, ../sass/styles.scss */
 #theQuestions {
   box-shadow: none;
   border: 0;
   border-radius: 0;
+}
+
+/* line 492, ../sass/styles.scss */
+#resultSection {
+  background-color: #009688;
+  margin-top: -10px;
+}
+/* line 495, ../sass/styles.scss */
+#resultSection h1 {
+  font-weight: 700;
+  color: #eaeaea;
+  font-size: 4em;
+  margin-bottom: 40px;
+}
+
+/* line 502, ../sass/styles.scss */
+.scoreNumber {
+  font-size: 2em;
+  color: #fff;
+  line-height: 2em;
+}
+
+/* line 507, ../sass/styles.scss */
+.scoreNumber2 {
+  color: #fff;
 }

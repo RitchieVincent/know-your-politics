@@ -21,6 +21,7 @@ $labourColor:#e74c3c;
 //Mixins---------------------------------------------
 @mixin choiceStyle($choice) {
     background-color: $choice;
+    padding-bottom: 30px;
 }
 @mixin transition($time) {
     -webkit-transition: $time;
@@ -35,11 +36,6 @@ $labourColor:#e74c3c;
 @mixin partyBtnHover($party) {
     background-color: darken($party, 15)
 }
-@mixin buttonShadow() {
-    -webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 1px 2px 0 rgba(0, 0, 0, 0.24);
-    -moz-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 1px 2px 0 rgba(0, 0, 0, 0.24);
-    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 1px 2px 0 rgba(0, 0, 0, 0.24);
-}
 @mixin questionSection($party) {
     background: $party;
     padding-bottom: 20px;
@@ -51,7 +47,7 @@ $labourColor:#e74c3c;
 
 }
 //---------------------------------------------------
- html {
+html {
     margin-top: -60px;
 }
 body {
@@ -165,7 +161,7 @@ hr {
 }
 #headerwrap h1 {
     color: white;
-    font-size: 90px;
+    font-size: 8em;
     font-weight: 300;
     letter-spacing: 3px;
 }
@@ -287,7 +283,7 @@ hr {
 .wellUkip,
 .wellNoPreference {
     @include transition(0.5s);
-    box-shadow: 0px 2px 2px 0 rgba(0, 0, 0, 0.12);
+    border: 1px solid rgb(216, 216, 216);
 }
 .wellLabour:hover {
     border: 1px solid lighten($labourColor, 15);
@@ -316,23 +312,18 @@ hr {
 }
 .wellLabour .btn {
     background-color: $labourColor;
-    @include buttonShadow();
 }
 .wellConservative .btn {
     background-color: $conservativeColor;
-    @include buttonShadow();
 }
 .wellLibdem .btn {
     background-color: $libdemColor;
-    @include buttonShadow();
 }
 .wellUkip .btn {
     background-color: $ukipColor;
-    @include buttonShadow();
 }
 .novoteBtn {
     background-color: $novoteColor;
-    @include buttonShadow();
 }
 .wellLabour .btn:hover {
     @include partyBtnHover($labourColor);
@@ -389,9 +380,6 @@ hr {
     width: 56px;
     height: 56px;
     min-width: 56px;
-    -webkit-box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.12), 0 1px 10px 0 rgba(0, 0, 0, 0.24);
-    -moz-box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.12), 0 1px 10px 0 rgba(0, 0, 0, 0.24);
-    box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.12), 0 1px 10px 0 rgba(0, 0, 0, 0.24);
     background-color: #ffffff;
     outline: 0;
     outline-offset: 0;
@@ -440,11 +428,10 @@ hr {
     padding-left: 50px;
 }
 .selectedPartyTitle h1 {
-    color: $bgColour;
+    color: $footerBg;
     font-weight: 700;
     text-transform: uppercase;
     margin-top: 40px;
-    text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.2);
 }
 #theQuestions h3 {
     font-family: 'Lato', sans-serif;
@@ -501,4 +488,22 @@ hr {
     box-shadow: none;
     border: 0;
     border-radius: 0;
+}
+#resultSection {
+    background-color: $primaryColor;
+    margin-top: -10px;
+    h1 {
+        font-weight: 700;
+        color: $bgColour;
+        font-size: 4em;
+        margin-bottom: 40px;
+    }
+}
+.scoreNumber {
+    font-size: 2em;
+    color: #fff;
+    line-height: 2em;
+}
+.scoreNumber2 {
+    color: #fff;
 }

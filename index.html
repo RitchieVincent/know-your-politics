@@ -64,7 +64,7 @@
                 </div>
             </div>
             <div class="row centered">
-                <div class="col-lg-10 col-lg-offset-1">
+                <div class="col-lg-12">
                     <h1><b>Know your politics?</b></h1>
                     <h2>Take our test and find out!</h2>
                     <h3>Choose your party below and let's see if you really know your politics.</h3>
@@ -213,9 +213,11 @@
         </div>
     </div>
     <!-- selectedSection -->
-    <div class="loadingBar"></div>
+<!--  <div class="loadingBar"></div>-->
 
-    <div id="questionSection" class="hiddenSteps">
+
+    <!---------------------------Begin question section---------------------------->
+    <div id="questionSection" class="hiddenSteps testClass">
         <div class="container">
             <div class="row centered">
                 <div class="col-lg-8 col-lg-offset-2">
@@ -243,9 +245,24 @@
             </div>
         </div>
     </div>
-
-
-    <!-- FOOTER -->
+    <!--------------------------------End question section---------------------------------->
+    <!--------------------------------Begin result section--------------------------------->
+    <div id="resultSection" class="hiddenSteps">
+        <div class="container">
+            <div class="row centered">
+                <div class="col-lg-12">
+                    <h1>Results</h1>
+                </div>
+            </div>
+            <div class="row centered">
+                <div class="col-lg-10 col-lg-offset-1">
+                    <p class="scoreNumber"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!----------------------------------End result section------------------------------>
+    <!----------------------------------Begin footer------------------------------------>
     <div id="footer">
         <div class="container">
             <div class="row centered">
@@ -267,7 +284,7 @@
         </div>
         <!-- container -->
     </div>
-    <!-- Footer -->
+    <!---------------------------------End footer------------------------------------->
 
     <!-- Bootstrap core JavaScript
 ================================================== -->
