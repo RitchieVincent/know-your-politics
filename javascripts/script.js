@@ -98,7 +98,7 @@ $(function () { //Wait for the document to be ready
 
             } else {
                 $('.choiceBtn').prop('disabled', true); //Disables the agree/disagree selection buttons so no user can re-click to answer another question
-                $("#questionSection").slideToggle(3000, function () {
+                $("#questionSection").slideUp(3000, function () {
                     resultDisplay();
                 });
             }
@@ -110,6 +110,7 @@ $(function () { //Wait for the document to be ready
             $(".loadingBar").one($.support.transition.end,
                 function () {
                     $(".loadingBar").removeClass("loadingBarAnimate");
+                    $('.choiceBtn').prop('disabled', true);
                     wrongChoiceColour("timeUp", "");
                     newQuestion();
                 });
