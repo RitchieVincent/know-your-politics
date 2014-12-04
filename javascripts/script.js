@@ -1,6 +1,6 @@
 $(function () { //Wait for the document to be ready
 
-    //---------------------------Variables-----------------------------
+    //---------------------------Variables---------------------------------------
     $.fx.speeds.slow = 800; //Sets speeds of transitions
     $.fx.speeds.xslow = 1200;
     var clicked = "1";
@@ -121,7 +121,7 @@ $(function () { //Wait for the document to be ready
 
         function randomQuestion() { //Runs a function that randomises the JSON objects to display a random question
             randomChoice = Math.floor((Math.random() * questionsLength) + 0); //Randomises a number based on the length of the JSON array and stores it in variable randomChoice
-            document.getElementById("theQuestions").innerHTML = "<h3>" + text.questions[randomChoice].question + "</h3>";
+            document.getElementById("theQuestions").innerHTML = "<h3>" + text.questions[randomChoice].question + "</h3><p>Do you agree with this policy?</p>";
             questionParty = text.questions[randomChoice].party; //Sets the party name of the selected question to this variable
             questionCount++; //Raises the question count by 1
             if (text.questions[randomChoice].party == "labourChoice") {
@@ -237,12 +237,6 @@ $(function () { //Wait for the document to be ready
 
 
         function checkQuestion(id, questionParty, choiceClass) {
-            //            var str = questionParty; //Sets the variable to match the question's corresponding party
-            //            var alertParty = str.replace("Choice", ""); //Sets the alertParty variable to remove the "Choice" from the "partynameChoice" string
-            //            String.prototype.capitalise = function () { //This function capitalises the first letter, since once it's removed from the "partynameChoice" string, it is lowercase
-            //                return this.charAt(0).toUpperCase() + this.slice(1);
-            //            }
-            //            alertParty = alertParty.capitalise(); //Runs the capitalise function
             if (id == "agreeChoice") { //If the user has clicked the "Agree" button
                 if (questionParty == choiceClass) { //If the question's party matches the user's chosen party
                     $(".loadingBar").removeClass("loadingBarAnimate");
