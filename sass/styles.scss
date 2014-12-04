@@ -475,6 +475,7 @@ hr {
 .loadingBarHolder {
     height: 10px;
     background-color: $footerBg;
+    overflow: hidden;
 }
 .correctParty {
     margin-top: -20px;

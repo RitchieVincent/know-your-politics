@@ -91,7 +91,7 @@ $(function () { //Wait for the document to be ready
                     randomQuestion(); //Runs the randomQuestion function, passing the randomised number to it, to create a new random number
                     timer();
                     $(".correctParty").html(""); //Removes the content of the answer message
-                    $('.correctParty').fadeTo(200, 0); //Hides the white "Correct" or "Actually this is..." bar
+                    $('.correctParty').fadeTo(200, 0); //Hides the white "Correct" or "Actually this is..." loadingBarAnimate
                 }, 4000); //Waits 4 seconds before running this function
 
                 wait(); //Runs the wait function above

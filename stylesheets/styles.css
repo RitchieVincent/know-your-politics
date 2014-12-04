@@ -8668,9 +8668,10 @@ hr {
 .loadingBarHolder {
   height: 10px;
   background-color: #2d2d2d;
+  overflow: hidden;
 }
 
-/* line 479, ../sass/styles.scss */
+/* line 480, ../sass/styles.scss */
 .correctParty {
   margin-top: -20px;
   border-radius: 0;
@@ -8682,19 +8683,19 @@ hr {
   box-shadow: none;
 }
 
-/* line 489, ../sass/styles.scss */
+/* line 490, ../sass/styles.scss */
 #theQuestions {
   box-shadow: none;
   border: 0;
   border-radius: 0;
 }
 
-/* line 494, ../sass/styles.scss */
+/* line 495, ../sass/styles.scss */
 #resultSection {
   background-color: #009688;
   margin-top: -10px;
 }
-/* line 497, ../sass/styles.scss */
+/* line 498, ../sass/styles.scss */
 #resultSection h1 {
   font-weight: 700;
   color: #eaeaea;
@@ -8702,14 +8703,14 @@ hr {
   margin-bottom: 40px;
 }
 
-/* line 504, ../sass/styles.scss */
+/* line 505, ../sass/styles.scss */
 .scoreNumber {
   font-size: 2em;
   color: #fff;
   line-height: 2em;
 }
 
-/* line 509, ../sass/styles.scss */
+/* line 510, ../sass/styles.scss */
 .scoreNumber2 {
   color: #fff;
 }
