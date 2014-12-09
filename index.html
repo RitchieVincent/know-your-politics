@@ -221,10 +221,8 @@
             <div class="row centered">
                 <div class="col-lg-8 col-lg-offset-2">
                     <div class="loadingBarHolder">
-                        <div class="row">
-                            <div class="col-lg-12">
-                                <div class="loadingBar"></div>
-                            </div>
+                        <div class="col-lg-12">
+                            <div class="loadingBar"></div>
                         </div>
                         <audio id="timeUpAudio" src="audio/timeUp.mp3"></audio>
                     </div>
@@ -233,7 +231,7 @@
             <div class="row centered">
                 <div class="col-lg-8 col-lg-offset-2">
                     <div class="well" id="theQuestions">
-                    
+
                     </div>
                 </div>
             </div>
@@ -271,6 +269,8 @@
             <div class="row centered">
                 <div class="col-lg-10 col-lg-offset-1">
                     <p class="scoreNumber"></p>
+                    <div id="resultsChart"></div>
+                    <h2>Please feel free to refresh the page and have another go!</h2>
                 </div>
             </div>
         </div>
@@ -309,6 +309,7 @@
     <!--Loads the questions external file-->
     <script src="javascripts/questions.json"></script>
     <script src="javascripts/bootstrap.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi?autoload={'modules':[{'name':'visualization','version':'1','packages':['corechart']}]}"></script>
 </body>
 
 </html>

@@ -8033,7 +8033,7 @@ html {
 
 /* line 53, ../sass/styles.scss */
 body {
-  background-color: #eaeaea;
+  background-color: #e4e4e4;
   font-family: 'Lato', sans-serif;
   font-weight: 400;
   font-size: 16px;
@@ -8563,7 +8563,7 @@ hr {
 
 /* line 400, ../sass/styles.scss */
 .agreeBtn {
-  background-color: #eaeaea;
+  background-color: #e4e4e4;
   color: #2d2d2d;
 }
 
@@ -8577,7 +8577,7 @@ hr {
 .agreeBtn:hover,
 .agreeBtn:focus,
 .agreeBtn:active {
-  background-color: #d1d1d1;
+  background-color: #cbcbcb;
   color: #009688;
 }
 
@@ -8673,7 +8673,6 @@ hr {
 
 /* line 480, ../sass/styles.scss */
 .correctParty {
-  margin-top: -20px;
   border-radius: 0;
   background-color: #f5f5f5;
   border: 0;
@@ -8683,11 +8682,12 @@ hr {
   box-shadow: none;
 }
 
-/* line 490, ../sass/styles.scss */
+/* line 489, ../sass/styles.scss */
 #theQuestions {
   box-shadow: none;
   border: 0;
   border-radius: 0;
+  margin-bottom: 0;
 }
 
 /* line 495, ../sass/styles.scss */
@@ -8698,19 +8698,29 @@ hr {
 /* line 498, ../sass/styles.scss */
 #resultSection h1 {
   font-weight: 700;
-  color: #eaeaea;
+  color: #e4e4e4;
   font-size: 4em;
   margin-bottom: 40px;
 }
+/* line 504, ../sass/styles.scss */
+#resultSection h2 {
+  color: white;
+}
 
-/* line 505, ../sass/styles.scss */
+/* line 508, ../sass/styles.scss */
 .scoreNumber {
   font-size: 2em;
   color: #fff;
   line-height: 2em;
 }
 
-/* line 510, ../sass/styles.scss */
+/* line 513, ../sass/styles.scss */
 .scoreNumber2 {
   color: #fff;
+}
+
+/* line 516, ../sass/styles.scss */
+#resultsChart {
+  margin: 0 auto;
+  margin-bottom: 50px;
 }

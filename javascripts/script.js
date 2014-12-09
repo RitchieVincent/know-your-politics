@@ -8,10 +8,14 @@ $(function () { //Wait for the document to be ready
     var questionsLength = Object.keys(text.questions).length; //This variable stores the length of the questions array
     var randomChoice; //This variable stores the random number
     var questionParty; //This variable stores the chosen question's corresponding party
-    var labourCount = 0;
+    var labourCount = 0; //The partyCount variables store how many of that party's questions have been asked
+    var labourCountChosen = 0; //The partyCountChosen variables store how many times the user clicks agree on the wrong party, and that party's name
     var conservativeCount = 0;
+    var conservativeCountChosen = 0;
     var libdemCount = 0;
+    var libdemCountChosen = 0;
     var ukipCount = 0;
+    var ukipCountChosen = 0;
     var correctCount = 0;
     var finalPercent = 0;
     var userScore = 0; //Sets the users score to 0, since it's the start of the quiz!
@@ -85,7 +89,7 @@ $(function () { //Wait for the document to be ready
 
 
         function newQuestion() {
-            if (questionCount < 10) { //Only displays a new question if the question count is below 10
+            if (questionCount < 1) { //Only displays a new question if the question count is below 10
                 var wait = setTimeout(function () {
                     $("#questionSection").removeClass(removedClasses);
                     randomQuestion(); //Runs the randomQuestion function, passing the randomised number to it, to create a new random number
@@ -139,12 +143,48 @@ $(function () { //Wait for the document to be ready
             $('.choiceBtn').prop('disabled', false); //Re-enables the choice button once the new question is displayed
         }
 
-
-
         function zeroCheck(partyName) { //This function checks if the finalPercent value is not a NaN% (Not a Number) error
             if (isNaN(finalPercent)) { //Checks if it's not a number (Which it will be if there have been no questions of the chosen party asked)
                 finalPercent = 0; //Sets the finalPercent to 0 to prevent errors
             }
+        }
+
+        function drawChart(labourCountChosen, ukipCountChosen, libdemCountChosen, conservativeCountChosen) { //Draws the results chart
+            var data = google.visualization.arrayToDataTable([
+                ['Party', 'Amount agreed with'], //Sets the options to partyName, partyCountChosen
+                ['Labour', labourCountChosen],
+                ['UKIP', ukipCountChosen],
+                ['Liberal democrat', libdemCountChosen],
+                ['Conservative', conservativeCountChosen],
+            ]);
+            var options = {
+                pieHole: 0.5,
+                pieSliceTextStyle: {
+                    color: 'black',
+                },
+                colors: ['#e74c3c', '#9b59b6', '#F7E041', '#3498db'],
+                backgroundColor: '#009688',
+                pieSliceBorderColor: '#009688',
+                legend: 'none',
+                chartArea: {
+                    top: 0,
+                    height: 300
+                },
+                height: 300
+            };
+
+            var chart = new google.visualization.PieChart(document.getElementById('resultsChart'));
+            chart.draw(data, options);
+        }
+
+        function displayScores(finalPercent, userScore) {
+            $(".scoreNumber").html("<p>You got " + finalPercent + "% of the " + idClicked + " questions correct.</p>"); //Displays the percent correct to the user
+            $(".scoreNumber").append("<p>Your overall score is: " + userScore + "</p>");
+            //            $(".scoreNumber").append("<p>Labour count " + labourCountChosen + "/" + labourCount + "</p>");
+            //            $(".scoreNumber").append("<p>Conservative count " + conservativeCountChosen + "/" + conservativeCount + "</p>");
+            //            $(".scoreNumber").append("<p>Lib dem count " + libdemCountChosen + "/" + libdemCount + "</p>");
+            //            $(".scoreNumber").append("<p>UKIP count " + ukipCountChosen + "/" + ukipCount + "</p>");
+            drawChart(labourCountChosen, ukipCountChosen, libdemCountChosen, conservativeCountChosen); //Runs the draw chart function
         }
 
         function resultDisplay() {
@@ -156,29 +196,25 @@ $(function () { //Wait for the document to be ready
                 finalPercent = (correctCount / labourCount) * 100; //Takes the amount correctly answered and the amount asked and calculates the percent correctly answered
                 finalPercent = finalPercent.toFixed(); //This converts the number to 0 decimal places
                 zeroCheck(labourCount); //Runs the zeroCheck function
-                $(".scoreNumber").html("<p>You got " + finalPercent + "% of the Labour questions correct.</p>"); //Displays the percent correct to the user
-                $(".scoreNumber").append("<p>Your overall score is: " + userScore + "</p>");
+                displayScores(finalPercent, userScore); //runs the displayScores function
             }
             if (choiceClass == "conservativeChoice") {
                 finalPercent = (correctCount / conservativeCount) * 100;
                 finalPercent = finalPercent.toFixed();
                 zeroCheck(conservativeCount);
-                $(".scoreNumber").html("<p>You got " + finalPercent + "% of the Conservative questions correct.</p>");
-                $(".scoreNumber").append("<p>Your overall score is: " + userScore + "</p>");
+                displayScores(finalPercent, userScore);
             }
             if (choiceClass == "libdemChoice") {
                 finalPercent = (correctCount / libdemCount) * 100;
                 finalPercent = finalPercent.toFixed();
                 zeroCheck(libdemCount);
-                $(".scoreNumber").html("<p>You got " + finalPercent + "% of the Liberal Democrat questions correct.</p>");
-                $(".scoreNumber").append("<p>Your overall score is: " + userScore + "</p>");
+                displayScores(finalPercent, userScore);
             }
             if (choiceClass == "ukipChoice") {
                 finalPercent = (correctCount / ukipCount) * 100;
                 finalPercent = finalPercent.toFixed();
                 zeroCheck(ukipCount);
-                $(".scoreNumber").html("<p>You got " + finalPercent + "% of the UKIP questions correct.</p>");
-                $(".scoreNumber").append("<p>Your overall score is: " + userScore + "</p>");
+                displayScores(finalPercent, userScore);
             }
         }
 
@@ -235,17 +271,34 @@ $(function () { //Wait for the document to be ready
             audioCorrect.play();
         }
 
+        function totalCount(questionParty) { //This function stores the total number of questions asked and answered with the choice agree. Will be used for charts in the results section
+            if (questionParty == "labourChoice") {
+                labourCountChosen++;
+            }
+            if (questionParty == "conservativeChoice") {
+                conservativeCountChosen++;
+            }
+            if (questionParty == "libdemChoice") {
+                libdemCountChosen++;
+            }
+            if (questionParty == "ukipChoice") {
+                ukipCountChosen++;
+            }
+        }
+
 
         function checkQuestion(id, questionParty, choiceClass) {
             if (id == "agreeChoice") { //If the user has clicked the "Agree" button
                 if (questionParty == choiceClass) { //If the question's party matches the user's chosen party
                     $(".loadingBar").removeClass("loadingBarAnimate");
                     userScore++; //Raises the user's score since they got the question correct
-                    correctCount++;
+                    correctCount++; //Raises the user's corrected answers score
+                    totalCount(questionParty); //Runs the totalCount function
                     correctAnswer(); //Runs the correctAnswer function to display the "Correct!" message
                 } else {
                     $(".loadingBar").removeClass("loadingBarAnimate");
                     wrongChoiceColour(questionParty, choiceClass); //Calls the function above that checks the party against the question and changes the background style accordingly
+                    totalCount(questionParty);
                     userScore--; //Lowers the user's score since they got the question incorrect
                 }
             }
