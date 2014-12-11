@@ -12,8 +12,10 @@
     <title>Know your politics?</title>
 
 
+<link rel="stylesheet" href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
     <link href="stylesheets/styles.css" rel="stylesheet">
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="stylesheets/animate.css" rel="stylesheet">
 
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -53,13 +55,13 @@
     <div id="headerwrap">
         <div class="container">
             <div class="row centered">
-                <div class="col-lg-1 col-lg-offset-4 headerLink">
+                <div class="col-lg-1 col-lg-offset-4 headerLink invisible" id="aboutLink">
                     <a href="#">About</a>
                 </div>
                 <div class="col-lg-2">
-                    <img src="img/logo.svg" class="logo" />
+                    <img src="img/logo.svg" class="logo" id="logo" />
                 </div>
-                <div class="col-lg-1 headerLink">
+                <div class="col-lg-1 headerLink invisible" id="contactLink">
                     <a href="#">Contact</a>
                 </div>
             </div>
@@ -97,7 +99,7 @@
                     <p class="labourTextAlign"></p>
                     <!-- Bad code really -->
                     <hr>
-                    <p>Leader: Ed Miliband MP</p>
+                    <p><a href="#" title="That&apos;s what this widget is">Tooltips</a>Current leader: Ed Miliband MP</p>
                     <div class="list-group">
                         <a class="list-group-item" href="http://www.labour.org.uk/" target="_blank"><i class="fa fa-desktop fa-2x"></i></a>
                         <a class="list-group-item" href="https://www.facebook.com/labourparty" target="_blank"><i class="fa fa-facebook fa-2x"></i></a>
@@ -115,7 +117,7 @@
                     </div>
                     <h4>THE <span class="conservativeText">CONSERVATIVE</span> PARTY</h4>
                     <hr>
-                    <p>Leader: David Cameron MP</p>
+                    <p>Current leader: David Cameron MP</p>
                     <div class="list-group">
                         <a class="list-group-item" href="https://www.conservatives.com/" target="_blank"><i class="fa fa-desktop fa-2x"></i></a>
                         <a class="list-group-item" href="https://www.facebook.com/conservatives" target="_blank"><i class="fa fa-facebook fa-2x"></i></a>
@@ -133,7 +135,7 @@
                     </div>
                     <h4>THE <span class="libdemText">LIBERAL</span> DEMOCRATS</h4>
                     <hr>
-                    <p>Leader: Nick Clegg MP</p>
+                    <p>Current leader: Nick Clegg MP</p>
                     <div class="list-group">
                         <a class="list-group-item" href="http://www.libdems.org.uk/" target="_blank"><i class="fa fa-desktop fa-2x"></i></a>
                         <a class="list-group-item" href="https://www.facebook.com/libdems" target="_blank"><i class="fa fa-facebook fa-2x"></i></a>
@@ -151,7 +153,7 @@
                     </div>
                     <h4>THE <span class="ukipText">UNITED</span> KINGDOM INDEPENDENCE PARTY</h4>
                     <hr>
-                    <p>Leader: Nigel Farage MEP</p>
+                    <p>Current leader: Nigel Farage MEP</p>
                     <div class="list-group">
                         <a class="list-group-item" href="http://www.ukip.org" target="_blank"><i class="fa fa-desktop fa-2x"></i></a>
                         <a class="list-group-item" href="https://www.facebook.com/TheUKIP" target="_blank"><i class="fa fa-facebook fa-2x"></i></a>
@@ -305,6 +307,7 @@
 
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
     <script src="javascripts/script.js"></script>
     <!--Loads the questions external file-->
     <script src="javascripts/questions.json"></script>

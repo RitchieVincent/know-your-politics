@@ -1,13 +1,15 @@
 $(function () { //Wait for the document to be ready
 
+$( document ).tooltip();
+
     //---------------------------Variables---------------------------------------
     $.fx.speeds.slow = 800; //Sets speeds of transitions
     $.fx.speeds.xslow = 1200;
     var clicked = "1";
-    var questionCount = 0; //This variable stores how many questions the system has asked
-    var questionsLength = Object.keys(text.questions).length; //This variable stores the length of the questions array
-    var randomChoice; //This variable stores the random number
-    var questionParty; //This variable stores the chosen question's corresponding party
+    var questionCount = 0; //stores how many questions the system has asked
+    var questionsLength = Object.keys(text.questions).length; //stores the length of the questions array
+    var randomChoice; //stores the random number
+    var questionParty; //stores the chosen question's corresponding party
     var labourCount = 0; //The partyCount variables store how many of that party's questions have been asked
     var labourCountChosen = 0; //The partyCountChosen variables store how many times the user clicks agree on the wrong party, and that party's name
     var conservativeCount = 0;
@@ -89,7 +91,7 @@ $(function () { //Wait for the document to be ready
 
 
         function newQuestion() {
-            if (questionCount < 1) { //Only displays a new question if the question count is below 10
+            if (questionCount < 10) { //Only displays a new question if the question count is below 10
                 var wait = setTimeout(function () {
                     $("#questionSection").removeClass(removedClasses);
                     randomQuestion(); //Runs the randomQuestion function, passing the randomised number to it, to create a new random number
@@ -319,4 +321,12 @@ $(function () { //Wait for the document to be ready
 
     });
 
+$( "#logo" ).hover(function() {
+    
+});
+$('#logo').addClass('animated rubberBand');
+    $('#aboutLink').addClass('animated fadeInRight');
+    $('#contactLink').addClass('animated fadeInLeft');
+    $('#aboutLink').removeClass('invisible');
+    $('#contactLink').removeClass('invisible');
 }); //End document ready
