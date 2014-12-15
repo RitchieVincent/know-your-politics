@@ -1,6 +1,6 @@
 $(function () { //Wait for the document to be ready
 
-$( document ).tooltip();
+    $(document).tooltip();
 
     //---------------------------Variables---------------------------------------
     $.fx.speeds.slow = 800; //Sets speeds of transitions
@@ -321,12 +321,97 @@ $( document ).tooltip();
 
     });
 
-$( "#logo" ).hover(function() {
-    
-});
-$('#logo').addClass('animated rubberBand');
+
+    $('#logo').addClass('animated rubberBand');
+    $('.headerTitle').addClass('animated bounceInUp');
+    $('.headerTitle2').addClass('animated bounceInLeft');
+    $('.headerTitle3').addClass('animated bounceInRight');
+    $('.headerDownBtn').addClass('animated flip');
     $('#aboutLink').addClass('animated fadeInRight');
     $('#contactLink').addClass('animated fadeInLeft');
     $('#aboutLink').removeClass('invisible');
     $('#contactLink').removeClass('invisible');
+
+    //Opentip tooltips---------------------------------------------------------------------
+
+    Opentip.styles.labourStyle = {
+        className: "labourTooltip",
+        delay: 0,
+        tipJoint: "bottom",
+        extends: "glass",
+        stemLength: 0
+    };
+    Opentip.styles.conservativeStyle = {
+        className: "conservativeTooltip",
+        delay: 0,
+        tipJoint: "bottom",
+        extends: "glass",
+        stemLength: 0
+    };
+    Opentip.styles.libdemStyle = {
+        className: "libdemTooltip",
+        delay: 0,
+        tipJoint: "bottom",
+        extends: "glass",
+        stemLength: 0
+    };
+    Opentip.styles.ukipStyle = {
+        className: "ukipTooltip",
+        delay: 0,
+        tipJoint: "bottom",
+        extends: "glass",
+        stemLength: 0
+    };
+
+
+    new Opentip(".law", "The Labour Party Website", {
+        style: "labourStyle"
+    })
+    new Opentip(".laf", "The Labour Party Facebook page", {
+        style: "labourStyle"
+    })
+    new Opentip(".lat", "The Labour Party Twitter page", {
+        style: "labourStyle"
+    })
+    new Opentip(".cow", "The Conservative Party Website", {
+        style: "conservativeStyle"
+    })
+    new Opentip(".cof", "The Conservative Party Facebook page", {
+        style: "conservativeStyle"
+    })
+    new Opentip(".cot", "The Conservative Party Twitter page", {
+        style: "conservativeStyle"
+    })
+    new Opentip(".liw", "The Liberal Democrat Party Website", {
+        style: "libdemStyle"
+    })
+    new Opentip(".lif", "The Liberal Democrat Party Facebook page", {
+        style: "libdemStyle"
+    })
+    new Opentip(".lit", "The Liberal Democrat Party Twitter page", {
+        style: "libdemStyle"
+    })
+    new Opentip(".ukw", "The UKIP Website", {
+        style: "ukipStyle"
+    })
+    new Opentip(".ukf", "The UKIP Facebook page", {
+        style: "ukipStyle"
+    })
+    new Opentip(".ukt", "The UKIP Twitter page", {
+        style: "ukipStyle"
+    })
+//    new Opentip("#theQuestions", "You only have 10 seconds!", {
+        //        target: ".loadingBarHolder",
+        //        targetJoint: "top right",
+        //        tipJoint: "top left",
+        //        extends: "dark",
+        //        stemLength: 0,
+        //        delay: 0,
+        //        className: "timerTooltip",
+        //        hideDelay: 2
+        //    })
+
+    //-------------------------------------------------------------------------------------
+
+
 }); //End document ready

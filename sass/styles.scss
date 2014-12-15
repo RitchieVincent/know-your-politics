@@ -7,6 +7,7 @@
 //Fonts----------------------------------------------
 @import url(http://fonts.googleapis.com/css?family=Lato:300,400,700,900);
 @import url(http://fonts.googleapis.com/css?family=Josefin+Sans:300,400,700);
+@import url(http://fonts.googleapis.com/css?family=Luckiest+Guy);
 //---------------------------------------------------
 //Variables------------------------------------------
 $labourColor:#e74c3c;
@@ -34,7 +35,7 @@ $labourColor:#e74c3c;
     box-shadow: $shadow;
 }
 @mixin partyBtnHover($party) {
-    background-color: darken($party, 15)
+    background-color: lighten($party, 15)
 }
 @mixin questionSection($party) {
     background: $party;
@@ -155,15 +156,26 @@ hr {
 }
 #headerwrap a {
     color: #000;
+    text-transform: uppercase;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 600;
 }
 #headerwrap a:hover {
     color: lighten($primaryColor, 25);
 }
+#aboutLink {
+    text-align: right;
+}
+#contactLink {
+    text-align: left;
+}
 #headerwrap h1 {
     color: white;
     font-size: 8em;
-    font-weight: 300;
+    font-family: 'Luckiest Guy', cursive;
+    text-transform: uppercase;
     letter-spacing: 3px;
+    margin-top: -10px;
 }
 #headerwrap h2 {
     color: white;
@@ -175,17 +187,6 @@ hr {
 }
 #headerwrap h3 {
     font-weight: 400;
-}
-/* Light Grey */
-
-#lg {
-    background: #ebebeb;
-    padding-top: 70px;
-    padding-bottom: 70px;
-    text-align: center;
-}
-#lg h4 {
-    font-weight: 700;
 }
 .labourQuestionSection {
     @include questionSection($labourColor);
@@ -202,8 +203,6 @@ hr {
 .novoteQuestionSection {
     @include questionSection($novoteColor);
 }
-/* Footer Wrap */
-
 #footer {
     background: $footerBg;
     padding-top: 30px;
@@ -224,24 +223,8 @@ hr {
 #footer h4 {
     color: lighten($footerBg, 25);
 }
-/****** SECTIONS *****/
-
-.w {
-    padding-top: 35px;
-}
-.w h4 {
+.partyWells h4 {
     font-weight: 700;
-}
-.desc {
-    padding-top: 35px;
-}
-.desc h4 {
-    font-weight: 700;
-}
-.desc i {
-    color: #ff7878;
-    font-size: 12px;
-    padding: 5px;
 }
 .partyIcon {
     width: 100%;
@@ -282,23 +265,24 @@ hr {
 .wellLibdem,
 .wellUkip,
 .wellNoPreference {
-    @include transition(0.5s);
     border: 1px solid rgb(216, 216, 216);
+    box-shadow: none;
+    transition: box-shadow 0.5s;
 }
 .wellLabour:hover {
-    border: 1px solid lighten($labourColor, 15);
+    box-shadow: 0px 0px 3pt 2pt $labourColor;
 }
 .wellConservative:hover {
-    border: 1px solid lighten($conservativeColor, 15);
+    box-shadow: 0px 0px 3pt 2pt $conservativeColor;
 }
 .wellLibdem:hover {
-    border: 1px solid lighten($libdemColor, 1);
+    box-shadow: 0px 0px 3pt 2pt $libdemColor;
 }
 .wellUkip:hover {
-    border: 1px solid lighten($ukipColor, 15);
+    box-shadow: 0px 0px 3pt 2pt $ukipColor;
 }
 .wellNoPreference:hover {
-    border: 1px solid lighten($novoteColor, 15);
+    box-shadow: 0px 0px 3pt 2pt $novoteColor;
 }
 .btn {
     color: #fff;
@@ -459,7 +443,7 @@ hr {
     z-index: -1;
     visibility: hidden;
     width: 100%;
-    height: 10px;
+    height: 25px;
     background: $primaryColor;
     -webkit-transform: translate3d(-100%, 0, 0);
     transform: translate3d(-100%, 0, 0);
@@ -473,18 +457,19 @@ hr {
     transform: translate3d(0%, 0, 0);
 }
 .loadingBarHolder {
-    height: 10px;
+    height: 25px;
     background-color: $footerBg;
     overflow: hidden;
 }
 .correctParty {
     border-radius: 0;
-    background-color: #f5f5f5;
+    background-color: $footerBg;
     border: 0;
-    color: #000;
+    color: #fff;
     height: 30px;
     padding: 0;
     box-shadow: none;
+    opacity: 0;
 }
 #theQuestions {
     box-shadow: none;
@@ -501,7 +486,7 @@ hr {
         font-size: 4em;
         margin-bottom: 40px;
     }
-    h2{
+    h2 {
         color: white;
     }
 }
@@ -516,4 +501,29 @@ hr {
 #resultsChart {
     margin: 0 auto;
     margin-bottom: 50px;
+}
+.opentip-container.style-labourTooltip .opentip {
+    background-color: $labourColor;
+    color: #fff;
+}
+.opentip-container.style-conservativeTooltip .opentip {
+    background-color: $conservativeColor;
+    color: #fff;
+}
+.opentip-container.style-libdemTooltip .opentip {
+    background-color: $libdemColor;
+    color: #000;
+}
+.opentip-container.style-ukipTooltip .opentip {
+    background-color: $ukipColor;
+    color: #fff;
+}
+.opentip-container.style-timerTooltip .opentip {
+    background-color: $footerBg;
+    border-radius: 10px;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 100;
+    text-shadow: none;
 }

@@ -7,12 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="shortcut icon" href="assets/ico/favicon.png">
+    <!--    <link rel="icon" type="image/png" href="img/logo.svg">-->
 
     <title>Know your politics?</title>
 
+    <link href="stylesheets/opentip.css" rel="stylesheet" type="text/css">
 
-<link rel="stylesheet" href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
     <link href="stylesheets/styles.css" rel="stylesheet">
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="stylesheets/animate.css" rel="stylesheet">
@@ -28,48 +28,24 @@
 <body>
 
 
-    <!--
-<div class="navbar navbar-inverse navbar-fixed-top">
-<div class="container">
-<div class="navbar-header">
-<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-<span class="icon-bar"></span>
-<span class="icon-bar"></span>
-<span class="icon-bar"></span>
-</button>
-<a class="navbar-brand" href="#">SP<i class="fa fa-circle"></i>T</a>
-</div>
-<div class="navbar-collapse collapse">
-<ul class="nav navbar-nav navbar-right">
-<li class="active"><a href="index.html">HOME</a></li>
-<li><a href="about.html">ABOUT</a></li>
-<li><a href="services.html">SERVICES</a></li>
-<li><a href="works.html">WORKS</a></li>
-<li><a data-toggle="modal" data-target="#myModal" href="#myModal"><i class="fa fa-envelope-o"></i></a></li>
-</ul>
-</div>
-</div>
-</div>
--->
-
     <div id="headerwrap">
         <div class="container">
             <div class="row centered">
-                <div class="col-lg-1 col-lg-offset-4 headerLink invisible" id="aboutLink">
+                <div class="col-lg-2 col-lg-offset-3 headerLink invisible" id="aboutLink">
                     <a href="#">About</a>
                 </div>
                 <div class="col-lg-2">
-                    <img src="img/logo.svg" class="logo" id="logo" />
+                    <img src="img/logo2.png" class="logo" id="logo" />
                 </div>
-                <div class="col-lg-1 headerLink invisible" id="contactLink">
+                <div class="col-lg-2 headerLink invisible" id="contactLink">
                     <a href="#">Contact</a>
                 </div>
             </div>
             <div class="row centered">
                 <div class="col-lg-12">
-                    <h1><b>Know your politics?</b></h1>
-                    <h2>Take our test and find out!</h2>
-                    <h3>Choose your party below and let's see if you really know your politics.</h3>
+                    <h1 class="headerTitle"><b>Know your politics?</b></h1>
+                    <h2 class="headerTitle2">Take our test and find out!</h2>
+                    <h3 class="headerTitle3">Choose your party below and let's see if you really know your politics.</h3>
                     <br/>
                     <button type="button" class="headerDownBtn"><i class="fa fa-angle-down"></i>
                     </button>
@@ -86,7 +62,7 @@
     </div>
 
 
-    <div class="container w">
+    <div class="container partyWells">
         <div class="row centered">
             <br>
             <br>
@@ -99,11 +75,12 @@
                     <p class="labourTextAlign"></p>
                     <!-- Bad code really -->
                     <hr>
-                    <p><a href="#" title="That&apos;s what this widget is">Tooltips</a>Current leader: Ed Miliband MP</p>
+                    <h4>Current leader</h4>
+                    <p>Ed Miliband MP</p>
                     <div class="list-group">
-                        <a class="list-group-item" href="http://www.labour.org.uk/" target="_blank"><i class="fa fa-desktop fa-2x"></i></a>
-                        <a class="list-group-item" href="https://www.facebook.com/labourparty" target="_blank"><i class="fa fa-facebook fa-2x"></i></a>
-                        <a class="list-group-item" href="https://twitter.com/UKLabour" target="_blank"><i class="fa fa-twitter fa-2x"></i></a>
+                        <a class="list-group-item law" href="http://www.labour.org.uk/" target="_blank"><i class="fa fa-desktop fa-2x"></i></a>
+                        <a class="list-group-item laf" href="https://www.facebook.com/labourparty" target="_blank"><i class="fa fa-facebook fa-2x"></i></a>
+                        <a class="list-group-item lat" href="https://twitter.com/UKLabour" target="_blank"><i class="fa fa-twitter fa-2x"></i></a>
                     </div>
                     <button type="button" class="btn btn-primary btn-lg btn-block partyBtn" id="labourVote">Vote!</button>
                 </div>
@@ -117,11 +94,12 @@
                     </div>
                     <h4>THE <span class="conservativeText">CONSERVATIVE</span> PARTY</h4>
                     <hr>
-                    <p>Current leader: David Cameron MP</p>
+                    <h4>Current leader</h4>
+                    <p>David Cameron MP</p>
                     <div class="list-group">
-                        <a class="list-group-item" href="https://www.conservatives.com/" target="_blank"><i class="fa fa-desktop fa-2x"></i></a>
-                        <a class="list-group-item" href="https://www.facebook.com/conservatives" target="_blank"><i class="fa fa-facebook fa-2x"></i></a>
-                        <a class="list-group-item" href="https://twitter.com/Conservatives" target="_blank"><i class="fa fa-twitter fa-2x"></i></a>
+                        <a class="list-group-item cow" href="https://www.conservatives.com/" target="_blank"><i class="fa fa-desktop fa-2x"></i></a>
+                        <a class="list-group-item cof" href="https://www.facebook.com/conservatives" target="_blank"><i class="fa fa-facebook fa-2x"></i></a>
+                        <a class="list-group-item cot" href="https://twitter.com/Conservatives" target="_blank"><i class="fa fa-twitter fa-2x"></i></a>
                     </div>
                     <button type="button" class="btn btn-primary btn-lg btn-block partyBtn" id="conservativeVote">Vote!</button>
                 </div>
@@ -135,11 +113,12 @@
                     </div>
                     <h4>THE <span class="libdemText">LIBERAL</span> DEMOCRATS</h4>
                     <hr>
-                    <p>Current leader: Nick Clegg MP</p>
+                    <h4>Current leader</h4>
+                    <p>Nick Clegg MP</p>
                     <div class="list-group">
-                        <a class="list-group-item" href="http://www.libdems.org.uk/" target="_blank"><i class="fa fa-desktop fa-2x"></i></a>
-                        <a class="list-group-item" href="https://www.facebook.com/libdems" target="_blank"><i class="fa fa-facebook fa-2x"></i></a>
-                        <a class="list-group-item" href="https://twitter.com/LibDems" target="_blank"><i class="fa fa-twitter fa-2x"></i></a>
+                        <a class="list-group-item liw" href="http://www.libdems.org.uk/" target="_blank"><i class="fa fa-desktop fa-2x"></i></a>
+                        <a class="list-group-item lif" href="https://www.facebook.com/libdems" target="_blank"><i class="fa fa-facebook fa-2x"></i></a>
+                        <a class="list-group-item lit" href="https://twitter.com/LibDems" target="_blank"><i class="fa fa-twitter fa-2x"></i></a>
                     </div>
                     <button type="button" class="btn btn-primary btn-lg btn-block partyBtn" id="libdemVote">Vote!</button>
                 </div>
@@ -153,11 +132,12 @@
                     </div>
                     <h4>THE <span class="ukipText">UNITED</span> KINGDOM INDEPENDENCE PARTY</h4>
                     <hr>
-                    <p>Current leader: Nigel Farage MEP</p>
+                    <h4>Current leader</h4>
+                    <p>Nigel Farage MEP</p>
                     <div class="list-group">
-                        <a class="list-group-item" href="http://www.ukip.org" target="_blank"><i class="fa fa-desktop fa-2x"></i></a>
-                        <a class="list-group-item" href="https://www.facebook.com/TheUKIP" target="_blank"><i class="fa fa-facebook fa-2x"></i></a>
-                        <a class="list-group-item" href="https://twitter.com/UKIP" target="_blank"><i class="fa fa-twitter fa-2x"></i></a>
+                        <a class="list-group-item ukw" href="http://www.ukip.org" target="_blank"><i class="fa fa-desktop fa-2x"></i></a>
+                        <a class="list-group-item ukf" href="https://www.facebook.com/TheUKIP" target="_blank"><i class="fa fa-facebook fa-2x"></i></a>
+                        <a class="list-group-item ukt" href="https://twitter.com/UKIP" target="_blank"><i class="fa fa-twitter fa-2x"></i></a>
                     </div>
                     <button type="button" class="btn btn-primary btn-lg btn-block partyBtn" id="ukipVote">Vote!</button>
                 </div>
@@ -167,17 +147,16 @@
         </div>
         <!-- row -->
         <div class="well wellNoPreference">
-            <div class="container">
-                <div class="row centered">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <h4>NO PREFERENCE</h4>
-                        <p>Alternativeley, if you have no preference for the above parties, you can vote 'No preference' to still take part in this test.</p>
-                        <div class="col-lg-4 col-lg-offset-4">
-                            <button type="button" class="btn btn-primary btn-lg btn-block novoteBtn partyBtn" id="noVote">No preference</button>
-                        </div>
+            <div class="row centered">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <h4>NO PREFERENCE</h4>
+                    <p>Alternativeley, if you have no preference for the above parties, you can vote 'No preference' to still take part in this test.</p>
+                    <div class="col-lg-4 col-lg-offset-4">
+                        <button type="button" class="btn btn-primary btn-lg btn-block novoteBtn partyBtn" id="noVote">No preference</button>
                     </div>
                 </div>
             </div>
+
         </div>
         <br>
         <br>
@@ -218,7 +197,7 @@
     </div>
     <!--________________________End selectedSection______________________________-->
     <!--________________________Begin question section______________________________-->
-    <div id="questionSection" class="hiddenSteps testClass">
+    <div id="questionSection" class="hiddenSteps">
         <div class="container">
             <div class="row centered">
                 <div class="col-lg-8 col-lg-offset-2">
@@ -232,6 +211,9 @@
             </div>
             <div class="row centered">
                 <div class="col-lg-8 col-lg-offset-2">
+                    <div class="col-lg-12">
+                        <p>You have 10 seconds!</p>
+                    </div>
                     <div class="well" id="theQuestions">
 
                     </div>
@@ -307,12 +289,12 @@
 
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <script src="https://code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
     <script src="javascripts/script.js"></script>
     <!--Loads the questions external file-->
     <script src="javascripts/questions.json"></script>
     <script src="javascripts/bootstrap.js"></script>
     <script type="text/javascript" src="https://www.google.com/jsapi?autoload={'modules':[{'name':'visualization','version':'1','packages':['corechart']}]}"></script>
+    <script src="javascripts/opentip-jquery.min.js"></script>
 </body>
 
 </html>
