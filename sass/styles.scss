@@ -527,3 +527,20 @@ hr {
     font-weight: 100;
     text-shadow: none;
 }
+//Contact page------------------------------------
+#headerwrap .contactPage {
+    font-size: 3em;
+}
+#headerwrap .contactLinks a {
+    font-family: 'Lato', sans-serif;
+    font-weight: 600;
+    text-transform: none;
+}
+#headerwrap .contactLinks a:hover {
+    color: $primaryColor;
+}
+.contactIcons {
+    padding: 0;
+    margin-right: -5px;
+}
+//----------------------------------------------

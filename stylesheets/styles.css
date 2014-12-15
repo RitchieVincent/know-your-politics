@@ -8737,3 +8737,26 @@ hr {
   font-weight: 100;
   text-shadow: none;
 }
+
+/* line 531, ../sass/styles.scss */
+#headerwrap .contactPage {
+  font-size: 3em;
+}
+
+/* line 534, ../sass/styles.scss */
+#headerwrap .contactLinks a {
+  font-family: 'Lato', sans-serif;
+  font-weight: 600;
+  text-transform: none;
+}
+
+/* line 539, ../sass/styles.scss */
+#headerwrap .contactLinks a:hover {
+  color: #009688;
+}
+
+/* line 542, ../sass/styles.scss */
+.contactIcons {
+  padding: 0;
+  margin-right: -5px;
+}
