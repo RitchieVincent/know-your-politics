@@ -26,9 +26,27 @@ $(function () { //Wait for the document to be ready
     var audioIncorrect = document.getElementById("incorrectAudio");
     var audioTimeUp = document.getElementById("timeUpAudio");
     var audioResult = document.getElementById("resultAudio");
+    var modalShow = 0;
     //---------------------------------------------------------------------------
 
+    if (modalShow == 0){
+        $( window ).scroll(function() {
+            $('#instructionsModal').modal({
+                backdrop: "static",
+                keyboard: false
+            })
+            alert(modalShow);
+        });
+        alert(modalShow);
+    }
 
+$('#instructionsModal').on('shown.bs.modal', function (e) {
+  modalShow++;
+})
+
+    
+
+    
 
     $(".headerDownBtn").click(function () { //Scrolls the page down when clicking the down arrow in the header
         $('html,body').animate({

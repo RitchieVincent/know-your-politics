@@ -8760,3 +8760,6 @@ hr {
   padding: 0;
   margin-right: -5px;
 }
+.modal-backdrop{
+  z-index: 0;
+}
