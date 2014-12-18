@@ -8739,27 +8739,48 @@ hr {
 }
 
 /* line 531, ../sass/styles.scss */
+.modal-backdrop {
+  z-index: 0;
+}
+
+/* line 534, ../sass/styles.scss */
+.modalInstructions {
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+/* line 540, ../sass/styles.scss */
+.modalInstructions p {
+  line-height: 20px;
+}
+
+/* line 546, ../sass/styles.scss */
+.modalDownBtn {
+  background-color: #E4E4E4;
+  border: 1px solid #D8D8D8;
+}
+
+/* line 552, ../sass/styles.scss */
 #headerwrap .contactPage {
   font-size: 3em;
 }
 
-/* line 534, ../sass/styles.scss */
+/* line 555, ../sass/styles.scss */
 #headerwrap .contactLinks a {
   font-family: 'Lato', sans-serif;
   font-weight: 600;
   text-transform: none;
 }
 
-/* line 539, ../sass/styles.scss */
+/* line 560, ../sass/styles.scss */
 #headerwrap .contactLinks a:hover {
   color: #009688;
 }
 
-/* line 542, ../sass/styles.scss */
+/* line 563, ../sass/styles.scss */
 .contactIcons {
   padding: 0;
   margin-right: -5px;
-}
-.modal-backdrop{
-  z-index: 0;
 }

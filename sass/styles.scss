@@ -527,6 +527,27 @@ hr {
     font-weight: 100;
     text-shadow: none;
 }
+//modalInstructions-------------------------------
+.modal-backdrop {
+    z-index: 0;
+}
+.modalInstructions {
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.modalInstructions p {
+    line-height: 20px;
+}
+.modalInstructions h1 {
+//    marign: 0 auto;
+}
+.modalDownBtn {
+    background-color: #E4E4E4;
+    border: 1px solid #D8D8D8;
+}
+//------------------------------------------------
 //Contact page------------------------------------
 #headerwrap .contactPage {
     font-size: 3em;
