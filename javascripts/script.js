@@ -35,6 +35,13 @@ $(function () { //Wait for the document to be ready
             'slow');
     });
 
+    $(".modalDownBtn").click(function () { //Scrolls the page down when clicking the button in the modal
+        $('html,body').animate({
+            scrollTop: $(".wellLabour").offset().top - 50
+        },
+                               'slow');
+    });
+
     setTimeout(function () {
         $('#instructionsModal').modal({
             backdrop: "static",

@@ -8758,29 +8758,59 @@ hr {
 
 /* line 546, ../sass/styles.scss */
 .modalDownBtn {
-  background-color: #E4E4E4;
-  border: 1px solid #D8D8D8;
+  background-color: #009688;
+  margin-bottom: 20px;
 }
-
-/* line 552, ../sass/styles.scss */
-#headerwrap .contactPage {
-  font-size: 3em;
+/* line 549, ../sass/styles.scss */
+.modalDownBtn:hover {
+  background-color: #00635a;
 }
 
 /* line 555, ../sass/styles.scss */
-#headerwrap .contactLinks a {
-  font-family: 'Lato', sans-serif;
-  font-weight: 600;
-  text-transform: none;
+.contactLinks {
+  text-transform: uppercase;
 }
 
-/* line 560, ../sass/styles.scss */
-#headerwrap .contactLinks a:hover {
+/* line 558, ../sass/styles.scss */
+.contactLinks a.list-group-item:hover, a.list-group-item:focus {
+  text-decoration: none;
   color: #009688;
+  background-color: #F0F0F0;
 }
 
 /* line 563, ../sass/styles.scss */
 .contactIcons {
   padding: 0;
   margin-right: -5px;
+}
+
+/* line 567, ../sass/styles.scss */
+.contactHeader {
+  margin-bottom: 25px;
+}
+
+/* line 572, ../sass/styles.scss */
+.aboutContent {
+  background-color: #e4e4e4;
+  margin-top: -125px;
+}
+/* line 575, ../sass/styles.scss */
+.aboutContent p {
+  line-height: 20px;
+  margin-top: -20px;
+}
+/* line 579, ../sass/styles.scss */
+.aboutContent h2 {
+  color: #009688;
+  margin-bottom: 25px;
+}
+/* line 583, ../sass/styles.scss */
+.aboutContent h4 {
+  color: #009688;
+  margin-bottom: 25px;
+}
+
+/* line 588, ../sass/styles.scss */
+.aboutHeader {
+  margin-bottom: 150px;
 }

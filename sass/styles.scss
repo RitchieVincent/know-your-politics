@@ -544,24 +544,48 @@ hr {
 //    marign: 0 auto;
 }
 .modalDownBtn {
-    background-color: #E4E4E4;
-    border: 1px solid #D8D8D8;
+    background-color: $primaryColor;
+    margin-bottom: 20px;
+    &:hover{
+        background-color: darken($primaryColor, 10);
+    }
 }
 //------------------------------------------------
 //Contact page------------------------------------
-#headerwrap .contactPage {
-    font-size: 3em;
+.contactLinks{
+    text-transform: uppercase;
 }
-#headerwrap .contactLinks a {
-    font-family: 'Lato', sans-serif;
-    font-weight: 600;
-    text-transform: none;
-}
-#headerwrap .contactLinks a:hover {
-    color: $primaryColor;
+.contactLinks a.list-group-item:hover, a.list-group-item:focus {
+    text-decoration: none;
+    color: #009688;
+    background-color: #F0F0F0;
 }
 .contactIcons {
     padding: 0;
     margin-right: -5px;
+}
+.contactHeader{
+    margin-bottom: 25px;
+}
+//----------------------------------------------
+//About page------------------------------------
+.aboutContent{
+    background-color: #e4e4e4;
+    margin-top: -125px;
+    p{
+        line-height: 20px;
+        margin-top: -20px;
+    }
+    h2{
+        color: $primaryColor;
+        margin-bottom: 25px;
+    }
+    h4{
+        color: $primaryColor;
+        margin-bottom: 25px;
+    }
+}
+.aboutHeader{
+    margin-bottom: 150px;
 }
 //----------------------------------------------
