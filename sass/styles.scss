@@ -164,10 +164,10 @@ hr {
     color: lighten($primaryColor, 25);
 }
 #aboutLink {
-    text-align: right;
+    text-align: center;
 }
 #contactLink {
-    text-align: left;
+    text-align: center;
 }
 #headerwrap h1 {
     color: white;
@@ -483,15 +483,16 @@ hr {
     h1 {
         font-weight: 700;
         color: $bgColour;
-        font-size: 4em;
-        margin-bottom: 40px;
+        font-size: 2.5em;
+        margin-bottom: 25px;
+        text-transform: uppercase;
     }
     h2 {
         color: white;
     }
 }
-.scoreNumber {
-    font-size: 2em;
+.scoreNumber, .refreshText {
+    font-size: 1.5em;
     color: #fff;
     line-height: 2em;
 }
@@ -527,6 +528,52 @@ hr {
     font-weight: 100;
     text-shadow: none;
 }
+//moreResults-------------------------------------
+.moreResultsBtn{
+    background-color: darken($primaryColor, 5);
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    &:hover{
+        background-color: darken($primaryColor, 15);
+        outline: none;
+    }
+    &:active{
+        background-color: darken($primaryColor, 15);
+        outline: none;
+    }
+    &:focus{
+        background-color: darken($primaryColor, 15);
+        outline: none;
+    }
+}
+.moreResultsSection{
+    background-color: darken($primaryColor, 5);
+    margin-bottom: -5px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.moreResultsSection p{
+    color: #fff;
+    font-size: 1.2em;
+    margin-bottom: 5px;
+    text-align: center;
+}
+.resultIcon{
+    height: 2em;
+}
+.resultsLinks {
+    color: rgb(228, 228, 228);
+    font-size: 1.2em;
+    margin-top: -30px;
+    a{
+        color: rgb(228, 228, 228);
+        text-decoration: underline;
+        &:hover{
+            color: darken($primaryColor, 15);
+        }
+    }
+}
+//------------------------------------------------
 //modalInstructions-------------------------------
 .modal-backdrop {
     z-index: 0;
@@ -579,6 +626,7 @@ hr {
     h2{
         color: $primaryColor;
         margin-bottom: 25px;
+        text-align: center;
     }
     h4{
         color: $primaryColor;
@@ -588,4 +636,19 @@ hr {
 .aboutHeader{
     margin-bottom: 150px;
 }
+.sourcesWell{
+    font-size: 0.6em;
+    h2{
+        font-size: 2em;
+        line-height: 0;
+    }
+    h4{
+        font-size: 1.5em;
+        line-height: 15px;
+    }
+    p{
+        line-height: 7px;
+    }
+}
+
 //----------------------------------------------

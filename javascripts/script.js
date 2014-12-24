@@ -1,7 +1,5 @@
 $(function () { //Wait for the document to be ready
 
-    $(document).tooltip();
-
     //---------------------------Variables---------------------------------------
     $.fx.speeds.slow = 800; //Sets speeds of transitions
     $.fx.speeds.xslow = 1200;
@@ -9,6 +7,7 @@ $(function () { //Wait for the document to be ready
     var questionCount = 0; //stores how many questions the system has asked
     var questionsLength = Object.keys(text.questions).length; //stores the length of the questions array
     var randomChoice; //stores the random number
+    var choiceClass = ""; //stores the user's chosen party class
     var questionParty; //stores the chosen question's corresponding party
     var labourCount = 0; //The partyCount variables store how many of that party's questions have been asked
     var labourCountChosen = 0; //The partyCountChosen variables store how many times the user clicks agree on the wrong party, and that party's name
@@ -26,20 +25,18 @@ $(function () { //Wait for the document to be ready
     var audioIncorrect = document.getElementById("incorrectAudio");
     var audioTimeUp = document.getElementById("timeUpAudio");
     var audioResult = document.getElementById("resultAudio");
+    var randomArrayCount = 0; //Stores a number that the function is on when looping through the random question array
+    var y = []; //Sets the random question array to blank, which will later be filled with a randomly sorted array of numbers
     //---------------------------------------------------------------------------
 
-    $(".headerDownBtn").click(function () { //Scrolls the page down when clicking the down arrow in the header
-        $('html,body').animate({
-                scrollTop: $(".wellLabour").offset().top - 50
-            },
-            'slow');
-    });
 
-    $(".modalDownBtn").click(function () { //Scrolls the page down when clicking the button in the modal
+
+
+    $(".downButton").click(function () { //Scrolls the page down when clicking the down arrow in the header or the button in the modal
         $('html,body').animate({
             scrollTop: $(".wellLabour").offset().top - 50
         },
-                               'slow');
+        'slow');
     });
 
     setTimeout(function () {
@@ -55,7 +52,7 @@ $(function () { //Wait for the document to be ready
         $("#selectedSection").addClass("" + choiceClass + "");
         $(".selectedPartyTitle").append("<h1>" + idClicked + "</h1>");
         $("#" + imageShow + "").fadeIn("slow");
-        clicked = "2";
+        clicked = "2"; //Ensures the user cannot run the partyBtn Click function again
         $('.partyBtn').prop('disabled', true); //Disables the party selection buttons so no user can re-click another party
         $("#questionSection").slideToggle("slow");
         $("#questionSection").addClass("" + choiceClassQuestionSection + "");
@@ -63,7 +60,6 @@ $(function () { //Wait for the document to be ready
 
     $(".partyBtn").click(function (e) {
         var idClicked = e.target.id;
-        var choiceClass = "";
         if ((idClicked == "labourVote") && (clicked == "1")) {
             idClicked = "The Labour Party";
             choiceClass = "labourChoice";
@@ -137,10 +133,16 @@ $(function () { //Wait for the document to be ready
         }
 
         timer(); //Runs the timer function to start the timer
+        scramble = function(x) { //Takes the array of numbers (x) and randomises them, storing them in a new array (y). This is used to stop the same question appearing twice.
+            while(x.length > 0) y.push(x.splice(Math.floor(Math.random() * x.length), 1)[0]);
+            return y;
+        }
+        scramble([0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39]);//Runs the above function with the values as (x). It goes up to 39 because there are 40 questions in total
         randomQuestion(); //Runs the random question function to display the first question
 
         function randomQuestion() { //Runs a function that randomises the JSON objects to display a random question
-            randomChoice = Math.floor((Math.random() * questionsLength) + 0); //Randomises a number based on the length of the JSON array and stores it in variable randomChoice
+            randomChoice = y[randomArrayCount];//Stores the random question as the first object in the new randomly sorted array
+            randomArrayCount++;//Raises the counter by 1, so the next question will be the next object in the array
             document.getElementById("theQuestions").innerHTML = "<h3>" + text.questions[randomChoice].question + "</h3><p>Do you agree with this policy?</p>";
             questionParty = text.questions[randomChoice].party; //Sets the party name of the selected question to this variable
             questionCount++; //Raises the question count by 1
@@ -195,18 +197,63 @@ $(function () { //Wait for the document to be ready
 
         function displayScores(finalPercent, userScore) {
             $(".scoreNumber").html("<p>You got " + finalPercent + "% of the " + idClicked + " questions correct.</p>"); //Displays the percent correct to the user
-            $(".scoreNumber").append("<p>Your overall score is: " + userScore + "</p>");
-            //            $(".scoreNumber").append("<p>Labour count " + labourCountChosen + "/" + labourCount + "</p>");
-            //            $(".scoreNumber").append("<p>Conservative count " + conservativeCountChosen + "/" + conservativeCount + "</p>");
-            //            $(".scoreNumber").append("<p>Lib dem count " + libdemCountChosen + "/" + libdemCount + "</p>");
-            //            $(".scoreNumber").append("<p>UKIP count " + ukipCountChosen + "/" + ukipCount + "</p>");
             drawChart(labourCountChosen, ukipCountChosen, libdemCountChosen, conservativeCountChosen); //Runs the draw chart function
+
+            if(labourCountChosen >= conservativeCountChosen && labourCountChosen >= libdemCountChosen && labourCountChosen >= ukipCountChosen){
+                if(choiceClass == "labourChoice"){
+                    $(".resultsLinks").append("<p>You seem to know a lot about your party. Well done!</p>");
+                } else{
+                    $(".resultsLinks").append("<p>You seemed to agree with The Labour party quite a lot. <a href='http://www.labour.org.uk/issues' target='_blank'>Click here to read more about this party.</a></p>");
+                }
+            }
+            if(conservativeCountChosen >= labourCountChosen && conservativeCountChosen >= libdemCountChosen && conservativeCountChosen >= ukipCountChosen){
+                if(choiceClass == "conservativeChoice"){
+                    $(".resultsLinks").append("<p>You seem to know a lot about your party. Well done!</p>");
+                } else{
+                    $(".resultsLinks").append("<p>You seemed to agree with The Conservative party quite a lot. <a href='https://www.conservatives.com/Plan.aspx' target='_blank'>Click here to read more about this party.</a></p>");
+                }
+            }
+            if(libdemCountChosen >= conservativeCountChosen && libdemCountChosen >= labourCountChosen && libdemCountChosen >= ukipCountChosen){
+                if(choiceClass == "libdemChoice"){
+                    $(".resultsLinks").append("<p>You seem to know a lot about your party. Well done!</p>");
+                } else{
+                    $(".resultsLinks").append("<p>You seemed to agree with The Liberal Democrats party quite a lot. <a href='http://www.libdems.org.uk/issues' target='_blank'>Click here to read more about this party.</a></p>");
+                }
+            }
+            if(ukipCountChosen >= conservativeCountChosen && ukipCountChosen >= libdemCountChosen && ukipCountChosen >= labourCountChosen){
+                if(choiceClass == "ukipChoice"){
+                    $(".resultsLinks").append("<p>You seem to know a lot about your party. Well done!</p>");
+                } else{
+                    $(".resultsLinks").append("<p>You seemed to agree with UKIP quite a lot. <a href='http://www.ukip.org/policies_for_people' target='_blank'>Click here to read more about this party.</a></p>");
+                }
+            }
+
+            $(".moreResults").append("<p>Your overall score is: " + userScore + "</p><hr/>");
+            if(userScore < 0){
+                $(".moreResults").append("<p>Your overall score is negative. What this means is that you tended to either agree with parties that were not the one you support, or you disagreed with your the policies of the party you support. Maybe you don't Know Your Politics as well as you thought!</p><hr/>");
+            }if(userScore == 0){
+                $(".moreResults").append("<p>Your overall score is neutral. What this means is that you tended to agree with some and disagree with other policies relating to your party. You Know Your Politics a bit, but not much!</p><hr/>");
+            }if(userScore >= 1){
+                $(".moreResults").append("<p>Your overall score is positive. What this means is that you tended to agree with your chosen party. You seem to Know Your Politics!</p><hr/>");
+            }
+            $(".moreResults").append("<p><img src='img/labourIcon.png' class='resultIcon'/> You got " + labourCountChosen + "/" + labourCount + " Labour party questions correct.</p>");
+            $(".moreResults").append("<p><img src='img/conservativeIcon.png' class='resultIcon'/> You got " + conservativeCountChosen + "/" + conservativeCount + " Conservative party questions correct.</p>");
+            $(".moreResults").append("<p><img src='img/libdemIcon.png' class='resultIcon'/> You got " + libdemCountChosen + "/" + libdemCount + " Liberal Democrat party questions correct.</p>");
+            $(".moreResults").append("<p><img src='img/ukipIcon.png' class='resultIcon'/> You got " + ukipCountChosen + "/" + ukipCount + " UKIP questions correct.</p>");
+            $( ".moreResultsBtn" ).click(function() {
+                $( ".moreResultsSection" ).slideToggle( "slow", function() {
+                    window.scrollTo(0, document.body.scrollHeight);
+                });
+            });
         }
 
         function resultDisplay() {
             audioResult.play();
-            $("#resultSection").slideDown("xslow", function () {
-                window.scrollTo(0, document.body.scrollHeight); //This scrolls the view to the bottom of the page, to show the results to the user easier
+            $("#resultSection").slideDown("xslow", function () { //This function animates the resultSection down, and then scrolls the view to the top of the resultSection
+                $('html,body').animate({
+                    scrollTop: $("#resultSection").offset().top
+                },
+                'slow');
             });
             if (choiceClass == "labourChoice") {
                 finalPercent = (correctCount / labourCount) * 100; //Takes the amount correctly answered and the amount asked and calculates the percent correctly answered

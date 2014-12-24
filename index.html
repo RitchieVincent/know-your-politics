@@ -47,8 +47,7 @@
                     <h2 class="headerTitle2">Take our test and find out!</h2>
                     <h3 class="headerTitle3">Choose your party below and let's see if you really know your politics.</h3>
                     <br/>
-                    <button type="button" class="headerDownBtn"><i class="fa fa-angle-down"></i>
-                    </button>
+                    <button type="button" class="headerDownBtn downButton"><i class="fa fa-angle-down"></i></button>
                 </div>
             </div>
             <!-- row -->
@@ -190,18 +189,12 @@
                 </div>
                 <div class="row centered">
                     <div class="col-lg-4 col-lg-offset-4">
-                        <button type="button" class="btn btn-primary modalDownBtn" data-dismiss="modal">I understand <i class="fa fa-check"></i></button>
+                        <button type="button" class="btn btn-primary modalDownBtn downButton" data-dismiss="modal">I understand <i class="fa fa-check"></i></button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
-
-
-
-
-
 
     <!--________________________Begin selectedSection______________________________-->
     <div id="selectedSection" class="hiddenSteps">
@@ -293,11 +286,18 @@
                 <div class="col-lg-10 col-lg-offset-1">
                     <p class="scoreNumber"></p>
                     <div id="resultsChart"></div>
-                    <h2>Please feel free to refresh the page and have another go!</h2>
+                    <div class="resultsLinks"></div>
+                    <button type="button" class="btn btn-primary moreResultsBtn">Click here to toggle more detailed results</button>
+                    <p class="refreshText">Please feel free to refresh the page and have another go!</p>
                 </div>
             </div>
         </div>
         <audio id="resultAudio" src="audio/result.mp3"></audio>
+        <div class="moreResultsSection hiddenSteps">
+            <div class="container">
+                <p class="moreResults"></p>
+            </div>
+        </div>
     </div>
     <!--________________________End result section______________________________-->
     <!--________________________Begin footer____________________________________-->

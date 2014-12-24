@@ -8179,12 +8179,12 @@ hr {
 
 /* line 166, ../sass/styles.scss */
 #aboutLink {
-  text-align: right;
+  text-align: center;
 }
 
 /* line 169, ../sass/styles.scss */
 #contactLink {
-  text-align: left;
+  text-align: center;
 }
 
 /* line 172, ../sass/styles.scss */
@@ -8677,57 +8677,58 @@ hr {
 #resultSection h1 {
   font-weight: 700;
   color: #e4e4e4;
-  font-size: 4em;
-  margin-bottom: 40px;
+  font-size: 2.5em;
+  margin-bottom: 25px;
+  text-transform: uppercase;
 }
-/* line 489, ../sass/styles.scss */
+/* line 490, ../sass/styles.scss */
 #resultSection h2 {
   color: white;
 }
 
-/* line 493, ../sass/styles.scss */
-.scoreNumber {
-  font-size: 2em;
+/* line 494, ../sass/styles.scss */
+.scoreNumber, .refreshText {
+  font-size: 1.5em;
   color: #fff;
   line-height: 2em;
 }
 
-/* line 498, ../sass/styles.scss */
+/* line 499, ../sass/styles.scss */
 .scoreNumber2 {
   color: #fff;
 }
 
-/* line 501, ../sass/styles.scss */
+/* line 502, ../sass/styles.scss */
 #resultsChart {
   margin: 0 auto;
   margin-bottom: 50px;
 }
 
-/* line 505, ../sass/styles.scss */
+/* line 506, ../sass/styles.scss */
 .opentip-container.style-labourTooltip .opentip {
   background-color: #e74c3c;
   color: #fff;
 }
 
-/* line 509, ../sass/styles.scss */
+/* line 510, ../sass/styles.scss */
 .opentip-container.style-conservativeTooltip .opentip {
   background-color: #3498db;
   color: #fff;
 }
 
-/* line 513, ../sass/styles.scss */
+/* line 514, ../sass/styles.scss */
 .opentip-container.style-libdemTooltip .opentip {
   background-color: #F7E041;
   color: #000;
 }
 
-/* line 517, ../sass/styles.scss */
+/* line 518, ../sass/styles.scss */
 .opentip-container.style-ukipTooltip .opentip {
   background-color: #9b59b6;
   color: #fff;
 }
 
-/* line 521, ../sass/styles.scss */
+/* line 522, ../sass/styles.scss */
 .opentip-container.style-timerTooltip .opentip {
   background-color: #2d2d2d;
   border-radius: 10px;
@@ -8738,12 +8739,71 @@ hr {
   text-shadow: none;
 }
 
-/* line 531, ../sass/styles.scss */
+/* line 532, ../sass/styles.scss */
+.moreResultsBtn {
+  background-color: #007d71;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+/* line 536, ../sass/styles.scss */
+.moreResultsBtn:hover {
+  background-color: #004a43;
+  outline: none;
+}
+/* line 540, ../sass/styles.scss */
+.moreResultsBtn:active {
+  background-color: #004a43;
+  outline: none;
+}
+/* line 544, ../sass/styles.scss */
+.moreResultsBtn:focus {
+  background-color: #004a43;
+  outline: none;
+}
+
+/* line 549, ../sass/styles.scss */
+.moreResultsSection {
+  background-color: #007d71;
+  margin-bottom: -5px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+/* line 555, ../sass/styles.scss */
+.moreResultsSection p {
+  color: #fff;
+  font-size: 1.2em;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+/* line 561, ../sass/styles.scss */
+.resultIcon {
+  height: 2em;
+}
+
+/* line 564, ../sass/styles.scss */
+.resultsLinks {
+  color: #e4e4e4;
+  font-size: 1.2em;
+  margin-top: -30px;
+}
+/* line 568, ../sass/styles.scss */
+.resultsLinks a {
+  color: #e4e4e4;
+  text-decoration: underline;
+}
+/* line 571, ../sass/styles.scss */
+.resultsLinks a:hover {
+  color: #004a43;
+}
+
+/* line 578, ../sass/styles.scss */
 .modal-backdrop {
   z-index: 0;
 }
 
-/* line 534, ../sass/styles.scss */
+/* line 581, ../sass/styles.scss */
 .modalInstructions {
   padding-left: 40px;
   padding-right: 40px;
@@ -8751,66 +8811,86 @@ hr {
   padding-bottom: 10px;
 }
 
-/* line 540, ../sass/styles.scss */
+/* line 587, ../sass/styles.scss */
 .modalInstructions p {
   line-height: 20px;
 }
 
-/* line 546, ../sass/styles.scss */
+/* line 593, ../sass/styles.scss */
 .modalDownBtn {
   background-color: #009688;
   margin-bottom: 20px;
 }
-/* line 549, ../sass/styles.scss */
+/* line 596, ../sass/styles.scss */
 .modalDownBtn:hover {
   background-color: #00635a;
 }
 
-/* line 555, ../sass/styles.scss */
+/* line 602, ../sass/styles.scss */
 .contactLinks {
   text-transform: uppercase;
 }
 
-/* line 558, ../sass/styles.scss */
+/* line 605, ../sass/styles.scss */
 .contactLinks a.list-group-item:hover, a.list-group-item:focus {
   text-decoration: none;
   color: #009688;
   background-color: #F0F0F0;
 }
 
-/* line 563, ../sass/styles.scss */
+/* line 610, ../sass/styles.scss */
 .contactIcons {
   padding: 0;
   margin-right: -5px;
 }
 
-/* line 567, ../sass/styles.scss */
+/* line 614, ../sass/styles.scss */
 .contactHeader {
   margin-bottom: 25px;
 }
 
-/* line 572, ../sass/styles.scss */
+/* line 619, ../sass/styles.scss */
 .aboutContent {
   background-color: #e4e4e4;
   margin-top: -125px;
 }
-/* line 575, ../sass/styles.scss */
+/* line 622, ../sass/styles.scss */
 .aboutContent p {
   line-height: 20px;
   margin-top: -20px;
 }
-/* line 579, ../sass/styles.scss */
+/* line 626, ../sass/styles.scss */
 .aboutContent h2 {
   color: #009688;
   margin-bottom: 25px;
+  text-align: center;
 }
-/* line 583, ../sass/styles.scss */
+/* line 631, ../sass/styles.scss */
 .aboutContent h4 {
   color: #009688;
   margin-bottom: 25px;
 }
 
-/* line 588, ../sass/styles.scss */
+/* line 636, ../sass/styles.scss */
 .aboutHeader {
   margin-bottom: 150px;
+}
+
+/* line 639, ../sass/styles.scss */
+.sourcesWell {
+  font-size: 0.6em;
+}
+/* line 641, ../sass/styles.scss */
+.sourcesWell h2 {
+  font-size: 2em;
+  line-height: 0;
+}
+/* line 645, ../sass/styles.scss */
+.sourcesWell h4 {
+  font-size: 1.5em;
+  line-height: 15px;
+}
+/* line 649, ../sass/styles.scss */
+.sourcesWell p {
+  line-height: 7px;
 }
