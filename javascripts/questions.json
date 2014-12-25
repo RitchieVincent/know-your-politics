@@ -16,10 +16,10 @@ var text = {
             "question": "This party will ensure all people who suspect they have cancer to get tested, getting results within one week.",
             "party": "labourChoice"
 }, {
-            "question": "This party will freeze gas and electricity bills until 2017 and reform the broken energy market to stop the cost of energy bills soaring.",
+    "question": "<div class='videowrapper'><iframe src='//www.youtube.com/embed/QVMJjeP34S8?modestbranding=1&amp;showinfo=0&amp;autoplay=1;rel=0' allowfullscreen=''></iframe></div><p>On utility prices.</p>",
             "party": "labourChoice"
 },{
-            "question": "This party wants to cut pension tax relief for higher earners.",
+    "question": "<div class='videowrapper'><iframe src='//www.youtube.com/embed/S-ovpuEVEyg?modestbranding=1&amp;showinfo=0&amp;autoplay=1;rel=0' allowfullscreen=''></iframe></div><p>On voting age.</p>",
             "party": "labourChoice"
 }, {
             "question": "This party wants to get 200,000 homes built a year by 2020.",
@@ -37,7 +37,7 @@ var text = {
             "question": "All patients will have access to a GP from 8am to 8pm, seven days a week by 2020.",
             "party": "conservativeChoice"
 }, {
-            "question": "This party is cutting income tax and freezing fuel duty.",
+    "question": "<div class='videowrapper'><iframe src='//www.youtube.com/embed/J4WgfOKlfkA?modestbranding=1&amp;showinfo=0&amp;autoplay=1;rel=0' allowfullscreen=''></iframe></div><p>On tax levels.</p>",
             "party": "conservativeChoice"
 }, {
             "question": "This party is cutting jobs tax.",
@@ -46,7 +46,7 @@ var text = {
             "question": "This party will enforce public sector job cuts.",
             "party": "conservativeChoice"
 }, {
-            "question": "This party is cutting income tax and freezing fuel duty.",
+    "question": "<div class='videowrapper'><iframe src='//www.youtube.com/embed/YYNfzsheR0Y?modestbranding=1&amp;showinfo=0&amp;autoplay=1;rel=0' allowfullscreen=''></iframe></div><p>On benefits.</p>",
             "party": "conservativeChoice"
 }, {
             "question": "This party is cutting corporation tax.",
@@ -64,13 +64,13 @@ var text = {
             "question": "This party will increase NHS funding by £1bn in 2016/17 and 2017/18.",
             "party": "libdemChoice"
 }, {
-            "question": "This party will allocate an additional £500 million for mental health services.",
+    "question": "<div class='videowrapper'><iframe src='//www.youtube.com/embed/ymhj-SulP_Q?modestbranding=1&amp;showinfo=0&amp;autoplay=1;rel=0' allowfullscreen=''></iframe></div><p>On free school meals.</p>",
             "party": "libdemChoice"
 }, {
             "question": "All patients will be issued with a \"Care footprint\", detailing the costs of their care.",
             "party": "libdemChoice"
 }, {
-            "question": "This party wants to raise the threshold at which people start paying income tax from £6,475 to £10,000.",
+    "question": "<div class='videowrapper'><iframe src='//www.youtube.com/embed/twb_C6BEtXY?modestbranding=1&amp;showinfo=0&amp;autoplay=1;rel=0' allowfullscreen=''></iframe></div><p>On funding income tax.</p>",
             "party": "libdemChoice"
 }, {
             "question": "This party wants to end imprisonment for possessing drugs for personal use.",
@@ -109,7 +109,7 @@ var text = {
             "question": "This party wants to scrap the current target of 50% of school leavers going to university.",
             "party": "ukipChoice"
 }, {
-            "question": "This party wants to ensure that students from the EU will pay the same student fee rates as International students.",
+    "question": "<div class='videowrapper'><iframe src='//www.youtube.com/embed/kYOhYlQNMaM?modestbranding=1&amp;showinfo=0&amp;autoplay=1;rel=0' allowfullscreen=''></iframe></div><p>On university fees.</p>",
             "party": "ukipChoice"
 }, {
             "question": "This party will guarantee those who have served in the Armed Forces for a minimum of 12 years a job in the police force, prison service or border force.",
@@ -118,7 +118,7 @@ var text = {
             "question": "This party supports a diverse energy market including coal, nuclear, shale gas, geo-thermal, tidal, solar, conventional gas and oil.",
             "party": "ukipChoice"
 }, {
-            "question": "This party wants to leave the EU and save at least £8bn per annum in net contributions.",
+    "question": "<div class='videowrapper'><iframe src='//www.youtube.com/embed/7UZH1AsWtnM?modestbranding=1&amp;showinfo=0&amp;autoplay=1;rel=0' allowfullscreen=''></iframe></div><p>On leaving the EU.</p>",
             "party": "ukipChoice"
 }
     ]

@@ -101,7 +101,7 @@ $(function () { //Wait for the document to be ready
 
 
         function newQuestion() {
-            if (questionCount < 10) { //Only displays a new question if the question count is below 10
+            if (questionCount < 8) { //Only displays a new question if the question count is below 10
                 var wait = setTimeout(function () {
                     $("#questionSection").removeClass(removedClasses);
                     randomQuestion(); //Runs the randomQuestion function, passing the randomised number to it, to create a new random number
@@ -137,7 +137,7 @@ $(function () { //Wait for the document to be ready
             while(x.length > 0) y.push(x.splice(Math.floor(Math.random() * x.length), 1)[0]);
             return y;
         }
-        scramble([0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39]);//Runs the above function with the values as (x). It goes up to 39 because there are 40 questions in total
+        scramble([0,1,2,3,4,5,6,7]);//Runs the above function with the values as (x). It goes up to 39 because there are 40 questions in total
         randomQuestion(); //Runs the random question function to display the first question
 
         function randomQuestion() { //Runs a function that randomises the JSON objects to display a random question

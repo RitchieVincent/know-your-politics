@@ -451,8 +451,8 @@ hr {
 .loadingBarAnimate {
     visibility: visible;
     z-index: 100;
-    -webkit-transition: -webkit-transform 10s ease-in;
-    transition: transform 10s ease-in;
+    -webkit-transition: -webkit-transform 15s ease-in;
+    transition: transform 15s ease-in;
     -webkit-transform: translate3d(0%, 0, 0);
     transform: translate3d(0%, 0, 0);
 }
@@ -650,5 +650,36 @@ hr {
         line-height: 7px;
     }
 }
+//Disclaimer page------------------------------
+.disclaimerHeader{
+    margin-bottom: 20px;
+}
+.disclaimerLink{
+    color: $primaryColor;
+}
+//---------------------------------------------
 
 //----------------------------------------------
+.videowrapper {
+    float: none;
+    clear: both;
+    width: 70%;
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 25px;
+    height: 0;
+    margin: 0 auto;
+    margin-bottom: -125px;
+    margin-right: 30px;
+}
+
+
+
+.videowrapper iframe, .videowrapper video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 70%;
+    height: 70%;
+    border: 0;
+}
