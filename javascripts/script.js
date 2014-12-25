@@ -101,7 +101,7 @@ $(function () { //Wait for the document to be ready
 
 
         function newQuestion() {
-            if (questionCount < 10) { //Only displays a new question if the question count is below 10
+            if (questionCount < 1) { //Only displays a new question if the question count is below 10
                 var wait = setTimeout(function () {
                     $("#questionSection").removeClass(removedClasses);
                     randomQuestion(); //Runs the randomQuestion function, passing the randomised number to it, to create a new random number
@@ -236,13 +236,16 @@ $(function () { //Wait for the document to be ready
             }if(userScore >= 1){
                 $(".moreResults").append("<p>Your overall score is positive. What this means is that you tended to agree with your chosen party. You seem to Know Your Politics!</p><hr/>");
             }
-            $(".moreResults").append("<p><img src='img/labourIcon.png' class='resultIcon'/> You got " + labourCountChosen + "/" + labourCount + " Labour party questions correct.</p>");
-            $(".moreResults").append("<p><img src='img/conservativeIcon.png' class='resultIcon'/> You got " + conservativeCountChosen + "/" + conservativeCount + " Conservative party questions correct.</p>");
-            $(".moreResults").append("<p><img src='img/libdemIcon.png' class='resultIcon'/> You got " + libdemCountChosen + "/" + libdemCount + " Liberal Democrat party questions correct.</p>");
-            $(".moreResults").append("<p><img src='img/ukipIcon.png' class='resultIcon'/> You got " + ukipCountChosen + "/" + ukipCount + " UKIP questions correct.</p>");
+            $(".moreResults").append("<p class='list-group-item moreResultsListGroup'><img src='img/labourIcon.png' class='resultIcon'/> You got " + labourCountChosen + "/" + labourCount + " <span class='labourText'>Labour</span> party questions correct.</p>");
+            $(".moreResults").append("<p class='list-group-item moreResultsListGroup'><img src='img/conservativeIcon.png' class='resultIcon'/> You got " + conservativeCountChosen + "/" + conservativeCount + " <span class='conservativeText'>Conservative</span> party questions correct.</p>");
+            $(".moreResults").append("<p class='list-group-item moreResultsListGroup'><img src='img/libdemIcon.png' class='resultIcon'/> You got " + libdemCountChosen + "/" + libdemCount + " <span class='libdemText'>Liberal Democrat</span> party questions correct.</p>");
+            $(".moreResults").append("<p class='list-group-item moreResultsListGroup'><img src='img/ukipIcon.png' class='resultIcon'/> You got " + ukipCountChosen + "/" + ukipCount + " <span class='ukipText'>UKIP</span> questions correct.</p>");
             $( ".moreResultsBtn" ).click(function() {
                 $( ".moreResultsSection" ).slideToggle( "slow", function() {
-                    window.scrollTo(0, document.body.scrollHeight);
+                    $('html,body').animate({
+                        scrollTop: $(".moreResultsSection").offset().top
+                    },
+                    'slow');
                 });
             });
         }

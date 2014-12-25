@@ -553,8 +553,8 @@ hr {
     padding-bottom: 30px;
 }
 .moreResultsSection p{
-    color: #fff;
-    font-size: 1.2em;
+    color: #333;
+    font-size: 1em;
     margin-bottom: 5px;
     text-align: center;
 }
@@ -572,6 +572,10 @@ hr {
             color: darken($primaryColor, 15);
         }
     }
+}
+.moreResultsListGroup{
+    text-transform: uppercase;
+    font-weight: 700;
 }
 //------------------------------------------------
 //modalInstructions-------------------------------

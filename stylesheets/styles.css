@@ -8771,8 +8771,8 @@ hr {
 
 /* line 555, ../sass/styles.scss */
 .moreResultsSection p {
-  color: #fff;
-  font-size: 1.2em;
+  color: #333;
+  font-size: 1em;
   margin-bottom: 5px;
   text-align: center;
 }
@@ -8798,12 +8798,18 @@ hr {
   color: #004a43;
 }
 
-/* line 578, ../sass/styles.scss */
+/* line 576, ../sass/styles.scss */
+.moreResultsListGroup {
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+/* line 582, ../sass/styles.scss */
 .modal-backdrop {
   z-index: 0;
 }
 
-/* line 581, ../sass/styles.scss */
+/* line 585, ../sass/styles.scss */
 .modalInstructions {
   padding-left: 40px;
   padding-right: 40px;
@@ -8811,101 +8817,101 @@ hr {
   padding-bottom: 10px;
 }
 
-/* line 587, ../sass/styles.scss */
+/* line 591, ../sass/styles.scss */
 .modalInstructions p {
   line-height: 20px;
 }
 
-/* line 593, ../sass/styles.scss */
+/* line 597, ../sass/styles.scss */
 .modalDownBtn {
   background-color: #009688;
   margin-bottom: 20px;
 }
-/* line 596, ../sass/styles.scss */
+/* line 600, ../sass/styles.scss */
 .modalDownBtn:hover {
   background-color: #00635a;
 }
 
-/* line 602, ../sass/styles.scss */
+/* line 606, ../sass/styles.scss */
 .contactLinks {
   text-transform: uppercase;
 }
 
-/* line 605, ../sass/styles.scss */
+/* line 609, ../sass/styles.scss */
 .contactLinks a.list-group-item:hover, a.list-group-item:focus {
   text-decoration: none;
   color: #009688;
   background-color: #F0F0F0;
 }
 
-/* line 610, ../sass/styles.scss */
+/* line 614, ../sass/styles.scss */
 .contactIcons {
   padding: 0;
   margin-right: -5px;
 }
 
-/* line 614, ../sass/styles.scss */
+/* line 618, ../sass/styles.scss */
 .contactHeader {
   margin-bottom: 25px;
 }
 
-/* line 619, ../sass/styles.scss */
+/* line 623, ../sass/styles.scss */
 .aboutContent {
   background-color: #e4e4e4;
   margin-top: -125px;
 }
-/* line 622, ../sass/styles.scss */
+/* line 626, ../sass/styles.scss */
 .aboutContent p {
   line-height: 20px;
   margin-top: -20px;
 }
-/* line 626, ../sass/styles.scss */
+/* line 630, ../sass/styles.scss */
 .aboutContent h2 {
   color: #009688;
   margin-bottom: 25px;
   text-align: center;
 }
-/* line 631, ../sass/styles.scss */
+/* line 635, ../sass/styles.scss */
 .aboutContent h4 {
   color: #009688;
   margin-bottom: 25px;
 }
 
-/* line 636, ../sass/styles.scss */
+/* line 640, ../sass/styles.scss */
 .aboutHeader {
   margin-bottom: 150px;
 }
 
-/* line 639, ../sass/styles.scss */
+/* line 643, ../sass/styles.scss */
 .sourcesWell {
   font-size: 0.6em;
 }
-/* line 641, ../sass/styles.scss */
+/* line 645, ../sass/styles.scss */
 .sourcesWell h2 {
   font-size: 2em;
   line-height: 0;
 }
-/* line 645, ../sass/styles.scss */
+/* line 649, ../sass/styles.scss */
 .sourcesWell h4 {
   font-size: 1.5em;
   line-height: 15px;
 }
-/* line 649, ../sass/styles.scss */
+/* line 653, ../sass/styles.scss */
 .sourcesWell p {
   line-height: 7px;
 }
 
-/* line 654, ../sass/styles.scss */
+/* line 658, ../sass/styles.scss */
 .disclaimerHeader {
   margin-bottom: 20px;
 }
 
-/* line 657, ../sass/styles.scss */
+/* line 661, ../sass/styles.scss */
 .disclaimerLink {
   color: #009688;
 }
 
-/* line 663, ../sass/styles.scss */
+/* line 667, ../sass/styles.scss */
 .videowrapper {
   float: none;
   clear: both;
@@ -8919,7 +8925,7 @@ hr {
   margin-right: 30px;
 }
 
-/* line 678, ../sass/styles.scss */
+/* line 682, ../sass/styles.scss */
 .videowrapper iframe, .videowrapper video {
   position: absolute;
   top: 0;
