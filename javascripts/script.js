@@ -29,9 +29,6 @@ $(function () { //Wait for the document to be ready
     var y = []; //Sets the random question array to blank, which will later be filled with a randomly sorted array of numbers
     //---------------------------------------------------------------------------
 
-
-
-
     $(".downButton").click(function () { //Scrolls the page down when clicking the down arrow in the header or the button in the modal
         $('html,body').animate({
             scrollTop: $(".wellLabour").offset().top - 50
@@ -45,8 +42,6 @@ $(function () { //Wait for the document to be ready
             keyboard: false
         })
     }, 2000);
-
-
 
     var showChoiceFctn = function (idClicked, choiceClass, imageShow, choiceClassQuestionSection) { //Shows the correct question section based on which button the user clicks
         $("#selectedSection").addClass("" + choiceClass + "");
@@ -95,13 +90,12 @@ $(function () { //Wait for the document to be ready
         $("#selectedSection").slideDown("slow");
 
         $('html,body').animate({
-                scrollTop: $("#selectedSection").offset().top
-            },
-            'xslow');
-
+            scrollTop: $("#selectedSection").offset().top
+        },
+        'xslow');
 
         function newQuestion() {
-            if (questionCount < 1) { //Only displays a new question if the question count is below 10
+            if (questionCount < 10) { //Only displays a new question if the question count is below 10
                 var wait = setTimeout(function () {
                     $("#questionSection").removeClass(removedClasses);
                     randomQuestion(); //Runs the randomQuestion function, passing the randomised number to it, to create a new random number
@@ -109,9 +103,7 @@ $(function () { //Wait for the document to be ready
                     $(".correctParty").html(""); //Removes the content of the answer message
                     $('.correctParty').fadeTo(200, 0); //Hides the white "Correct" or "Actually this is..." loadingBarAnimate
                 }, 4000); //Waits 4 seconds before running this function
-
                 wait(); //Runs the wait function above
-
             } else {
                 $('.choiceBtn').prop('disabled', true); //Disables the agree/disagree selection buttons so no user can re-click to answer another question
                 $("#questionSection").slideUp(3000, function () {
@@ -119,7 +111,6 @@ $(function () { //Wait for the document to be ready
                 });
             }
         }
-
 
         function timer() {
             $(".loadingBar").addClass("loadingBarAnimate");
@@ -196,58 +187,68 @@ $(function () { //Wait for the document to be ready
         }
 
         function displayScores(finalPercent, userScore) {
-            $(".scoreNumber").html("<p>You got " + finalPercent + "% of the " + idClicked + " questions correct.</p>"); //Displays the percent correct to the user
-            drawChart(labourCountChosen, ukipCountChosen, libdemCountChosen, conservativeCountChosen); //Runs the draw chart function
+            if(labourCountChosen == 0 && conservativeCountChosen == 0 && libdemCountChosen == 0 && ukipCountChosen == 0){ //If the user hasn't agreed with any policies
+                $(".resultsLinks").append("<p>You haven't agreed with any policies!</p>"); //Display appropriate message
+                $(".moreResultsBtn").addClass("hiddenSteps"); //As there will be no more results, hide the moreResultsBtn
+            } else {
+                if(choiceClass != "noChoice"){ //Run only if the user didn't select No preference
+                    $(".scoreNumber").html("<p>You got " + finalPercent + "% of the " + idClicked + " questions correct.</p>"); //Displays the percent correct to the user
+                }
+                drawChart(labourCountChosen, ukipCountChosen, libdemCountChosen, conservativeCountChosen); //Runs the draw chart function
+                if(labourCountChosen >= conservativeCountChosen && labourCountChosen >= libdemCountChosen && labourCountChosen >= ukipCountChosen){ //If labourCountChosen is greater than the rest
+                    if(choiceClass == "labourChoice"){ //If the user chose Labour
+                        $(".resultsLinks").append("<p>You seem to know a lot about your party. Well done!</p>");//Display appropriate message
+                    } else{
+                        $(".resultsLinks").append("<p>You seemed to agree with The Labour party quite a lot. <a href='http://www.labour.org.uk/issues' target='_blank'>Click here to read more about this party.</a></p>");
+                    }
+                }
+                if(conservativeCountChosen >= labourCountChosen && conservativeCountChosen >= libdemCountChosen && conservativeCountChosen >= ukipCountChosen){
+                    if(choiceClass == "conservativeChoice"){
+                        $(".resultsLinks").append("<p>You seem to know a lot about your party. Well done!</p>");
+                    } else{
+                        $(".resultsLinks").append("<p>You seemed to agree with The Conservative party quite a lot. <a href='https://www.conservatives.com/Plan.aspx' target='_blank'>Click here to read more about this party.</a></p>");
+                    }
+                }
+                if(libdemCountChosen >= conservativeCountChosen && libdemCountChosen >= labourCountChosen && libdemCountChosen >= ukipCountChosen){
+                    if(choiceClass == "libdemChoice"){
+                        $(".resultsLinks").append("<p>You seem to know a lot about your party. Well done!</p>");
+                    } else{
+                        $(".resultsLinks").append("<p>You seemed to agree with The Liberal Democrats party quite a lot. <a href='http://www.libdems.org.uk/issues' target='_blank'>Click here to read more about this party.</a></p>");
+                    }
+                }
+                if(ukipCountChosen >= conservativeCountChosen && ukipCountChosen >= libdemCountChosen && ukipCountChosen >= labourCountChosen){
+                    if(choiceClass == "ukipChoice"){
+                        $(".resultsLinks").append("<p>You seem to know a lot about your party. Well done!</p>");
+                    } else{
+                        $(".resultsLinks").append("<p>You seemed to agree with UKIP quite a lot. <a href='http://www.ukip.org/policies_for_people' target='_blank'>Click here to read more about this party.</a></p>");
+                    }
+                }
 
-            if(labourCountChosen >= conservativeCountChosen && labourCountChosen >= libdemCountChosen && labourCountChosen >= ukipCountChosen){
-                if(choiceClass == "labourChoice"){
-                    $(".resultsLinks").append("<p>You seem to know a lot about your party. Well done!</p>");
-                } else{
-                    $(".resultsLinks").append("<p>You seemed to agree with The Labour party quite a lot. <a href='http://www.labour.org.uk/issues' target='_blank'>Click here to read more about this party.</a></p>");
+                if(choiceClass != "noChoice"){ //Run only if the user didn't select No preference
+                    $(".moreResults").append("<p>Your overall score is: " + userScore + "</p><hr/>");
+                    if(userScore < 0){
+                        $(".moreResults").append("<p>Your overall score is negative. What this means is that you tended to either agree with parties that were not the one you support, or you disagreed with your the policies of the party you support. Maybe you don't Know Your Politics as well as you thought!</p><hr/>");
+                    }if(userScore == 0){
+                        $(".moreResults").append("<p>Your overall score is neutral. What this means is that you tended to agree with some and disagree with other policies relating to your party. You Know Your Politics a bit, but not much!</p><hr/>");
+                    }if(userScore >= 1){
+                        $(".moreResults").append("<p>Your overall score is positive. What this means is that you tended to agree with your chosen party. You seem to Know Your Politics!</p><hr/>");
+                    }
                 }
-            }
-            if(conservativeCountChosen >= labourCountChosen && conservativeCountChosen >= libdemCountChosen && conservativeCountChosen >= ukipCountChosen){
-                if(choiceClass == "conservativeChoice"){
-                    $(".resultsLinks").append("<p>You seem to know a lot about your party. Well done!</p>");
-                } else{
-                    $(".resultsLinks").append("<p>You seemed to agree with The Conservative party quite a lot. <a href='https://www.conservatives.com/Plan.aspx' target='_blank'>Click here to read more about this party.</a></p>");
-                }
-            }
-            if(libdemCountChosen >= conservativeCountChosen && libdemCountChosen >= labourCountChosen && libdemCountChosen >= ukipCountChosen){
-                if(choiceClass == "libdemChoice"){
-                    $(".resultsLinks").append("<p>You seem to know a lot about your party. Well done!</p>");
-                } else{
-                    $(".resultsLinks").append("<p>You seemed to agree with The Liberal Democrats party quite a lot. <a href='http://www.libdems.org.uk/issues' target='_blank'>Click here to read more about this party.</a></p>");
-                }
-            }
-            if(ukipCountChosen >= conservativeCountChosen && ukipCountChosen >= libdemCountChosen && ukipCountChosen >= labourCountChosen){
-                if(choiceClass == "ukipChoice"){
-                    $(".resultsLinks").append("<p>You seem to know a lot about your party. Well done!</p>");
-                } else{
-                    $(".resultsLinks").append("<p>You seemed to agree with UKIP quite a lot. <a href='http://www.ukip.org/policies_for_people' target='_blank'>Click here to read more about this party.</a></p>");
-                }
-            }
 
-            $(".moreResults").append("<p>Your overall score is: " + userScore + "</p><hr/>");
-            if(userScore < 0){
-                $(".moreResults").append("<p>Your overall score is negative. What this means is that you tended to either agree with parties that were not the one you support, or you disagreed with your the policies of the party you support. Maybe you don't Know Your Politics as well as you thought!</p><hr/>");
-            }if(userScore == 0){
-                $(".moreResults").append("<p>Your overall score is neutral. What this means is that you tended to agree with some and disagree with other policies relating to your party. You Know Your Politics a bit, but not much!</p><hr/>");
-            }if(userScore >= 1){
-                $(".moreResults").append("<p>Your overall score is positive. What this means is that you tended to agree with your chosen party. You seem to Know Your Politics!</p><hr/>");
-            }
-            $(".moreResults").append("<p class='list-group-item moreResultsListGroup'><img src='img/labourIcon.png' class='resultIcon'/> You got " + labourCountChosen + "/" + labourCount + " <span class='labourText'>Labour</span> party questions correct.</p>");
-            $(".moreResults").append("<p class='list-group-item moreResultsListGroup'><img src='img/conservativeIcon.png' class='resultIcon'/> You got " + conservativeCountChosen + "/" + conservativeCount + " <span class='conservativeText'>Conservative</span> party questions correct.</p>");
-            $(".moreResults").append("<p class='list-group-item moreResultsListGroup'><img src='img/libdemIcon.png' class='resultIcon'/> You got " + libdemCountChosen + "/" + libdemCount + " <span class='libdemText'>Liberal Democrat</span> party questions correct.</p>");
-            $(".moreResults").append("<p class='list-group-item moreResultsListGroup'><img src='img/ukipIcon.png' class='resultIcon'/> You got " + ukipCountChosen + "/" + ukipCount + " <span class='ukipText'>UKIP</span> questions correct.</p>");
-            $( ".moreResultsBtn" ).click(function() {
-                $( ".moreResultsSection" ).slideToggle( "slow", function() {
-                    $('html,body').animate({
-                        scrollTop: $(".moreResultsSection").offset().top
-                    },
-                    'slow');
+                $(".moreResults").append("<p class='list-group-item moreResultsListGroup'><img src='img/labourIcon.png' class='resultIcon'/> You got " + labourCountChosen + "/" + labourCount + " <span class='labourText'>Labour</span> party questions correct.</p>");
+                $(".moreResults").append("<p class='list-group-item moreResultsListGroup'><img src='img/conservativeIcon.png' class='resultIcon'/> You got " + conservativeCountChosen + "/" + conservativeCount + " <span class='conservativeText'>Conservative</span> party questions correct.</p>");
+                $(".moreResults").append("<p class='list-group-item moreResultsListGroup'><img src='img/libdemIcon.png' class='resultIcon'/> You got " + libdemCountChosen + "/" + libdemCount + " <span class='libdemText'>Liberal Democrat</span> party questions correct.</p>");
+                $(".moreResults").append("<p class='list-group-item moreResultsListGroup'><img src='img/ukipIcon.png' class='resultIcon'/> You got " + ukipCountChosen + "/" + ukipCount + " <span class='ukipText'>UKIP</span> questions correct.</p>");
+                $( ".moreResultsBtn" ).click(function() {
+                    $( ".moreResultsSection" ).slideToggle( "slow", function() {
+                        $('html,body').animate({
+                            scrollTop: $(".moreResultsSection").offset().top
+                        },
+                        'slow');
+                    });
                 });
-            });
+
+            }
         }
 
         function resultDisplay() {
@@ -281,6 +282,12 @@ $(function () { //Wait for the document to be ready
                 finalPercent = finalPercent.toFixed();
                 zeroCheck(ukipCount);
                 displayScores(finalPercent, userScore);
+            }
+            if(choiceClass == "noChoice"){
+                displayScores(finalPercent, userScore);
+                if(idClicked == "No preference"){
+                    alert("yayyyy");
+                }
             }
         }
 
@@ -380,11 +387,7 @@ $(function () { //Wait for the document to be ready
                 }
             }
         }
-
-
-
     });
-
 
     $('#logo').addClass('animated rubberBand');
     $('.headerTitle').addClass('animated bounceInUp');
@@ -427,7 +430,6 @@ $(function () { //Wait for the document to be ready
         stemLength: 0
     };
 
-
     new Opentip(".law", "The Labour Party Website", {
         style: "labourStyle"
     })
@@ -464,17 +466,6 @@ $(function () { //Wait for the document to be ready
     new Opentip(".ukt", "The UKIP Twitter page", {
         style: "ukipStyle"
     })
-    //    new Opentip("#theQuestions", "You only have 10 seconds!", {
-    //        target: ".loadingBarHolder",
-    //        targetJoint: "top right",
-    //        tipJoint: "top left",
-    //        extends: "dark",
-    //        stemLength: 0,
-    //        delay: 0,
-    //        className: "timerTooltip",
-    //        hideDelay: 2
-    //    })
-
     //-------------------------------------------------------------------------------------
 
 
