@@ -235,10 +235,10 @@ $(function () { //Wait for the document to be ready
                     }
                 }
 
-                $(".moreResults").append("<p class='list-group-item moreResultsListGroup'><img src='img/labourIcon.png' class='resultIcon'/> You got " + labourCountChosen + "/" + labourCount + " <span class='labourText'>Labour</span> party questions correct.</p>");
-                $(".moreResults").append("<p class='list-group-item moreResultsListGroup'><img src='img/conservativeIcon.png' class='resultIcon'/> You got " + conservativeCountChosen + "/" + conservativeCount + " <span class='conservativeText'>Conservative</span> party questions correct.</p>");
-                $(".moreResults").append("<p class='list-group-item moreResultsListGroup'><img src='img/libdemIcon.png' class='resultIcon'/> You got " + libdemCountChosen + "/" + libdemCount + " <span class='libdemText'>Liberal Democrat</span> party questions correct.</p>");
-                $(".moreResults").append("<p class='list-group-item moreResultsListGroup'><img src='img/ukipIcon.png' class='resultIcon'/> You got " + ukipCountChosen + "/" + ukipCount + " <span class='ukipText'>UKIP</span> questions correct.</p>");
+                $(".moreResults").append("<p class='list-group-item moreResultsListGroup'><img src='img/labourIcon.png' class='resultIcon'/> You agreed with " + labourCountChosen + "/" + labourCount + " <span class='labourText'>Labour</span> party policies.</p>");
+                $(".moreResults").append("<p class='list-group-item moreResultsListGroup'><img src='img/conservativeIcon.png' class='resultIcon'/> You agreed with " + conservativeCountChosen + "/" + conservativeCount + " <span class='conservativeText'>Conservative</span> party policies.</p>");
+                $(".moreResults").append("<p class='list-group-item moreResultsListGroup'><img src='img/libdemIcon.png' class='resultIcon'/> You agreed with " + libdemCountChosen + "/" + libdemCount + " <span class='libdemText'>Liberal Democrat</span> party policies.</p>");
+                $(".moreResults").append("<p class='list-group-item moreResultsListGroup'><img src='img/ukipIcon.png' class='resultIcon'/> You agreed with " + ukipCountChosen + "/" + ukipCount + " <span class='ukipText'>UKIP</span> policies.</p>");
                 $( ".moreResultsBtn" ).click(function() {
                     $( ".moreResultsSection" ).slideToggle( "slow", function() {
                         $('html,body').animate({
@@ -285,13 +285,8 @@ $(function () { //Wait for the document to be ready
             }
             if(choiceClass == "noChoice"){
                 displayScores(finalPercent, userScore);
-                if(idClicked == "No preference"){
-                    alert("yayyyy");
-                }
             }
         }
-
-
 
         $(".choiceBtn").click(function (e) { //Runs this function when the agreeChoice or disagreeChoice button is clicked
             $('.choiceBtn').prop('disabled', true); //Disables the choice button (although temporarily) until the next question is displayed
@@ -300,11 +295,9 @@ $(function () { //Wait for the document to be ready
             newQuestion();
         });
 
-
-
         function wrongChoiceColour(questionParty, choiceClass) { //This function checks which party you have chosen and will remove any previous classes relating to other parties. It then replaces it with the new party class, which styles the background of the section, alerting the user to the party that question actually relates to
             if (questionParty == "labourChoice") {
-                $("#questionSection").removeClass(removedClasses); //Removes old classes using the "removedClasses" variable defined above
+                $("#questionSection").removeClass(removedClasses); //Removes old classes using the "removedClasses" variable
                 $("#questionSection").addClass("labourChoice"); //Adds the party class which relates to the question they have just answered
                 $('.correctParty').fadeTo(500, 1); //Fades the answer to the question to "1" opacity over 500 miliseconds
                 $(".correctParty").html("<p>Actually, this is a Labour policy!</p>"); //Adds some text to tell the user the answer to the question
@@ -380,7 +373,11 @@ $(function () { //Wait for the document to be ready
                     $(".loadingBar").removeClass("loadingBarAnimate");
                     wrongChoiceColour(questionParty, choiceClass);
                     userScore--;
-                } else {
+                } else if(choiceClass == "noChoice"){ //If the user selected No preference, run this
+                    $(".loadingBar").removeClass("loadingBarAnimate");
+                    wrongChoiceColour(questionParty, choiceClass);
+                    userScore++;
+                } else { //IF the user clicked disagree, and did not choose No preference, run this
                     $(".loadingBar").removeClass("loadingBarAnimate");
                     userScore++;
                     correctAnswer();
@@ -389,7 +386,7 @@ $(function () { //Wait for the document to be ready
         }
     });
 
-    $('#logo').addClass('animated rubberBand');
+    $('#logo').addClass('animated rubberBand'); //The lines below add animation classes
     $('.headerTitle').addClass('animated bounceInUp');
     $('.headerTitle2').addClass('animated bounceInLeft');
     $('.headerTitle3').addClass('animated bounceInRight');
